@@ -1,5 +1,5 @@
 // Import Bootstrap Utils so that we can amend them
-@import '~bootstrap/scss/utilities';
+@import 'bootstrap/scss/utilities';
 
 $utilities: map-merge(
   $utilities,
