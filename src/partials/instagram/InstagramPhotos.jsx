@@ -2,93 +2,93 @@ import React from "react";
 
 export const InstagramPhotos = () => {
 	return (
-		<div class="row g-2">
-			<div class="d-none d-md-block col-md-4" data-aos="fade-in" data-aos-delay="150">
+		<div className="row g-2">
+			<div className="d-none d-md-block col-md-4" data-aos="fade-in" data-aos-delay="150">
 				<picture>
 					<img
-						class="img-fluid"
+						className="img-fluid"
 						src="{{webRoot}}/assets/images/instagram/instagram-1.jpg"
 						alt="{{config.defaultImgAlt}}"
 						data-zoomable
 					/>
 				</picture>
 			</div>
-			<div class="col-12 col-md-8" data-aos="fade-in" data-aos-delay="300">
-				<div class="row g-2">
-					<div class="col-3">
+			<div className="col-12 col-md-8" data-aos="fade-in" data-aos-delay="300">
+				<div className="row g-2">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-2.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-3.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-4.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-5.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-6.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-7.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-8.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
 					</div>
-					<div class="col-3">
+					<div className="col-3">
 						<picture>
 							<img
-								class="img-fluid"
+								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-9.jpg"
 								alt="{{config.defaultImgAlt}}"
 								data-zoomable

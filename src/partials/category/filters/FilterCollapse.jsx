@@ -6,16 +6,16 @@ import React from "react";
 
 export const FilterCollapse = () => {
 	return (
-		<div class="row gx-5">
-			<div class="col-4 widget-filter-price">
-				<p class="small fs-6 fw-bolder border-bottom pb-3 mb-4">Price</p>
+		<div className="row gx-5">
+			<div className="col-4 widget-filter-price">
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Price</p>
 				<FilterPrice />
 			</div>
 
-			<div class="col-4">
-				<p class="small fs-6 fw-bolder border-bottom pb-3 mb-4">Sizes</p>
+			<div className="col-4">
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Sizes</p>
 				<div>
-					<div class="filter-options mt-3">
+					<div className="filter-options mt-3">
 						{sizes.map((i) => (
 							<FilterCheckboxTwo {...i} type="sizes" />
 						))}
@@ -23,10 +23,10 @@ export const FilterCollapse = () => {
 				</div>
 			</div>
 
-			<div class="col-4">
-				<p class="small fs-6 fw-bolder border-bottom pb-3 mb-4">Colour</p>
+			<div className="col-4">
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Colour</p>
 				<div>
-					<div class="filter-options mt-3">
+					<div className="filter-options mt-3">
 						{colours.map((i) => (
 							<FilterColour {...i} type="colours" />
 						))}

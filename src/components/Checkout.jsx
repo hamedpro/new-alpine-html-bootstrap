@@ -10,15 +10,15 @@ export const Checkout = () => {
 	return (
 		<>
 			<NavBar />
-			<section class="mt-5 container">
-				<h1 class="mb-4 display-5 fw-bold text-center">Checkout Securely</h1>
-				<p class="text-center mx-auto">
+			<section className="mt-5 container">
+				<h1 className="mb-4 display-5 fw-bold text-center">Checkout Securely</h1>
+				<p className="text-center mx-auto">
 					Please fill in the details below to complete your order. Already registered?
 					<a href="#">Login here.</a>
 				</p>
 
-				<div class="row g-md-8 mt-4">
-					<div class="col-12 col-lg-6 col-xl-7">
+				<div className="row g-md-8 mt-4">
+					<div className="col-12 col-lg-6 col-xl-7">
 						<CheckoutContact />
 						<CheckoutShipping />
 						<CheckoutBilling />
@@ -26,7 +26,7 @@ export const Checkout = () => {
 						<CheckoutPayment />
 					</div>
 
-					<div class="col-12 col-lg-6 col-xl-5">
+					<div className="col-12 col-lg-6 col-xl-5">
 						<CheckoutSummary />
 					</div>
 				</div>

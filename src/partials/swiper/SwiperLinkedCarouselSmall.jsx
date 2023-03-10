@@ -3,13 +3,13 @@ import { ListingCard } from "../category/listing-cards/ListingCard";
 
 export const SwiperLinkedCarouselSmall = () => {
 	return (
-		<div class="swiper-container swiper-linked-carousel-small">
-			<div class="swiper-pagination-blocks mb-4">
-				<div class="swiper-pagination-custom"></div>
+		<div className="swiper-container swiper-linked-carousel-small">
+			<div className="swiper-pagination-blocks mb-4">
+				<div className="swiper-pagination-custom"></div>
 			</div>
 
-			<div class="swiper-wrapper">
-				<div class="swiper-slide overflow-hidden">
+			<div className="swiper-wrapper">
+				<div className="swiper-slide overflow-hidden">
 					<ListingCard
 						img="{{webRoot}}/assets/images/products/product-12.jpg"
 						title="Mens Outdoors T-Shirt"
@@ -21,7 +21,7 @@ export const SwiperLinkedCarouselSmall = () => {
 					/>
 				</div>
 
-				<div class="swiper-slide overflow-hidden">
+				<div className="swiper-slide overflow-hidden">
 					<ListingCard
 						img="{{webRoot}}/assets/images/products/product-1.jpg"
 						title="Mens Flyroam Sneakers"
@@ -33,7 +33,7 @@ export const SwiperLinkedCarouselSmall = () => {
 					/>
 				</div>
 
-				<div class="swiper-slide overflow-hidden">
+				<div className="swiper-slide overflow-hidden">
 					<ListingCard
 						img="{{webRoot}}/assets/images/products/product-13.jpg"
 						title="Mens Flyroam Sneakers"

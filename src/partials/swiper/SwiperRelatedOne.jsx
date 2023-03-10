@@ -4,7 +4,7 @@ import { ListingCardFive } from "../category/listing-cards/ListingCardFive";
 export const SwiperRelatedOne = ({ shoes }) => {
 	return (
 		<div
-			class="swiper-container"
+			className="swiper-container"
 			data-swiper
 			data-options='{
     "spaceBetween": 10,
@@ -33,22 +33,22 @@ export const SwiperRelatedOne = ({ shoes }) => {
     }
   }'
 		>
-			<div class="swiper-wrapper mb-5">
+			<div className="swiper-wrapper mb-5">
 				{CategoryFour &&
 					shoes.entries.map((i) => (
-						<div class="swiper-slide align-self-stretch bg-transparent h-auto">
+						<div className="swiper-slide align-self-stretch bg-transparent h-auto">
 							<ListingCardFive {...i} />
 						</div>
 					))}
 			</div>
 
-			<div class="swiper-pagination bottom-0"></div>
+			<div className="swiper-pagination bottom-0"></div>
 
-			<div class="swiper-prev top-50  start-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 start-0 mt-n8 d-flex justify-content-center align-items-center opacity-50-hover">
-				<i class="ri-arrow-left-s-line ri-lg"></i>
+			<div className="swiper-prev top-50  start-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 start-0 mt-n8 d-flex justify-content-center align-items-center opacity-50-hover">
+				<i className="ri-arrow-left-s-line ri-lg"></i>
 			</div>
-			<div class="swiper-next top-50 end-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 end-0 mt-n8 d-flex justify-content-center align-items-center opacity-50-hover">
-				<i class="ri-arrow-right-s-line ri-lg"></i>
+			<div className="swiper-next top-50 end-0 z-index-30 cursor-pointer transition-all bg-white px-3 py-4 position-absolute z-index-30 top-50 end-0 mt-n8 d-flex justify-content-center align-items-center opacity-50-hover">
+				<i className="ri-arrow-right-s-line ri-lg"></i>
 			</div>
 		</div>
 	);

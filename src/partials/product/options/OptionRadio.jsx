@@ -11,7 +11,7 @@ export const OptionRadio = (props) => {
 				id={`option-${props.type}-${index}`}
 			/>
 			<label for={`option-${props.type}}-${index}}`}>
-				{props["label-top"] && <small class="d-block">{props["label-top"]}</small>}
+				{props["label-top"] && <small className="d-block">{props["label-top"]}</small>}
 				{props["label-bottom"] && <small>{props["label-bottom"]}</small>}
 			</label>
 		</div>

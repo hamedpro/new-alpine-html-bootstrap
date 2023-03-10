@@ -7,10 +7,10 @@ export const FilterColour = (props) => {
 		>
 			<input
 				type="checkbox"
-				class="form-check-color-input"
+				className="form-check-color-input"
 				id={`filter-${props.type}-${index}`}
 			/>
-			<label class="form-check-label" for={`filter-${props.type}-${index}`}></label>
+			<label className="form-check-label" for={`filter-${props.type}-${index}`}></label>
 		</div>
 	);
 };

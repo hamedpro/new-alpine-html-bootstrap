@@ -2,27 +2,27 @@ import React from "react";
 
 export const Share = () => {
 	return (
-		<div class="d-flex justify-content-start align-items-center">
-			<p class="fw-bolder lh-1 mb-0 me-3">Share</p>
-			<ul class="list-unstyled p-0 m-0 d-flex justify-content-start lh-1 align-items-center mt-1">
-				<li class="me-2">
-					<a class="text-decoration-none" href="#" role="button">
-						<i class="ri-facebook-box-fill"></i>
+		<div className="d-flex justify-content-start align-items-center">
+			<p className="fw-bolder lh-1 mb-0 me-3">Share</p>
+			<ul className="list-unstyled p-0 m-0 d-flex justify-content-start lh-1 align-items-center mt-1">
+				<li className="me-2">
+					<a className="text-decoration-none" href="#" role="button">
+						<i className="ri-facebook-box-fill"></i>
 					</a>
 				</li>
-				<li class="me-2">
-					<a class="text-decoration-none" href="#" role="button">
-						<i class="ri-instagram-fill"></i>
+				<li className="me-2">
+					<a className="text-decoration-none" href="#" role="button">
+						<i className="ri-instagram-fill"></i>
 					</a>
 				</li>
-				<li class="me-2">
-					<a class="text-decoration-none" href="#" role="button">
-						<i class="ri-pinterest-fill"></i>
+				<li className="me-2">
+					<a className="text-decoration-none" href="#" role="button">
+						<i className="ri-pinterest-fill"></i>
 					</a>
 				</li>
-				<li class="me-2">
-					<a class="text-decoration-none" href="#" role="button">
-						<i class="ri-twitter-fill"></i>
+				<li className="me-2">
+					<a className="text-decoration-none" href="#" role="button">
+						<i className="ri-twitter-fill"></i>
 					</a>
 				</li>
 			</ul>

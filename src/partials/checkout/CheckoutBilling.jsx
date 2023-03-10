@@ -3,17 +3,17 @@ import React from 'react'
 
 export const CheckoutBilling = () => {
   return (
-		<div class="billing-address checkout-panel d-none">
-			<h5 class="title-checkout">Billing Address</h5>
-			<div class="row">
-				<div class="col-sm-6">
-					<div class="form-group">
-						<label for="firstNameAddress" class="form-label">
+		<div className="billing-address checkout-panel d-none">
+			<h5 className="title-checkout">Billing Address</h5>
+			<div className="row">
+				<div className="col-sm-6">
+					<div className="form-group">
+						<label for="firstNameAddress" className="form-label">
 							First name
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="firstNameAddress"
 							placeholder=""
 							value=""
@@ -22,14 +22,14 @@ export const CheckoutBilling = () => {
 					</div>
 				</div>
 
-				<div class="col-sm-6">
-					<div class="form-group">
-						<label for="lastNameAddress" class="form-label">
+				<div className="col-sm-6">
+					<div className="form-group">
+						<label for="lastNameAddress" className="form-label">
 							Last name
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="lastNameAddress"
 							placeholder=""
 							value=""
@@ -38,14 +38,14 @@ export const CheckoutBilling = () => {
 					</div>
 				</div>
 
-				<div class="col-12">
-					<div class="form-group">
-						<label for="addressAddress" class="form-label">
+				<div className="col-12">
+					<div className="form-group">
+						<label for="addressAddress" className="form-label">
 							Address
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="addressAddress"
 							placeholder="123 Some Street Somewhere"
 							required=""
@@ -53,38 +53,38 @@ export const CheckoutBilling = () => {
 					</div>
 				</div>
 
-				<div class="col-md-12">
-					<div class="form-group">
-						<label for="countryAddress" class="form-label">
+				<div className="col-md-12">
+					<div className="form-group">
+						<label for="countryAddress" className="form-label">
 							Country
 						</label>
-						<select class="form-select" id="countryAddress" required="">
+						<select className="form-select" id="countryAddress" required="">
 							<option value="">Please Select...</option>
 							<option>United States</option>
 						</select>
 					</div>
 				</div>
 
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="stateAddress" class="form-label">
+				<div className="col-md-6">
+					<div className="form-group">
+						<label for="stateAddress" className="form-label">
 							State
 						</label>
-						<select class="form-select" id="stateAddress" required="">
+						<select className="form-select" id="stateAddress" required="">
 							<option value="">Please Select...</option>
 							<option>California</option>
 						</select>
 					</div>
 				</div>
 
-				<div class="col-md-6">
-					<div class="form-group">
-						<label for="zipAddress" class="form-label">
+				<div className="col-md-6">
+					<div className="form-group">
+						<label for="zipAddress" className="form-label">
 							Zip/Post Code
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="zipAddress"
 							placeholder=""
 							required=""

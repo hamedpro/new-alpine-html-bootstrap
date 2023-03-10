@@ -7,26 +7,26 @@ import { FilterCheckboxTwo } from "../category/filters/FilterCheckboxTwo";
 import { FilterColour } from "../category/filters/FilterColour";
 export const OffcanvasFilters = () => {
 	return (
-		<div class="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasFilters">
-			<div class="offcanvas-header d-flex align-items-center">
-				<h5 class="offcanvas-title" id="offcanvasFiltersLabel">
+		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasFilters">
+			<div className="offcanvas-header d-flex align-items-center">
+				<h5 className="offcanvas-title" id="offcanvasFiltersLabel">
 					Category Filters
 				</h5>
 				<button
 					type="button"
-					class="btn-close text-reset"
+					className="btn-close text-reset"
 					data-bs-dismiss="offcanvas"
 					aria-label="Close"
 				></button>
 			</div>
-			<div class="offcanvas-body">
-				<div class="d-flex flex-column justify-content-between w-100 h-100">
+			<div className="offcanvas-body">
+				<div className="d-flex flex-column justify-content-between w-100 h-100">
 					<div>
 						{categories && (
-							<div class="mb-4">
-								<h2 class="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
+							<div className="mb-4">
+								<h2 className="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
 								<nav>
-									<ul class="list-unstyled list-default-text">
+									<ul className="list-unstyled list-default-text">
 										{categories.map((i) => (
 											<FilterText {...i} />
 										))}
@@ -35,9 +35,9 @@ export const OffcanvasFilters = () => {
 							</div>
 						)}
 
-						<div class="py-4 widget-filter widget-filter-price border-top">
+						<div className="py-4 widget-filter widget-filter-price border-top">
 							<a
-								class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+								className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 								data-bs-toggle="collapse"
 								href="#filter-modal-price"
 								role="button"
@@ -46,15 +46,15 @@ export const OffcanvasFilters = () => {
 							>
 								Price
 							</a>
-							<div id="filter-modal-price" class="collapse">
+							<div id="filter-modal-price" className="collapse">
 								<FilterPrice />
 							</div>
 						</div>
 
 						{brands && (
-							<div class="py-4 widget-filter border-top">
+							<div className="py-4 widget-filter border-top">
 								<a
-									class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+									className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 									data-bs-toggle="collapse"
 									href="#filter-modal-brands"
 									role="button"
@@ -63,20 +63,20 @@ export const OffcanvasFilters = () => {
 								>
 									Brands
 								</a>
-								<div id="filter-modal-brands" class="collapse">
-									<div class="input-group my-3 py-1">
+								<div id="filter-modal-brands" className="collapse">
+									<div className="input-group my-3 py-1">
 										<input
 											type="text"
-											class="form-control py-2 filter-search rounded"
+											className="form-control py-2 filter-search rounded"
 											placeholder="Search"
 											aria-label="Search"
 										/>
-										<span class="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20">
-											<i class="ri-search-2-line text-muted"></i>
+										<span className="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20">
+											<i className="ri-search-2-line text-muted"></i>
 										</span>
 									</div>
-									<div class="simplebar-wrapper">
-										<div class="filter-options" data-pixr-simplebar>
+									<div className="simplebar-wrapper">
+										<div className="filter-options" data-pixr-simplebar>
 											{brands.map((i) => (
 												<FilterCheckbox {...i} type="brands-modal" />
 											))}
@@ -87,9 +87,9 @@ export const OffcanvasFilters = () => {
 						)}
 
 						{type && (
-							<div class="py-4 widget-filter border-top">
+							<div className="py-4 widget-filter border-top">
 								<a
-									class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+									className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 									data-bs-toggle="collapse"
 									href="#filter-modal-type"
 									role="button"
@@ -98,19 +98,19 @@ export const OffcanvasFilters = () => {
 								>
 									Type
 								</a>
-								<div id="filter-modal-type" class="collapse">
-									<div class="input-group my-3 py-1">
+								<div id="filter-modal-type" className="collapse">
+									<div className="input-group my-3 py-1">
 										<input
 											type="text"
-											class="form-control py-2 filter-search rounded"
+											className="form-control py-2 filter-search rounded"
 											placeholder="Search"
 											aria-label="Search"
 										/>
-										<span class="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20">
-											<i class="ri-search-2-line text-muted"></i>
+										<span className="input-group-text bg-transparent p-2 position-absolute top-2 end-0 border-0 z-index-20">
+											<i className="ri-search-2-line text-muted"></i>
 										</span>
 									</div>
-									<div class="filter-options">
+									<div className="filter-options">
 										{type.map((i) => (
 											<FilterCheckbox {...i} type="type-modal" />
 										))}
@@ -120,9 +120,9 @@ export const OffcanvasFilters = () => {
 						)}
 
 						{sizes && (
-							<div class="py-4 widget-filter border-top">
+							<div className="py-4 widget-filter border-top">
 								<a
-									class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+									className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 									data-bs-toggle="collapse"
 									href="#filter-modal-sizes"
 									role="button"
@@ -131,8 +131,8 @@ export const OffcanvasFilters = () => {
 								>
 									Sizes
 								</a>
-								<div id="filter-modal-sizes" class="collapse">
-									<div class="filter-options mt-3">
+								<div id="filter-modal-sizes" className="collapse">
+									<div className="filter-options mt-3">
 										{sizes.map((i) => (
 											<FilterCheckboxTwo {...i} type="sizes-modal" />
 										))}
@@ -142,9 +142,9 @@ export const OffcanvasFilters = () => {
 						)}
 
 						{colours && (
-							<div class="py-4 widget-filter border-top">
+							<div className="py-4 widget-filter border-top">
 								<a
-									class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+									className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 									data-bs-toggle="collapse"
 									href="#filter-modal-colour"
 									role="button"
@@ -153,8 +153,8 @@ export const OffcanvasFilters = () => {
 								>
 									Colour
 								</a>
-								<div id="filter-modal-colour" class="collapse">
-									<div class="filter-options mt-3">
+								<div id="filter-modal-colour" className="collapse">
+									<div className="filter-options mt-3">
 										{colours.map((i) => (
 											<FilterColour {...i} type="colours-modal" />
 										))}
@@ -164,8 +164,11 @@ export const OffcanvasFilters = () => {
 						)}
 					</div>
 
-					<div class="border-top pt-3">
-						<a href="#" class="btn btn-dark mt-2 d-block hover-lift-sm hover-boxshadow">
+					<div className="border-top pt-3">
+						<a
+							href="#"
+							className="btn btn-dark mt-2 d-block hover-lift-sm hover-boxshadow"
+						>
 							Done
 						</a>
 					</div>

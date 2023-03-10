@@ -8,10 +8,10 @@ import { FilterColour } from "../filters/FilterColour";
 export const AsideMenuOne = () => {
 	return (
 		<aside>
-			<div class="mb-4">
-				<h2 class="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
+			<div className="mb-4">
+				<h2 className="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
 				<nav>
-					<ul class="list-unstyled list-default-text">
+					<ul className="list-unstyled list-default-text">
 						{categories.map((i) => (
 							<FilterText {...i} />
 						))}
@@ -19,9 +19,9 @@ export const AsideMenuOne = () => {
 				</nav>
 			</div>
 
-			<div class="py-4 widget-filter widget-filter-price border-top">
+			<div className="py-4 widget-filter widget-filter-price border-top">
 				<a
-					class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+					className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 					data-bs-toggle="collapse"
 					href="#filter-price"
 					role="button"
@@ -30,14 +30,14 @@ export const AsideMenuOne = () => {
 				>
 					Price
 				</a>
-				<div id="filter-price" class="collapse show">
+				<div id="filter-price" className="collapse show">
 					<FilterPrice />
 				</div>
 			</div>
 
-			<div class="py-4 widget-filter border-top">
+			<div className="py-4 widget-filter border-top">
 				<a
-					class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+					className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 					data-bs-toggle="collapse"
 					href="#filter-brands"
 					role="button"
@@ -46,20 +46,20 @@ export const AsideMenuOne = () => {
 				>
 					Brands
 				</a>
-				<div id="filter-brands" class="collapse show">
-					<div class="input-group my-3 py-1">
+				<div id="filter-brands" className="collapse show">
+					<div className="input-group my-3 py-1">
 						<input
 							type="text"
-							class="form-control py-2 filter-search rounded"
+							className="form-control py-2 filter-search rounded"
 							placeholder="Search"
 							aria-label="Search"
 						/>
-						<span class="input-group-text bg-transparent px-2 position-absolute top-7 end-0 border-0 z-index-20">
-							<i class="ri-search-2-line text-muted"></i>
+						<span className="input-group-text bg-transparent px-2 position-absolute top-7 end-0 border-0 z-index-20">
+							<i className="ri-search-2-line text-muted"></i>
 						</span>
 					</div>
-					<div class="simplebar-wrapper">
-						<div class="filter-options" data-pixr-simplebar>
+					<div className="simplebar-wrapper">
+						<div className="filter-options" data-pixr-simplebar>
 							{brands.map((brand) => (
 								<FilterCheckbox {...brand} type="brand" />
 							))}
@@ -68,9 +68,9 @@ export const AsideMenuOne = () => {
 				</div>
 			</div>
 
-			<div class="py-4 widget-filter border-top">
+			<div className="py-4 widget-filter border-top">
 				<a
-					class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+					className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 					data-bs-toggle="collapse"
 					href="#filter-type"
 					role="button"
@@ -79,19 +79,19 @@ export const AsideMenuOne = () => {
 				>
 					Type
 				</a>
-				<div id="filter-type" class="collapse show">
-					<div class="input-group my-3 py-1">
+				<div id="filter-type" className="collapse show">
+					<div className="input-group my-3 py-1">
 						<input
 							type="text"
-							class="form-control py-2 filter-search rounded"
+							className="form-control py-2 filter-search rounded"
 							placeholder="Search"
 							aria-label="Search"
 						/>
-						<span class="input-group-text bg-transparent px-2 position-absolute top-7 end-0 border-0 z-index-20">
-							<i class="ri-search-2-line text-muted"></i>
+						<span className="input-group-text bg-transparent px-2 position-absolute top-7 end-0 border-0 z-index-20">
+							<i className="ri-search-2-line text-muted"></i>
 						</span>
 					</div>
-					<div class="filter-options">
+					<div className="filter-options">
 						{type.map((i) => (
 							<FilterCheckbox {...i} type="type" />
 						))}
@@ -99,9 +99,9 @@ export const AsideMenuOne = () => {
 				</div>
 			</div>
 
-			<div class="py-4 widget-filter border-top">
+			<div className="py-4 widget-filter border-top">
 				<a
-					class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+					className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 					data-bs-toggle="collapse"
 					href="#filter-sizes"
 					role="button"
@@ -110,8 +110,8 @@ export const AsideMenuOne = () => {
 				>
 					Sizes
 				</a>
-				<div id="filter-sizes" class="collapse show">
-					<div class="filter-options mt-3">
+				<div id="filter-sizes" className="collapse show">
+					<div className="filter-options mt-3">
 						{sizes.map((i) => (
 							<FilterCheckboxTwo {...i} type="sizes" />
 						))}
@@ -119,9 +119,9 @@ export const AsideMenuOne = () => {
 				</div>
 			</div>
 
-			<div class="py-4 widget-filter border-top">
+			<div className="py-4 widget-filter border-top">
 				<a
-					class="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
+					className="small text-body text-decoration-none text-secondary-hover transition-all transition-all fs-6 fw-bolder d-block collapse-icon-chevron"
 					data-bs-toggle="collapse"
 					href="#filter-colour"
 					role="button"
@@ -130,8 +130,8 @@ export const AsideMenuOne = () => {
 				>
 					Colour
 				</a>
-				<div id="filter-colour" class="collapse show">
-					<div class="filter-options mt-3">
+				<div id="filter-colour" className="collapse show">
+					<div className="filter-options mt-3">
 						{colours.map((i) => (
 							<FilterColour {...i} type="colours" />
 						))}

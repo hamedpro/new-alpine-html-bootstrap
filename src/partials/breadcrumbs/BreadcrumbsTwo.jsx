@@ -3,14 +3,14 @@ import React from "react";
 export const BreadcrumbsTwo = () => {
 	return (
 		<nav aria-label="breadcrumb">
-			<ol class="breadcrumb">
-				<li class="breadcrumb-item breadcrumb-light">
+			<ol className="breadcrumb">
+				<li className="breadcrumb-item breadcrumb-light">
 					<a href="#">Home</a>
 				</li>
-				<li class="breadcrumb-item breadcrumb-light">
+				<li className="breadcrumb-item breadcrumb-light">
 					<a href="#">Activities</a>
 				</li>
-				<li class="breadcrumb-item active breadcrumb-light" aria-current="page">
+				<li className="breadcrumb-item active breadcrumb-light" aria-current="page">
 					Clothing
 				</li>
 			</ol>

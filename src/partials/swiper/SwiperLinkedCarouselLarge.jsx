@@ -2,11 +2,11 @@ import React from "react";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 export const SwiperLinkedCarouselLarge = () => {
 	return (
-		<div class="swiper-container h-100 swiper-linked-carousel-large">
-			<div class="swiper-wrapper h-100">
-				<div class="swiper-slide">
-					<div class="row g-3">
-						<div class="col-12 col-md-6">
+		<div className="swiper-container h-100 swiper-linked-carousel-large">
+			<div className="swiper-wrapper h-100">
+				<div className="swiper-slide">
+					<div className="row g-3">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-13.jpg"
 								title="Pocket Tee Rusty Red"
@@ -17,7 +17,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-14.jpg"
 								title="Mens T-Shirt Rusty"
@@ -28,7 +28,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-15.jpg"
 								title="Mens T-Shirt Phantom"
@@ -39,7 +39,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-16.jpg"
 								title="Heather T-Shirt"
@@ -53,9 +53,9 @@ export const SwiperLinkedCarouselLarge = () => {
 					</div>
 				</div>
 
-				<div class="swiper-slide">
-					<div class="row g-3">
-						<div class="col-12 col-md-6">
+				<div className="swiper-slide">
+					<div className="row g-3">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-2.jpg"
 								title="Mens Classic Hoodie"
@@ -66,7 +66,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-3.jpg"
 								title="Womens Essential Hoodie"
@@ -77,7 +77,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-4.jpg"
 								title="Sherpa Hoodie"
@@ -88,7 +88,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-5.jpg"
 								title="Mens Flyroam Hoodie"
@@ -102,9 +102,9 @@ export const SwiperLinkedCarouselLarge = () => {
 					</div>
 				</div>
 
-				<div class="swiper-slide">
-					<div class="row g-3">
-						<div class="col-12 col-md-6">
+				<div className="swiper-slide">
+					<div className="row g-3">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-12.jpg"
 								title="Mens Tee Faded Brown"
@@ -115,7 +115,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-14.jpg"
 								title="Mens Flyroam T-Shirt"
@@ -126,7 +126,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-15.jpg"
 								title="Little Brown T"
@@ -137,7 +137,7 @@ export const SwiperLinkedCarouselLarge = () => {
 								review-count="4.7 (1669)"
 							/>
 						</div>
-						<div class="col-12 col-md-6">
+						<div className="col-12 col-md-6">
 							<ListingCard
 								img="{{webRoot}}/assets/images/products/product-16.jpg"
 								title="Mens Flyroam Sneakers"

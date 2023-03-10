@@ -2,59 +2,59 @@ import React from "react";
 
 export const OffcanvasReview = () => {
 	return (
-		<div class="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasReview">
-			<div class="offcanvas-header d-flex align-items-center">
-				<h5 class="offcanvas-title" id="offcanvasReviewLabel">
+		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasReview">
+			<div className="offcanvas-header d-flex align-items-center">
+				<h5 className="offcanvas-title" id="offcanvasReviewLabel">
 					Leave A Review
 				</h5>
 				<button
 					type="button"
-					class="btn-close text-reset"
+					className="btn-close text-reset"
 					data-bs-dismiss="offcanvas"
 					aria-label="Close"
 				></button>
 			</div>
-			<div class="offcanvas-body">
+			<div className="offcanvas-body">
 				<form>
-					<div class="form-group mb-3 mt-2">
-						<label class="form-label" for="formReviewName">
+					<div className="form-group mb-3 mt-2">
+						<label className="form-label" for="formReviewName">
 							Your Name
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="formReviewName"
 							placeholder="Your Name"
 						/>
 					</div>
-					<div class="form-group mb-3 mt-2">
-						<label class="form-label" for="formReviewEmail">
+					<div className="form-group mb-3 mt-2">
+						<label className="form-label" for="formReviewEmail">
 							Your Email
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="formReviewEmail"
 							placeholder="Your Email"
 						/>
 					</div>
-					<div class="form-group mb-3 mt-2">
-						<label class="form-label" for="formReviewTitle">
+					<div className="form-group mb-3 mt-2">
+						<label className="form-label" for="formReviewTitle">
 							Your Review Title
 						</label>
 						<input
 							type="text"
-							class="form-control"
+							className="form-control"
 							id="formReviewTitle"
 							placeholder="Review Title"
 						/>
 					</div>
-					<div class="form-group mb-3 mt-2">
-						<label class="form-label" for="formReviewReview">
+					<div className="form-group mb-3 mt-2">
+						<label className="form-label" for="formReviewReview">
 							Your Review
 						</label>
 						<textarea
-							class="form-control"
+							className="form-control"
 							name="formReviewReview"
 							id="formReviewReview"
 							cols="30"
@@ -62,7 +62,7 @@ export const OffcanvasReview = () => {
 							placeholder="Your Review"
 						></textarea>
 					</div>
-					<button type="submit" class="btn btn-dark hover-lift hover-boxshadow">
+					<button type="submit" className="btn btn-dark hover-lift hover-boxshadow">
 						Submit Review
 					</button>
 				</form>

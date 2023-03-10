@@ -10,31 +10,31 @@ export const Product = () => {
 	return (
 		<>
 			<NavBar />
-			<section class="mt-5">
-				<section class="container">
+			<section className="mt-5">
+				<section className="container">
 					<BreadcrumbsOne />
 
-					<div class="row g-5">
-						<div class="col-12 col-lg-7">
+					<div className="row g-5">
+						<div className="col-12 col-lg-7">
 							<ImagesSlideshowVertical />
 						</div>
 
-						<div class="col-12 col-lg-5">
+						<div className="col-12 col-lg-5">
 							<InfoOne />
 						</div>
 					</div>
 				</section>
 
 				<section>
-					<div class="mt-7 pt-5 border-top">
-						<div class="container">
+					<div className="mt-7 pt-5 border-top">
+						<div className="container">
 							<TabsOne />
 						</div>
 					</div>
 				</section>
 
-				<div class="container my-8">
-					<h3 class="fs-4 fw-bold mb-5 text-center">You May Also Like</h3>
+				<div className="container my-8">
+					<h3 className="fs-4 fw-bold mb-5 text-center">You May Also Like</h3>
 					<SwiperProductCarouselScrollbar entries={entries} />
 				</div>
 			</section>
