@@ -8,10 +8,7 @@ export const NavBar = ({ classList }) => {
 		>
 			<div class="w-100 pb-lg-0 pt-lg-0 pt-4 pb-3">
 				<div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
-					<a
-						class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0"
-						href="{{webRoot}}/index.html"
-					>
+					<a class="navbar-brand fw-bold fs-3 m-0 p-0 flex-shrink-0" href="/">
 						<LogoFull />
 					</a>
 

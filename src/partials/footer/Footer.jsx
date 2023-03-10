@@ -70,7 +70,7 @@ export const Footer = ({ classList }) => {
 								<li class="mb-2">
 									<a
 										class="text-decoration-none text-white opacity-75 opacity-25-hover transition-all"
-										href="{{webRoot}}/category.html"
+										href="/category"
 									>
 										Menswear
 									</a>
@@ -78,7 +78,7 @@ export const Footer = ({ classList }) => {
 								<li class="mb-2">
 									<a
 										class="text-decoration-none text-white opacity-75 opacity-25-hover transition-all"
-										href="{{webRoot}}/category.html"
+										href="/category"
 									>
 										Womenswear
 									</a>
@@ -86,7 +86,7 @@ export const Footer = ({ classList }) => {
 								<li class="mb-2">
 									<a
 										class="text-decoration-none text-white opacity-75 opacity-25-hover transition-all"
-										href="{{webRoot}}/category.html"
+										href="/category"
 									>
 										Kidswear
 									</a>
@@ -94,7 +94,7 @@ export const Footer = ({ classList }) => {
 								<li class="mb-2">
 									<a
 										class="text-decoration-none text-white opacity-75 opacity-25-hover transition-all"
-										href="{{webRoot}}/category.html"
+										href="/category"
 									>
 										New Arrivals
 									</a>

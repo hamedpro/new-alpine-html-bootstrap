@@ -39,7 +39,7 @@ export const ListingCard = (props) => {
 				</div>
 				<a
 					class="mb-0 mx-2 mx-md-4 fs-p link-cover text-decoration-none d-block text-center"
-					href="{{webRoot}}/product.html"
+					href="/product"
 				>
 					{props.title}
 				</a>

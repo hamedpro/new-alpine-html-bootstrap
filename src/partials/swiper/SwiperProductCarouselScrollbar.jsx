@@ -44,7 +44,7 @@ export const SwiperProductCarouselScrollbar = ({ entries }) => {
 
 				<div class="swiper-slide d-flex h-auto justify-content-center align-items-center">
 					<a
-						href="{{webRoot}}/category.html"
+						href="/category"
 						class="d-flex text-decoration-none flex-column justify-content-center align-items-center"
 					>
 						<span class="btn btn-dark btn-icon mb-3">

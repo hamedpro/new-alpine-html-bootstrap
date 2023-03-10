@@ -1,10 +1,7 @@
 import React from "react";
-import { CartItems } from "./CartItems";
-import { CartSummary } from "./CartSummary";
-import { Footer } from "./Footer";
-import { NavBar } from "./NavBar";
-import { OffCanvas } from "./OffCanvas";
-import { SearchOverlay } from "./SearchOverlay";
+import { NavBar } from "../partials/header/navbar/NavBar";
+import { CartItems } from "../partials/cart/CartItems";
+import { CartSummary } from "../partials/cart/CartSummary";
 
 export const Cart = () => {
 	return (
@@ -26,12 +23,6 @@ export const Cart = () => {
 					</div>
 				</div>
 			</section>
-
-			<Footer />
-
-			<OffCanvas />
-
-			<SearchOverlay />
 		</>
 	);
 };

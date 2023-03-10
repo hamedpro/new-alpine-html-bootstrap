@@ -1,19 +1,16 @@
 import React from "react";
-import { NavBar } from "./NavBar";
-import { Footer } from "./Footer";
-import { OffCanvas } from "./OffCanvas";
-import { SearchOverlay } from "./SearchOverlay";
-import { CheckoutContact } from "./CheckoutContact";
-import { CheckoutShipping } from "./CheckoutShipping";
-import { CheckoutBilling } from "./CheckoutBilling";
-import { CheckoutShippingMethod } from "./CheckoutShippingMethod";
-import { CheckoutPayment } from "./CheckoutPayment";
-import { CheckoutSummary } from "./CheckoutSummary";
+import { CheckoutContact } from "../partials/checkout/CheckoutContact";
+import { CheckoutShipping } from "../partials/checkout/CheckoutShipping";
+import { CheckoutBilling } from "../partials/checkout/CheckoutBilling";
+import { CheckoutShippingMethod } from "../partials/checkout/CheckoutShippingMethod";
+import { CheckoutPayment } from "../partials/checkout/CheckoutPayment";
+import { CheckoutSummary } from "../partials/checkout/CheckoutSummary";
+import { NavBar } from "../partials/header/navbar/NavBar";
 export const Checkout = () => {
 	return (
 		<>
 			<NavBar />
-			<section class="mt-5 container {{ config.classes.content }}">
+			<section class="mt-5 container">
 				<h1 class="mb-4 display-5 fw-bold text-center">Checkout Securely</h1>
 				<p class="text-center mx-auto">
 					Please fill in the details below to complete your order. Already registered?
@@ -34,9 +31,6 @@ export const Checkout = () => {
 					</div>
 				</div>
 			</section>
-			<Footer />
-			<OffCanvas />
-			<SearchOverlay />
 		</>
 	);
 };

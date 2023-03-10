@@ -26,25 +26,25 @@ export const BannerSaleExtended = () => {
 							data-aos-delay="250"
 						>
 							<a
-								href="{{webRoot}}/category.html"
+								href="/category"
 								class="btn btn-orange btn-orange-chunky text-white my-1"
 							>
 								<span>Shop Menswear</span>
 							</a>
 							<a
-								href="{{webRoot}}/category.html"
+								href="/category"
 								class="btn btn-orange btn-orange-chunky text-white my-1"
 							>
 								<span>Shop Womenswear</span>
 							</a>
 							<a
-								href="{{webRoot}}/category.html"
+								href="/category"
 								class="btn btn-orange btn-orange-chunky text-white my-1"
 							>
 								<span>Shop Kidswear</span>
 							</a>
 							<a
-								href="{{webRoot}}/category.html"
+								href="/category"
 								class="btn btn-orange btn-orange-chunky text-white my-1"
 							>
 								<span>Shop Accessories</span>

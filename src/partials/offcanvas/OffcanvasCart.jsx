@@ -86,13 +86,13 @@ export const OffcanvasCart = () => {
 							<p class="m-0 fw-bolder">$233.33</p>
 						</div>
 						<a
-							href="{{webRoot}}/checkout.html"
+							href="/checkout"
 							class="btn btn-orange btn-orange-chunky mt-5 mb-2 d-block text-center"
 						>
 							Checkout
 						</a>
 						<a
-							href="{{webRoot}}/cart.html"
+							href="/cart"
 							class="btn btn-dark fw-bolder d-block text-center transition-all opacity-50-hover"
 						>
 							View Cart

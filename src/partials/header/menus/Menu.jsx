@@ -85,27 +85,27 @@ export const Menu = () => {
 				</a>
 				<ul class="dropdown-menu">
 					<li>
-						<a class="dropdown-item" href="{{webRoot}}/index.html">
+						<a class="dropdown-item" href="/">
 							Homepage
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{webRoot}}/category.html">
+						<a class="dropdown-item" href="/category">
 							Category
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{webRoot}}/product.html">
+						<a class="dropdown-item" href="/product">
 							Product
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{webRoot}}/cart.html">
+						<a class="dropdown-item" href="/cart">
 							Cart
 						</a>
 					</li>
 					<li>
-						<a class="dropdown-item" href="{{webRoot}}/checkout.html">
+						<a class="dropdown-item" href="/checkout">
 							Checkout
 						</a>
 					</li>
