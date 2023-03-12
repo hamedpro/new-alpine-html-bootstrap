@@ -82,11 +82,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop Kathmandu"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo1}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo1} />
 									</a>
 								</div>
 								<div className="me-2 f-w-20 m-4 ms-md-0 mt-md-0 mb-md-0">
@@ -97,11 +93,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop Billabong"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo2}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo2} />
 									</a>
 								</div>
 								<div className="me-2 f-w-20 m-4 ms-md-0 mt-md-0 mb-md-0">
@@ -112,11 +104,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop Oakley"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo9}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo9} />
 									</a>
 								</div>
 								<div className="me-2 f-w-20 m-4 ms-md-0 mt-md-0 mb-md-0">
@@ -127,11 +115,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop Patagonia"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo4}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo4} />
 									</a>
 								</div>
 								<div className="me-2 f-w-20 m-4 ms-md-0 mt-md-0 mb-md-0">
@@ -142,11 +126,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop North Face"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo5}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo5} />
 									</a>
 								</div>
 								<div className="me-2 f-w-20 m-4 ms-md-0 mt-md-0 mb-md-0">
@@ -157,11 +137,7 @@ export const Index = () => {
 										data-bs-placement="top"
 										title="Shop Salomon"
 									>
-										<img
-											className="img-fluid d-table mx-auto"
-											src={logo7}
-											alt="{{config.defaultImgAlt}}"
-										/>
+										<img className="img-fluid d-table mx-auto" src={logo7} />
 									</a>
 								</div>
 								<a href="/category" className="btn btn-link fw-bolder">

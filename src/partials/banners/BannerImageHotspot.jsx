@@ -64,11 +64,7 @@ export const BannerImageHotspot = () => {
 					<div className="m-n2 rounded overflow-hidden">
 						<div className="mb-1 bg-light d-flex justify-content-center">
 							<div className="f-w-48 px-3 pt-3">
-								<img
-									className="img-fluid"
-									src={product3}
-									alt="{{config.defaultImgAlt}}"
-								/>
+								<img className="img-fluid" src={product3} />
 							</div>
 						</div>
 						<div className="px-4 py-4 text-center">

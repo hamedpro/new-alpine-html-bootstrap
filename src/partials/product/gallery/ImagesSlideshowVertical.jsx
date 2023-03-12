@@ -10,7 +10,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid mx-auto d-table"
 								src="{{webRoot}}/assets/images/products/product-5.jpg"
-								alt="{{config.defaultImgAlt}}"
 							/>
 						</picture>
 					</div>
@@ -19,7 +18,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid mx-auto d-table"
 								src="{{webRoot}}/assets/images/products/product-5b.jpg"
-								alt="{{config.defaultImgAlt}}"
 							/>
 						</picture>
 					</div>
@@ -28,7 +26,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid mx-auto d-table"
 								src="{{webRoot}}/assets/images/products/product-5c.jpg"
-								alt="{{config.defaultImgAlt}}"
 							/>
 						</picture>
 					</div>
@@ -41,7 +38,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid d-table mx-auto"
 								src="{{webRoot}}/assets/images/products/product-5.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -51,7 +47,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid d-table mx-auto"
 								src="{{webRoot}}/assets/images/products/product-5b.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -61,7 +56,6 @@ export const ImagesSlideshowVertical = () => {
 							<img
 								className="img-fluid d-table mx-auto"
 								src="{{webRoot}}/assets/images/products/product-5c.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>

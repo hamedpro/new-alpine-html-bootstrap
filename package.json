@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Bootstrap 5 HTML Template created by Pixel Rocket",
 	"scripts": {
-		"dev": "vite"
+		"dev": "vite & nodemon ./src/api/index.js"
 	},
 	"type": "module",
 	"keywords": [],
@@ -42,9 +42,15 @@
 		"@types/react-dom": "^18.0.11",
 		"@vitejs/plugin-react": "^3.1.0",
 		"aos": "^2.3.4",
+		"axios": "^1.3.4",
 		"bootstrap": "^5.0.0-beta3",
 		"choices.js": "^9.0.1",
+		"cors": "^2.8.5",
+		"express": "^4.18.2",
+		"form-data": "^4.0.0",
+		"formidable": "^2.1.1",
 		"medium-zoom": "^1.0.6",
+		"mongodb": "^5.1.0",
 		"nouislider": "^14.6.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",

@@ -1,6 +1,6 @@
 import React from "react";
 import { InstagramPhotos } from "../instagram/InstagramPhotos";
-import { templateName } from "../../data/config.json";
+import { templateName } from "../../../env.json";
 import { InfoBoxes } from "../info-boxes/InfoBoxes";
 export const Footer = ({ classList }) => {
 	return (

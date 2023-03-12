@@ -40,7 +40,6 @@ export const OffcanvasCart = () => {
 									<img
 										className="img-fluid"
 										src="{{webRoot}}/assets/images/products/product-1.jpg"
-										alt="{{config.defaultImgAlt}}"
 									/>
 								</picture>
 							</div>
@@ -65,7 +64,6 @@ export const OffcanvasCart = () => {
 									<img
 										className="img-fluid"
 										src="{{webRoot}}/assets/images/products/product-2.jpg"
-										alt="{{config.defaultImgAlt}}"
 									/>
 								</picture>
 							</div>

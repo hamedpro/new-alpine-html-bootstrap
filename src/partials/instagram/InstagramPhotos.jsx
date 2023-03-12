@@ -8,7 +8,6 @@ export const InstagramPhotos = () => {
 					<img
 						className="img-fluid"
 						src="{{webRoot}}/assets/images/instagram/instagram-1.jpg"
-						alt="{{config.defaultImgAlt}}"
 						data-zoomable
 					/>
 				</picture>
@@ -20,7 +19,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-2.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -30,7 +28,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-3.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -40,7 +37,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-4.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -50,7 +46,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-5.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -60,7 +55,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-6.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -70,7 +64,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-7.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -80,7 +73,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-8.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
@@ -90,7 +82,6 @@ export const InstagramPhotos = () => {
 							<img
 								className="img-fluid"
 								src="{{webRoot}}/assets/images/instagram/instagram-9.jpg"
-								alt="{{config.defaultImgAlt}}"
 								data-zoomable
 							/>
 						</picture>
