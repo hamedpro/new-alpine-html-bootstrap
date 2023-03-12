@@ -19,19 +19,40 @@ export const SwiperHeroSlideshow = () => {
 				<div className="swiper-slide position-relative">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
-						style="background-image: url({{webRoot}}/assets/images/slideshows/slideshow-1.jpg);"
+						style={{
+							backgroundImage: `url(${
+								new URL(
+									`/static/assets/images/slideshows/slideshow-1.jpg`,
+									api_endpoint
+								).href
+							})`,
+						}}
 					></div>
 				</div>
 				<div className="swiper-slide position-relative">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
-						style="background-image: url({{webRoot}}/assets/images/slideshows/slideshow-2.jpg);"
+						style={{
+							backgroundImage: `url(${
+								new URL(
+									`/static/assets/images/slideshows/slideshow-2.jpg`,
+									api_endpoint
+								).href
+							})`,
+						}}
 					></div>
 				</div>
 				<div className="swiper-slide position-relative">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
-						style="background-image: url({{webRoot}}/assets/images/slideshows/slideshow-3.jpg);"
+						style={{
+							backgroundImage: `url(${
+								new URL(
+									`/static/assets/images/slideshows/slideshow-3.jpg`,
+									api_endpoint
+								).href
+							})`,
+						}}
 					></div>
 				</div>
 			</div>

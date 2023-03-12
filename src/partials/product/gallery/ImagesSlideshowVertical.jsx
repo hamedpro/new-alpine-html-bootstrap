@@ -9,7 +9,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid mx-auto d-table"
-								src="{{webRoot}}/assets/images/products/product-5.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5.jpg`,
+										api_endpoint
+									).href
+								}
 							/>
 						</picture>
 					</div>
@@ -17,7 +22,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid mx-auto d-table"
-								src="{{webRoot}}/assets/images/products/product-5b.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5b.jpg`,
+										api_endpoint
+									).href
+								}
 							/>
 						</picture>
 					</div>
@@ -25,7 +35,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid mx-auto d-table"
-								src="{{webRoot}}/assets/images/products/product-5c.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5c.jpg`,
+										api_endpoint
+									).href
+								}
 							/>
 						</picture>
 					</div>
@@ -37,7 +52,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid d-table mx-auto"
-								src="{{webRoot}}/assets/images/products/product-5.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -46,7 +66,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid d-table mx-auto"
-								src="{{webRoot}}/assets/images/products/product-5b.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5b.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -55,7 +80,12 @@ export const ImagesSlideshowVertical = () => {
 						<picture>
 							<img
 								className="img-fluid d-table mx-auto"
-								src="{{webRoot}}/assets/images/products/product-5c.jpg"
+								src={
+									new URL(
+										`/static/assets/images/products/product-5c.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>

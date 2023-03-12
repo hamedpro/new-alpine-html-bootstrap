@@ -26,7 +26,14 @@ export const Menu = () => {
 							<div className="d-none d-lg-block col-lg-5">
 								<div
 									className="vw-50 h-100 bg-img-cover bg-pos-center-center position-absolute"
-									style="background-image: url({{webRoot}}/assets/images/banners/banner-2.jpg);"
+									style={{
+										backgroundImage: `url(${
+											new URL(
+												`/static/assets/images/banners/banner-2.jpg`,
+												api_endpoint
+											).href
+										})`,
+									}}
 								></div>
 							</div>
 						</div>
@@ -55,7 +62,14 @@ export const Menu = () => {
 							<div className="d-none d-lg-block col-lg-5">
 								<div
 									className="vw-50 h-100 bg-img-cover bg-pos-center-center position-absolute"
-									style="background-image: url({{webRoot}}/assets/images/banners/banner-4.jpg);"
+									style={{
+										backgroundImage: `url(${
+											new URL(
+												`/static/assets/images/banners/banner-4.jpg`,
+												api_endpoint
+											).href
+										})`,
+									}}
 								></div>
 							</div>
 						</div>

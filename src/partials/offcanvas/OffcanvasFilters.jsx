@@ -1,11 +1,15 @@
-import React from "react";
-import { categories, brands, type, sizes, colours } from "../../data/filters-one.json";
+import React, { useContext } from "react";
 import { FilterText } from "../category/filters/FilterText";
 import { FilterPrice } from "../category/filters/FilterPrice";
 import { FilterCheckbox } from "../category/filters/FilterCheckbox";
 import { FilterCheckboxTwo } from "../category/filters/FilterCheckboxTwo";
 import { FilterColour } from "../category/filters/FilterColour";
+import { GlobalContext } from "../../GlobalContext";
 export const OffcanvasFilters = () => {
+	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
+	if (filters_one === undefined) return <h1>still loading filters_one ...</h1>;
+
+	var { categories, brands, type, sizes, colours } = filters_one;
 	return (
 		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasFilters">
 			<div className="offcanvas-header d-flex align-items-center">

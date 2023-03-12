@@ -7,13 +7,19 @@ export const BannerImageHotspot = () => {
   return (
 		<>
 			<div className="position-absolute z-index-50 text-white top-0 start-0 end-0">
-				<img src={svg_divider_top_lr} />
-				{/* colorclassName="text-white" positionclassName="top-0 start-0 end-0" */}
+				<img
+					src={svg_divider_top_lr}
+					/* colorclassName="text-white"
+					positionclassName="top-0 start-0 end-0" */
+				/>
 			</div>
 
 			<div
 				className="w-100 h-100 bg-img-cover bg-pos-center-center hotspot-container py-5 py-md-7 py-lg-10"
-				style="background-image: url(https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80);"
+				style={{
+					backgroundimage:
+						"url(https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
+				}}
 			>
 				<div
 					className="hotspot d-none d-lg-block"
@@ -85,8 +91,8 @@ export const BannerImageHotspot = () => {
 			<div className="position-absolute z-index-50 text-white bottom-0 start-0 end-0">
 				<img
 					src={svg_divider_bottom_rl}
-					colorclassName="text-white"
-					positionclassName="bottom-0 start-0 end-0"
+					/* colorclassName="text-white"
+					positionclassName="bottom-0 start-0 end-0" */
 				/>
 			</div>
 		</>

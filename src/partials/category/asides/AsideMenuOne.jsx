@@ -1,11 +1,15 @@
-import React from "react";
-import { categories, brands, type, sizes, colours } from "../../../data/filters-one.json";
+import React, { useContext } from "react";
 import { FilterText } from "../filters/FilterText";
 import { FilterPrice } from "../filters/FilterPrice";
 import { FilterCheckbox } from "../filters/FilterCheckbox.jsx";
 import { FilterCheckboxTwo } from "../filters/FilterCheckboxTwo";
 import { FilterColour } from "../filters/FilterColour";
+import { GlobalContext } from "../../../GlobalContext";
 export const AsideMenuOne = () => {
+	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
+	if (filters_one === undefined) return <h1>still loading filters one ...</h1>;
+
+	var { categories, brands, type, sizes, colours } = filters_one;
 	return (
 		<aside>
 			<div className="mb-4">

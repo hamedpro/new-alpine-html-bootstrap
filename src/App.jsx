@@ -10,6 +10,7 @@ import { Product } from "./components/Product";
 import { templateName } from "../env.json";
 import { Newproduct } from "./components/Newproduct";
 import { GlobalContextProvider } from "./GlobalContextProvider";
+
 export const App = () => {
 	return (
 		<>

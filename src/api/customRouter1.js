@@ -13,7 +13,6 @@ export function generator(db) {
 	customRouter1.post("/collections/:collection_name", async (req, res) => {
 		//body should be like this : {document : object}
 		//response is json stringified of id of new document
-		console.log(req.body);
 		var { insertedId } = await db
 			.collection(req.params.collection_name)
 			.insertOne(req.body.document);
@@ -22,11 +21,11 @@ export function generator(db) {
 	customRouter1.get("/collections/:collection_name", async (req, res) => {
 		//body should be like this :{filters : {}}
 		//response contains an array of documents that match filters passed in body
-		var filters = req.body.filters;
+		var filters = req.body.filters || {};
 		if (Object.keys(filters).includes("_id")) {
 			filters["_id"] = ObjectId(filters["_id"]);
 		}
-		res.json(await db.collection(req.body.collection_name).find(filters).toArray());
+		res.json(await db.collection(req.params.collection_name).find(filters).toArray());
 	});
 	customRouter1.patch("/collections/:collection_name", async (req, res) => {
 		//body must be like : {update_filter : object, update_set : object}
@@ -42,9 +41,9 @@ export function generator(db) {
 		res.json(update_statement);
 	});
 	customRouter1.delete("/collections/:collection_name", async (req, res) => {
-		//body should look like this : {filter_object : object}
+		//body should look like this : {filters : object}
 		//deletes all documents which match that filters in that collection
-		//response is what .deleteOne of mongodb returns
+		//response is what .deleteMany of mongodb returns
 
 		var filters = req.body.filters;
 		if (Object.keys(filters).includes("_id")) {

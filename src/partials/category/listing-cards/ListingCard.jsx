@@ -14,12 +14,18 @@ export const ListingCard = (props) => {
 					<img
 						className="w-100 img-fluid position-relative z-index-10"
 						title=""
-						src={props.img}
+						src={new URL(`/files/${props.image_file_id}`, api_endpoint).href}
 					/>
 				</picture>
-				{props["img-hover"] && (
+				{props["hover_image_file_id"] && (
 					<picture className="position-absolute z-index-20 start-0 top-0 hover-show bg-light">
-						<img className="w-100 img-fluid" title="" src={props["img-hover"]} />
+						<img
+							className="w-100 img-fluid"
+							title=""
+							src={
+								new URL(`/files/${props["hover_image_file_id"]}`, api_endpoint).href
+							}
+						/>
 					</picture>
 				)}
 

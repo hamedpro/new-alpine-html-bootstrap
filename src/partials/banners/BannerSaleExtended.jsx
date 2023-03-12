@@ -73,8 +73,8 @@ export const BannerSaleExtended = () => {
 			<div className="position-absolute z-index-50 text-white bottom-0 start-0 end-0">
 				<img
 					src={svg_divider_bottom_rl}
-					colorclassName="text-white"
-					positionclassName="bottom-0 start-0 end-0"
+					/* colorclassName="text-white"
+					positionclassName="bottom-0 start-0 end-0" */
 				/>
 			</div>
 		</>

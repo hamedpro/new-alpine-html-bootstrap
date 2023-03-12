@@ -26,22 +26,38 @@ export const SearchOverlay = () => {
 						<div className="row">
 							<div className="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
 								<ListingCard
-									img="{{webRoot}}/assets/images/products/product-1.jpg"
-									title="Mens Pennie II Waterproof Jacket"
-									currency="$"
-									price="325.66"
-									review-width="80%"
-									review-count="4.2 (123)"
+									{...{
+										_id: "640d8126eef774a41003d931",
+										title: "Mens Sherpa Hoodie",
+										brand: "Timberland",
+										price: "150.00",
+										currency: "$",
+										options: "Availble in 4 colours, 7 sizes",
+										"sale-price": "599.55",
+										"discount-percentage": "-25%",
+										"review-count": "4.4 (1289)",
+										"review-width": "60%",
+										image_file_id: "16785602512517061",
+										hover_image_file_id: "16785602512517061",
+									}}
 								/>
 							</div>
 							<div className="col-12 col-md-6 col-lg-3">
 								<ListingCard
-									img="{{webRoot}}/assets/images/products/product-2.jpg"
-									title="Mens Storm Waterproof Jacket"
-									currency="$"
-									price="499.99"
-									review-width="70%"
-									review-count="4.5 (1289)"
+									{...{
+										_id: "640d8126eef774a41003d931",
+										title: "Mens Sherpa Hoodie",
+										brand: "Timberland",
+										price: "150.00",
+										currency: "$",
+										options: "Availble in 4 colours, 7 sizes",
+										"sale-price": "599.55",
+										"discount-percentage": "-25%",
+										"review-count": "4.4 (1289)",
+										"review-width": "60%",
+										image_file_id: "16785602512517061",
+										hover_image_file_id: "16785602512517061",
+									}}
 								/>
 							</div>
 						</div>

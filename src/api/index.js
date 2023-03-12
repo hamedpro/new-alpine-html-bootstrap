@@ -6,5 +6,6 @@ var { api_port, mongodb_url, mongodb_db_name } = JSON.parse(readFileSync("./env.
 var client = new MongoClient(mongodb_url);
 var db = client.db(mongodb_db_name);
 var app = express();
+app.use("/static/assets", express.static("./src/assets"));
 app.use(generator(db));
 app.listen(api_port, () => console.log(`server started listening on port ${api_port} ...`));

@@ -26,7 +26,7 @@ export const OffcanvasCart = () => {
 								<div
 									className="progress-bar bg-success"
 									role="progressbar"
-									style="width: 25%"
+									style={{ width: "25%" }}
 									aria-valuenow="25"
 									aria-valuemin="0"
 									aria-valuemax="100"
@@ -39,7 +39,12 @@ export const OffcanvasCart = () => {
 								<picture className="d-block bg-light">
 									<img
 										className="img-fluid"
-										src="{{webRoot}}/assets/images/products/product-1.jpg"
+										src={
+											new URL(
+												`/static/assets/images/products/product-1.jpg`,
+												api_endpoint
+											).href
+										}
 									/>
 								</picture>
 							</div>
@@ -63,7 +68,12 @@ export const OffcanvasCart = () => {
 								<picture className="d-block bg-light">
 									<img
 										className="img-fluid"
-										src="{{webRoot}}/assets/images/products/product-2.jpg"
+										src={
+											new URL(
+												`/static/assets/images/products/product-2.jpg`,
+												api_endpoint
+											).href
+										}
 									/>
 								</picture>
 							</div>

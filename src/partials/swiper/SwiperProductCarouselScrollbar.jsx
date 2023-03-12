@@ -1,7 +1,7 @@
 import React from "react";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 
-export const SwiperProductCarouselScrollbar = ({ entries }) => {
+export const SwiperProductCarouselScrollbar = ({ products }) => {
 	return (
 		<div
 			className="swiper-container overflow-visible"
@@ -36,8 +36,8 @@ export const SwiperProductCarouselScrollbar = ({ entries }) => {
   }'
 		>
 			<div className="swiper-wrapper pb-5 pe-1">
-				{entries.map((i) => (
-					<div className="swiper-slide d-flex h-auto">
+				{products.map((i) => (
+					<div className="swiper-slide d-flex h-auto" key={i._id}>
 						<ListingCard {...i} />
 					</div>
 				))}

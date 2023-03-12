@@ -4,7 +4,7 @@ import { templateName } from "../../../env.json";
 import { InfoBoxes } from "../info-boxes/InfoBoxes";
 export const Footer = ({ classList }) => {
 	return (
-		<footer class={`bg-dark mt-10  ${classList}`}>
+		<footer className={`bg-dark mt-10  ${classList}`}>
 			<div className="bg-light py-4">
 				<div className="container d-flex justify-content-center align-items-center py-2">
 					<p className="lead fw-bolder mb-0 lh-1">Find us online</p>

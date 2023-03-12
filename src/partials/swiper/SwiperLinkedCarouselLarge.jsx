@@ -8,95 +8,74 @@ export const SwiperLinkedCarouselLarge = () => {
 					<div className="row g-3">
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-13.jpg"
-								title="Pocket Tee Rusty Red"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-14.jpg"
-								title="Mens T-Shirt Rusty"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-15.jpg"
-								title="Mens T-Shirt Phantom"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-16.jpg"
-								title="Heather T-Shirt"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
-							/>
-						</div>
-					</div>
-				</div>
-
-				<div className="swiper-slide">
-					<div className="row g-3">
-						<div className="col-12 col-md-6">
-							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-2.jpg"
-								title="Mens Classic Hoodie"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
-							/>
-						</div>
-						<div className="col-12 col-md-6">
-							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-3.jpg"
-								title="Womens Essential Hoodie"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
-							/>
-						</div>
-						<div className="col-12 col-md-6">
-							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-4.jpg"
-								title="Sherpa Hoodie"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
-							/>
-						</div>
-						<div className="col-12 col-md-6">
-							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-5.jpg"
-								title="Mens Flyroam Hoodie"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 					</div>
@@ -106,46 +85,151 @@ export const SwiperLinkedCarouselLarge = () => {
 					<div className="row g-3">
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-12.jpg"
-								title="Mens Tee Faded Brown"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-14.jpg"
-								title="Mens Flyroam T-Shirt"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-15.jpg"
-								title="Little Brown T"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 						<div className="col-12 col-md-6">
 							<ListingCard
-								img="{{webRoot}}/assets/images/products/product-16.jpg"
-								title="Mens Flyroam Sneakers"
-								options="Availble in 4 colours, 7 sizes"
-								currency="$"
-								price="1699.87"
-								review-width="80%"
-								review-count="4.7 (1669)"
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
+							/>
+						</div>
+					</div>
+				</div>
+
+				<div className="swiper-slide">
+					<div className="row g-3">
+						<div className="col-12 col-md-6">
+							<ListingCard
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
+							/>
+						</div>
+						<div className="col-12 col-md-6">
+							<ListingCard
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
+							/>
+						</div>
+						<div className="col-12 col-md-6">
+							<ListingCard
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
+							/>
+						</div>
+						<div className="col-12 col-md-6">
+							<ListingCard
+								{...{
+									_id: "640d8126eef774a41003d931",
+									title: "Mens Sherpa Hoodie",
+									brand: "Timberland",
+									price: "150.00",
+									currency: "$",
+									options: "Availble in 4 colours, 7 sizes",
+									"sale-price": "599.55",
+									"discount-percentage": "-25%",
+									"review-count": "4.4 (1289)",
+									"review-width": "60%",
+									image_file_id: "16785602512517061",
+									hover_image_file_id: "16785602512517061",
+								}}
 							/>
 						</div>
 					</div>

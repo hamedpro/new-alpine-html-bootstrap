@@ -7,7 +7,10 @@ export const InstagramPhotos = () => {
 				<picture>
 					<img
 						className="img-fluid"
-						src="{{webRoot}}/assets/images/instagram/instagram-1.jpg"
+						src={
+							new URL(`/static/assets/images/instagram/instagram-1.jpg`, api_endpoint)
+								.href
+						}
 						data-zoomable
 					/>
 				</picture>
@@ -18,7 +21,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-2.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-2.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -27,7 +35,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-3.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-3.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -36,7 +49,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-4.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-4.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -45,7 +63,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-5.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-5.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -54,7 +77,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-6.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-6.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -63,7 +91,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-7.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-7.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -72,7 +105,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-8.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-8.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>
@@ -81,7 +119,12 @@ export const InstagramPhotos = () => {
 						<picture>
 							<img
 								className="img-fluid"
-								src="{{webRoot}}/assets/images/instagram/instagram-9.jpg"
+								src={
+									new URL(
+										`/static/assets/images/instagram/instagram-9.jpg`,
+										api_endpoint
+									).href
+								}
 								data-zoomable
 							/>
 						</picture>

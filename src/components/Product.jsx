@@ -1,12 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { BreadcrumbsOne } from "../partials/breadcrumbs/BreadcrumbsOne";
 import { ImagesSlideshowVertical } from "../partials/product/gallery/ImagesSlideshowVertical";
 import { InfoOne } from "../partials/product/info/InfoOne";
 import { TabsOne } from "../partials/product/tabs/TabsOne";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
 import { NavBar } from "../partials/header/navbar/NavBar";
-import { entries } from "../data/category-products.json";
+import { GlobalContext } from "../GlobalContext";
 export const Product = () => {
+	var products = useContext(GlobalContext).global_context_state.products;
+	if (products === undefined) return <h1>still loading products ...</h1>;
 	return (
 		<>
 			<NavBar />
@@ -35,7 +37,7 @@ export const Product = () => {
 
 				<div className="container my-8">
 					<h3 className="fs-4 fw-bold mb-5 text-center">You May Also Like</h3>
-					<SwiperProductCarouselScrollbar entries={entries} />
+					<SwiperProductCarouselScrollbar products={products} />
 				</div>
 			</section>
 		</>

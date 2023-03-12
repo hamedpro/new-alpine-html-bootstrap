@@ -1,7 +1,10 @@
-import React from 'react'
-import CategoryFour from "../../data/category-four.json";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../GlobalContext";
 import { ListingCardFive } from "../category/listing-cards/ListingCardFive";
+//this component has not been used anywhere so make
+//it work when you want to use it for the first time
 export const SwiperRelatedOne = ({ shoes }) => {
+	var CategoryFour = useContext(GlobalContext).global_context_state.category_four;
 	return (
 		<div
 			className="swiper-container"

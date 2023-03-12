@@ -2,7 +2,7 @@ import React from "react";
 
 export const OptionCheckbox = (props) => {
 	return (
-		<div class={`form-check-option ${props["option-classes"]}`}>
+		<div className={`form-check-option ${props["option-classes"]}`}>
 			<input
 				type="checkbox"
 				name={`product-option-${props.type}}`}

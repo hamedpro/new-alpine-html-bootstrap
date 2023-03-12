@@ -2,7 +2,7 @@ import React from "react";
 
 export const OptionRadio = (props) => {
 	return (
-		<div class={`form-check-option ${props["option-classes"]}`}>
+		<div className={`form-check-option ${props["option-classes"]}`}>
 			<input
 				type="radio"
 				name={`product-option-${props.type}`}

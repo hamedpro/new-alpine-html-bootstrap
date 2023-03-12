@@ -1,15 +1,21 @@
-import React from "react";
-import { entries } from "../../data/cart-items.json";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../GlobalContext";
 export const CheckoutSummary = () => {
+	var cart_items = useContext(GlobalContext).global_context_state.cart_items;
+	if (cart_items === undefined) return <h1>still loading cart_items ...</h1>;
+
 	return (
 		<div className="bg-light p-4 sticky-md-top top-5">
 			<div className="border-bottom pb-3">
-				{entries.map((i) => (
+				{cart_items.map((i) => (
 					<div className="d-none d-md-flex justify-content-between align-items-start py-2">
 						<div className="d-flex flex-grow-1 justify-content-start align-items-start">
 							<div className="position-relative f-w-20 border p-2 me-4">
 								<span className="checkout-item-qty">{i.qty}</span>
-								<img src={i.img} className="rounded img-fluid" />
+								<img
+									src={new URL(`/files/${i.image_file_id}`, api_endpoint).href}
+									className="rounded img-fluid"
+								/>
 							</div>
 							<div>
 								<p className="mb-1 fs-6 fw-bolder">{i.title}</p>

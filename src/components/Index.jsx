@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { SwiperHeroSlideshow } from "../partials/swiper/SwiperHeroSlideshow";
-import { entries } from "../data/category-products.json";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
 import { BannerImageHotspot } from "../partials/banners/BannerImageHotspot";
 import { SwiperLinkedCarouselSmall } from "../partials/swiper/SwiperLinkedCarouselSmall";
@@ -15,7 +14,11 @@ import logo9 from "../assets/images/logos/logo-9.svg";
 import logo4 from "../assets/images/logos/logo-4.svg";
 import logo5 from "../assets/images/logos/logo-5.svg";
 import logo7 from "../assets/images/logos/logo-7.svg";
+import { GlobalContext } from "../GlobalContext";
 export const Index = () => {
+	//console.log("global context", useContext(GlobalContext));
+	var products = useContext(GlobalContext).global_context_state.products;
+	if (products === undefined) return <h1>still loading products ... </h1>;
 	return (
 		<>
 			<div className="position-relative z-index-30">
@@ -161,7 +164,7 @@ export const Index = () => {
 								products perfect for a summer outdoors.
 							</p>
 						</div>
-						{entries && <SwiperProductCarouselScrollbar entries={entries} />}
+						{products && <SwiperProductCarouselScrollbar products={products} />}
 					</div>
 				</section>
 

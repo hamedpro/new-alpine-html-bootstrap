@@ -4,7 +4,7 @@ import { Menu } from "../menus/Menu";
 export const NavBar = ({ classList }) => {
 	return (
 		<nav
-			class={`navbar navbar-expand-lg navbar-light bg-white border-bottom mx-0 p-0 flex-column  ${classList}`}
+			className={`navbar navbar-expand-lg navbar-light bg-white border-bottom mx-0 p-0 flex-column  ${classList}`}
 		>
 			<div className="w-100 pb-lg-0 pt-lg-0 pt-4 pb-3">
 				<div className="container-fluid d-flex justify-content-between align-items-center flex-wrap">

@@ -10,6 +10,6 @@ export default defineConfig({
 		strictPort: true,
 	},
 	define: {
-		api_endpoint,
+		api_endpoint: JSON.stringify(api_endpoint),
 	},
 });
