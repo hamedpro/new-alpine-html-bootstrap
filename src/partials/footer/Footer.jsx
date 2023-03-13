@@ -203,7 +203,7 @@ export const Footer = ({ classList }) => {
 					</div>
 					<div className="border-top-white-opacity justify-content-between flex-column flex-md-row align-items-center d-flex pt-6 mt-6 px-0">
 						<p className="small opacity-75">
-							&copy; 2021 {{ templateName }} All Rights Reserved. Template by{" "}
+							&copy; 2021 {templateName} All Rights Reserved. Template by{" "}
 							<a className="text-white" href="https://www.pixelrocket.store">
 								Pixel Rocket
 							</a>

@@ -15,7 +15,7 @@ export const CheckoutPayment = () => {
 							id="checkoutPaymentStripe"
 							checked
 						/>
-						<label className="form-check-label" for="checkoutPaymentStripe">
+						<label className="form-check-label" htmlFor="checkoutPaymentStripe">
 							<span className="d-flex justify-content-between align-items-start">
 								<span>
 									<span className="mb-0 fw-bolder d-block">
@@ -36,7 +36,7 @@ export const CheckoutPayment = () => {
 							name="checkoutPaymentMethod"
 							id="checkoutPaymentPaypal"
 						/>
-						<label className="form-check-label" for="checkoutPaymentPaypal">
+						<label className="form-check-label" htmlFor="checkoutPaymentPaypal">
 							<span className="d-flex justify-content-between align-items-start">
 								<span>
 									<span className="mb-0 fw-bolder d-block">PayPal</span>
@@ -52,7 +52,7 @@ export const CheckoutPayment = () => {
 				<div className="row pt-3">
 					<div className="col-md-12">
 						<div className="form-group">
-							<label for="cc-name" className="form-label">
+							<label htmlFor="cc-name" className="form-label">
 								Name on card
 							</label>
 							<input
@@ -68,7 +68,7 @@ export const CheckoutPayment = () => {
 
 					<div className="col-md-12">
 						<div className="form-group">
-							<label for="cc-number" className="form-label">
+							<label htmlFor="cc-number" className="form-label">
 								Credit card number
 							</label>
 							<input
@@ -83,7 +83,7 @@ export const CheckoutPayment = () => {
 
 					<div className="col-md-6">
 						<div className="form-group">
-							<label for="cc-expiration" className="form-label">
+							<label htmlFor="cc-expiration" className="form-label">
 								Expiration
 							</label>
 							<input
@@ -100,7 +100,7 @@ export const CheckoutPayment = () => {
 						<div className="form-group">
 							<div className="d-flex">
 								<label
-									for="cc-cvv"
+									htmlFor="cc-cvv"
 									className="form-label d-flex w-100 justify-content-between align-items-center"
 								>
 									Security Code

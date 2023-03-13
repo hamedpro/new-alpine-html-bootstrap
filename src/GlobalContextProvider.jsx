@@ -4,11 +4,10 @@ import { GlobalContext } from "./GlobalContext.js";
 
 export const GlobalContextProvider = ({ children }) => {
 	var [global_context_state, set_global_context_state] = useState({});
-	function refresh_global_context_state() {
+	async function refresh_global_context_state() {
 		[
 			"products",
 			"cart_items",
-			"filters_one",
 			"options_size_one",
 			"options_size_two",
 			"slideshow_brands_one",
@@ -24,8 +23,18 @@ export const GlobalContextProvider = ({ children }) => {
 				[collection_name]: collection,
 			}));
 		});
+
+		var filters_one = (
+			await axios({
+				url: `/collections/filters_one`,
+				baseURL: api_endpoint,
+			})
+		).data[0];
+		set_global_context_state((current_state) => ({ ...current_state, filters_one }));
 	}
-	useEffect(refresh_global_context_state, []);
+	useEffect(() => {
+		refresh_global_context_state();
+	}, []);
 	//useEffect(() => console.log(global_context_state), [global_context_state]);
 	return (
 		<GlobalContext.Provider

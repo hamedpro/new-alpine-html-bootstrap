@@ -15,7 +15,11 @@ export const Category = () => {
 			<section className={`mt-0`}>
 				<div
 					className="py-6 bg-img-cover bg-dark bg-overlay-gradient-dark position-relative overflow-hidden mb-4 bg-pos-center-center"
-					style={{ backgroundImage: "url(../images/banners/banner-1.jpg);" }}
+					style={{
+						backgroundImage: `url(${
+							new URL(`/static/assets/images/banners/banner-1.jpg`, api_endpoint).href
+						})`,
+					}}
 				>
 					<div
 						className="container position-relative z-index-20"
@@ -49,7 +53,7 @@ export const Category = () => {
 							<div className="row g-4 mb-5">
 								{products &&
 									products.slice(0, 4).map((i) => (
-										<div className="col-12 col-sm-6 col-md-4">
+										<div className="col-12 col-sm-6 col-md-4" key={i._id}>
 											<ListingCard {...i} />
 										</div>
 									))}
@@ -59,8 +63,12 @@ export const Category = () => {
 										<div
 											className="position-absolute w-50 h-100 start-0 bottom-0 top-0 bg-pos-center-center bg-img-cover"
 											style={{
-												backgroundImage:
-													"url(../images/banners/banner-3.jpg)",
+												backgroundImage: `url(${
+													new URL(
+														`/static/assets/images/banners/banner-3.jpg`,
+														api_endpoint
+													).href
+												})`,
 											}}
 										></div>
 										<div className="position-absolute w-50 h-100 bg-light end-0 top-0 bottom-0 d-flex justify-content-center align-items-center">
@@ -84,7 +92,7 @@ export const Category = () => {
 								</div>
 								{products &&
 									products.slice(0, 6).map((i) => (
-										<div className="col-12 col-sm-6 col-md-4">
+										<div className="col-12 col-sm-6 col-md-4" key={i._id }>
 											<ListingCard {...i} />
 										</div>
 									))}

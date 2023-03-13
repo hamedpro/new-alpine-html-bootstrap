@@ -31,8 +31,8 @@ export const OffcanvasFilters = () => {
 								<h2 className="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
 								<nav>
 									<ul className="list-unstyled list-default-text">
-										{categories.map((i) => (
-											<FilterText {...i} />
+										{categories.map((i, index) => (
+											<FilterText key={index} {...i} />
 										))}
 									</ul>
 								</nav>
@@ -81,8 +81,13 @@ export const OffcanvasFilters = () => {
 									</div>
 									<div className="simplebar-wrapper">
 										<div className="filter-options" data-pixr-simplebar>
-											{brands.map((i) => (
-												<FilterCheckbox {...i} type="brands-modal" />
+											{brands.map((i, index) => (
+												<FilterCheckbox
+													key={index}
+													index={index}
+													{...i}
+													type="brands-modal"
+												/>
 											))}
 										</div>
 									</div>
@@ -115,8 +120,13 @@ export const OffcanvasFilters = () => {
 										</span>
 									</div>
 									<div className="filter-options">
-										{type.map((i) => (
-											<FilterCheckbox {...i} type="type-modal" />
+										{type.map((i, index) => (
+											<FilterCheckbox
+												key={index}
+												index={index}
+												{...i}
+												type="type-modal"
+											/>
 										))}
 									</div>
 								</div>
@@ -137,8 +147,13 @@ export const OffcanvasFilters = () => {
 								</a>
 								<div id="filter-modal-sizes" className="collapse">
 									<div className="filter-options mt-3">
-										{sizes.map((i) => (
-											<FilterCheckboxTwo {...i} type="sizes-modal" />
+										{sizes.map((i, index) => (
+											<FilterCheckboxTwo
+												key={index}
+												index={index}
+												{...i}
+												type="sizes-modal"
+											/>
 										))}
 									</div>
 								</div>
@@ -159,8 +174,13 @@ export const OffcanvasFilters = () => {
 								</a>
 								<div id="filter-modal-colour" className="collapse">
 									<div className="filter-options mt-3">
-										{colours.map((i) => (
-											<FilterColour {...i} type="colours-modal" />
+										{colours.map((i, index) => (
+											<FilterColour
+												{...i}
+												key={index}
+												index={index}
+												type="colours-modal"
+											/>
 										))}
 									</div>
 								</div>

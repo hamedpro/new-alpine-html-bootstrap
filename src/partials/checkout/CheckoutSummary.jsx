@@ -8,7 +8,10 @@ export const CheckoutSummary = () => {
 		<div className="bg-light p-4 sticky-md-top top-5">
 			<div className="border-bottom pb-3">
 				{cart_items.map((i) => (
-					<div className="d-none d-md-flex justify-content-between align-items-start py-2">
+					<div
+						key={i._id}
+						className="d-none d-md-flex justify-content-between align-items-start py-2"
+					>
 						<div className="d-flex flex-grow-1 justify-content-start align-items-start">
 							<div className="position-relative f-w-20 border p-2 me-4">
 								<span className="checkout-item-qty">{i.qty}</span>
@@ -65,7 +68,7 @@ export const CheckoutSummary = () => {
 
 			<div className="form-group form-check my-4">
 				<input type="checkbox" className="form-check-input" id="accept-terms" checked />
-				<label className="form-check-label fw-bolder" for="accept-terms">
+				<label className="form-check-label fw-bolder" htmlFor="accept-terms">
 					I agree to Alpine's <a href="#">terms & conditions</a>
 				</label>
 			</div>

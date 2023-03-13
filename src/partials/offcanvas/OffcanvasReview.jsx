@@ -17,7 +17,7 @@ export const OffcanvasReview = () => {
 			<div className="offcanvas-body">
 				<form>
 					<div className="form-group mb-3 mt-2">
-						<label className="form-label" for="formReviewName">
+						<label className="form-label" htmlFor="formReviewName">
 							Your Name
 						</label>
 						<input
@@ -28,7 +28,7 @@ export const OffcanvasReview = () => {
 						/>
 					</div>
 					<div className="form-group mb-3 mt-2">
-						<label className="form-label" for="formReviewEmail">
+						<label className="form-label" htmlFor="formReviewEmail">
 							Your Email
 						</label>
 						<input
@@ -39,7 +39,7 @@ export const OffcanvasReview = () => {
 						/>
 					</div>
 					<div className="form-group mb-3 mt-2">
-						<label className="form-label" for="formReviewTitle">
+						<label className="form-label" htmlFor="formReviewTitle">
 							Your Review Title
 						</label>
 						<input
@@ -50,7 +50,7 @@ export const OffcanvasReview = () => {
 						/>
 					</div>
 					<div className="form-group mb-3 mt-2">
-						<label className="form-label" for="formReviewReview">
+						<label className="form-label" htmlFor="formReviewReview">
 							Your Review
 						</label>
 						<textarea

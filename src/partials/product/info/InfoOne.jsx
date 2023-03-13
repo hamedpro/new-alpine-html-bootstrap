@@ -47,7 +47,7 @@ export const InfoOne = () => {
 								name="option-colour"
 								value="Dark Black"
 							/>
-							<label className="form-check-label" for="option-colour-1"></label>
+							<label className="form-check-label" htmlFor="option-colour-1"></label>
 						</div>
 						<div className="form-group d-inline-block mr-1 mb-1 form-check-solid-bg-checkmark form-check-custom form-check-warning">
 							<input
@@ -57,7 +57,7 @@ export const InfoOne = () => {
 								name="option-colour"
 								value="Sun Yellow"
 							/>
-							<label className="form-check-label" for="option-colour-2"></label>
+							<label className="form-check-label" htmlFor="option-colour-2"></label>
 						</div>
 						<div className="form-group d-inline-block mr-1 mb-1 form-check-solid-bg-checkmark form-check-custom form-check-info">
 							<input
@@ -66,9 +66,10 @@ export const InfoOne = () => {
 								id="option-colour-3"
 								name="option-colour"
 								value="Crimson Blue"
-								checked
+								checked={true}
+								readOnly /* todo make this work  */
 							/>
-							<label className="form-check-label" for="option-colour-3"></label>
+							<label className="form-check-label" htmlFor="option-colour-3"></label>
 						</div>
 						<div className="form-group d-inline-block mr-1 mb-1 form-check-solid-bg-checkmark form-check-custom form-check-danger">
 							<input
@@ -78,7 +79,7 @@ export const InfoOne = () => {
 								name="option-colour"
 								value="Cherry Red"
 							/>
-							<label className="form-check-label" for="option-colour-4"></label>
+							<label className="form-check-label" htmlFor="option-colour-4"></label>
 						</div>
 					</div>
 				</div>

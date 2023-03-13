@@ -32,7 +32,7 @@ export const SwiperProductCarouselOne = ({ entries }) => {
 			<div className="swiper-wrapper pb-1 pe-1">
 				{entries.map((i) => (
 					<div className="swiper-slide d-flex h-auto">
-						<ListingCard {...i} />
+						<ListingCard {...i} key={i._id} />
 					</div>
 				))}
 

@@ -7,7 +7,7 @@ export const CheckoutContact = () => {
 			<div className="row">
 				<div className="col-12">
 					<div className="form-group">
-						<label for="email" className="form-label">
+						<label htmlFor="email" className="form-label">
 							Email
 						</label>
 						<input
@@ -23,9 +23,9 @@ export const CheckoutContact = () => {
 							type="checkbox"
 							className="form-check-input"
 							id="add-mailinglist"
-							checked
+							readOnly /* todo make this work  */
 						/>
-						<label className="form-check-label" for="add-mailinglist">
+						<label className="form-check-label" htmlFor="add-mailinglist">
 							Keep me updated with your latest news and offers
 						</label>
 					</div>

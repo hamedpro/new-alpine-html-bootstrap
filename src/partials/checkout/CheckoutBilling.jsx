@@ -8,7 +8,7 @@ export const CheckoutBilling = () => {
 			<div className="row">
 				<div className="col-sm-6">
 					<div className="form-group">
-						<label for="firstNameAddress" className="form-label">
+						<label htmlFor="firstNameAddress" className="form-label">
 							First name
 						</label>
 						<input
@@ -24,7 +24,7 @@ export const CheckoutBilling = () => {
 
 				<div className="col-sm-6">
 					<div className="form-group">
-						<label for="lastNameAddress" className="form-label">
+						<label htmlFor="lastNameAddress" className="form-label">
 							Last name
 						</label>
 						<input
@@ -40,7 +40,7 @@ export const CheckoutBilling = () => {
 
 				<div className="col-12">
 					<div className="form-group">
-						<label for="addressAddress" className="form-label">
+						<label htmlFor="addressAddress" className="form-label">
 							Address
 						</label>
 						<input
@@ -55,7 +55,7 @@ export const CheckoutBilling = () => {
 
 				<div className="col-md-12">
 					<div className="form-group">
-						<label for="countryAddress" className="form-label">
+						<label htmlFor="countryAddress" className="form-label">
 							Country
 						</label>
 						<select className="form-select" id="countryAddress" required="">
@@ -67,7 +67,7 @@ export const CheckoutBilling = () => {
 
 				<div className="col-md-6">
 					<div className="form-group">
-						<label for="stateAddress" className="form-label">
+						<label htmlFor="stateAddress" className="form-label">
 							State
 						</label>
 						<select className="form-select" id="stateAddress" required="">
@@ -79,7 +79,7 @@ export const CheckoutBilling = () => {
 
 				<div className="col-md-6">
 					<div className="form-group">
-						<label for="zipAddress" className="form-label">
+						<label htmlFor="zipAddress" className="form-label">
 							Zip/Post Code
 						</label>
 						<input

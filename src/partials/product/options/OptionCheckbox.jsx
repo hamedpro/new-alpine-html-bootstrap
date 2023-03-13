@@ -7,9 +7,9 @@ export const OptionCheckbox = (props) => {
 				type="checkbox"
 				name={`product-option-${props.type}}`}
 				value={props.value}
-				id={`option-${props.type}-${index}`}
+				id={`option-${props.type}-${props.index}`}
 			/>
-			<label for={`option-${props.type}-${index}`}>
+			<label htmlFor={`option-${props.type}-${props.index}`}>
 				{props["label-top"] && <small className="d-block">{props["label-top"]}</small>}
 
 				{props["label-top"] && <small>{props["label-bottom"]}</small>}

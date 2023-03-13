@@ -13,7 +13,7 @@ export const CheckoutShippingMethod = () => {
 					id="checkoutShippingMethodOne"
 					checked
 				/>
-				<label className="form-check-label" for="checkoutShippingMethodOne">
+				<label className="form-check-label" htmlFor="checkoutShippingMethodOne">
 					<span className="d-flex justify-content-between align-items-start w-100">
 						<span>
 							<span className="mb-0 fw-bolder d-block">Click & Collect Shipping</span>
@@ -31,7 +31,7 @@ export const CheckoutShippingMethod = () => {
 					name="checkoutShippingMethod"
 					id="checkoutShippingMethodTwo"
 				/>
-				<label className="form-check-label" for="checkoutShippingMethodTwo">
+				<label className="form-check-label" htmlFor="checkoutShippingMethodTwo">
 					<span className="d-flex justify-content-between align-items-start">
 						<span>
 							<span className="mb-0 fw-bolder d-block">UPS Next Day</span>
@@ -51,7 +51,7 @@ export const CheckoutShippingMethod = () => {
 					name="checkoutShippingMethod"
 					id="checkoutShippingMethodThree"
 				/>
-				<label className="form-check-label" for="checkoutShippingMethodThree">
+				<label className="form-check-label" htmlFor="checkoutShippingMethodThree">
 					<span className="d-flex justify-content-between align-items-start">
 						<span>
 							<span className="mb-0 fw-bolder d-block">DHL Priority Service</span>

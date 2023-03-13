@@ -7,7 +7,7 @@ export const CheckoutShipping = () => {
 			<div className="row">
 				<div className="col-sm-6">
 					<div className="form-group">
-						<label for="firstName" className="form-label">
+						<label htmlFor="firstName" className="form-label">
 							First name
 						</label>
 						<input
@@ -23,7 +23,7 @@ export const CheckoutShipping = () => {
 
 				<div className="col-sm-6">
 					<div className="form-group">
-						<label for="lastName" className="form-label">
+						<label htmlFor="lastName" className="form-label">
 							Last name
 						</label>
 						<input
@@ -39,7 +39,7 @@ export const CheckoutShipping = () => {
 
 				<div className="col-12">
 					<div className="form-group">
-						<label for="address" className="form-label">
+						<label htmlFor="address" className="form-label">
 							Address
 						</label>
 						<input
@@ -54,7 +54,7 @@ export const CheckoutShipping = () => {
 
 				<div className="col-md-12">
 					<div className="form-group">
-						<label for="country" className="form-label">
+						<label htmlFor="country" className="form-label">
 							Country
 						</label>
 						<select className="form-select" id="country" required="">
@@ -66,7 +66,7 @@ export const CheckoutShipping = () => {
 
 				<div className="col-md-6">
 					<div className="form-group">
-						<label for="state" className="form-label">
+						<label htmlFor="state" className="form-label">
 							State
 						</label>
 						<select className="form-select" id="state" required="">
@@ -78,7 +78,7 @@ export const CheckoutShipping = () => {
 
 				<div className="col-md-6">
 					<div className="form-group">
-						<label for="zip" className="form-label">
+						<label htmlFor="zip" className="form-label">
 							Zip/Post Code
 						</label>
 						<input
@@ -95,7 +95,7 @@ export const CheckoutShipping = () => {
 			<div className="pt-4 mt-4 border-top d-flex justify-content-between align-items-center">
 				<div className="form-group form-check m-0">
 					<input type="checkbox" className="form-check-input" id="same-address" checked />
-					<label className="form-check-label" for="same-address">
+					<label className="form-check-label" htmlFor="same-address">
 						Use for billing address
 					</label>
 				</div>

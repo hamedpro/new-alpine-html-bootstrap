@@ -8,16 +8,16 @@ import { GlobalContext } from "../../../GlobalContext";
 export const AsideMenuOne = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
 	if (filters_one === undefined) return <h1>still loading filters one ...</h1>;
-
 	var { categories, brands, type, sizes, colours } = filters_one;
+
 	return (
 		<aside>
 			<div className="mb-4">
 				<h2 className="mb-4 fs-6 mt-2 fw-bolder">Jacket Category</h2>
 				<nav>
 					<ul className="list-unstyled list-default-text">
-						{categories.map((i) => (
-							<FilterText {...i} />
+						{categories.map((i, index) => (
+							<FilterText key={index} {...i} />
 						))}
 					</ul>
 				</nav>
@@ -64,8 +64,8 @@ export const AsideMenuOne = () => {
 					</div>
 					<div className="simplebar-wrapper">
 						<div className="filter-options" data-pixr-simplebar>
-							{brands.map((brand) => (
-								<FilterCheckbox {...brand} type="brand" />
+							{brands.map((brand, index) => (
+								<FilterCheckbox key={index} index={index} {...brand} type="brand" />
 							))}
 						</div>
 					</div>
@@ -96,8 +96,8 @@ export const AsideMenuOne = () => {
 						</span>
 					</div>
 					<div className="filter-options">
-						{type.map((i) => (
-							<FilterCheckbox {...i} type="type" />
+						{type.map((i, index) => (
+							<FilterCheckbox key={index} index={index} {...i} type="type" />
 						))}
 					</div>
 				</div>
@@ -116,8 +116,8 @@ export const AsideMenuOne = () => {
 				</a>
 				<div id="filter-sizes" className="collapse show">
 					<div className="filter-options mt-3">
-						{sizes.map((i) => (
-							<FilterCheckboxTwo {...i} type="sizes" />
+						{sizes.map((i, index) => (
+							<FilterCheckboxTwo key={index} index={index} {...i} type="sizes" />
 						))}
 					</div>
 				</div>
@@ -136,8 +136,8 @@ export const AsideMenuOne = () => {
 				</a>
 				<div id="filter-colour" className="collapse show">
 					<div className="filter-options mt-3">
-						{colours.map((i) => (
-							<FilterColour {...i} type="colours" />
+						{colours.map((i, index) => (
+							<FilterColour key={index} index={ index}{...i} type="colours" />
 						))}
 					</div>
 				</div>

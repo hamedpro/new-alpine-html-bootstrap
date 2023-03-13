@@ -19,8 +19,8 @@ export const FilterCollapse = () => {
 				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Sizes</p>
 				<div>
 					<div className="filter-options mt-3">
-						{sizes.map((i) => (
-							<FilterCheckboxTwo {...i} type="sizes" />
+						{sizes.map((i, index) => (
+							<FilterCheckboxTwo key={index} index={index} {...i} type="sizes" />
 						))}
 					</div>
 				</div>
@@ -30,8 +30,8 @@ export const FilterCollapse = () => {
 				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Colour</p>
 				<div>
 					<div className="filter-options mt-3">
-						{colours.map((i) => (
-							<FilterColour {...i} type="colours" />
+						{colours.map((i, index) => (
+							<FilterColour key={index} index={index} {...i} type="colours" />
 						))}
 					</div>
 				</div>
