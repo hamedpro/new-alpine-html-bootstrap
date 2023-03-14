@@ -7,7 +7,12 @@ export const SearchOverlay = () => {
 				<div className="py-5">
 					<div className="d-flex justify-content-between align-items-center mb-4">
 						<p className="lead lh-1 m-0 fw-bold">What are you looking for?</p>
-						<button className="btn btn-light btn-close-search">
+						<button
+							className="btn btn-light btn-close-search"
+							onClick={() => {
+								document.body.classList.remove("search-active");
+							}}
+						>
 							<i className="ri-close-circle-line align-bottom"></i> Close search
 						</button>
 					</div>

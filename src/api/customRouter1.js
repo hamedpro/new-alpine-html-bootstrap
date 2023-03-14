@@ -4,6 +4,9 @@ import cors from "cors";
 import formidable from "formidable";
 import path from "path";
 import fs from "fs";
+import { ObjectId } from "mongodb";
+import jwt from "jsonwebtoken";
+var { jwt_secret } = JSON.parse(fs.readFileSync("./env.json", "utf8"));
 export function generator(db) {
 	var customRouter1 = Router();
 	if (fs.existsSync("./uploads") !== true) fs.mkdirSync("./uploads");
@@ -84,6 +87,35 @@ export function generator(db) {
 			});
 		});
 		response.json({ file_id });
+	});
+	customRouter1.post("/auth/password_verification", async (request, response) => {
+		//body schema : user_id : string , password : any
+		var user = await db
+			.collection("users")
+			.findOne({ _id: new ObjectId(request.body.user_id) });
+		if (user === null) {
+			response.status(404).json("user you are looking for doesnt exist");
+			return;
+		}
+
+		if (request.body.password === user.password) {
+			response.json({
+				verified: true,
+
+				jwt: jwt.sign(
+					{
+						user_id: user._id,
+					},
+					jwt_secret
+				),
+			});
+			return;
+		} else {
+			response.json({
+				verified: false,
+			});
+			return;
+		}
 	});
 	return customRouter1;
 }

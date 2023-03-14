@@ -1,32 +1,5 @@
 (function () {
 	document.addEventListener("DOMContentLoaded", () => {
-		const searchBtns = document.querySelectorAll("[data-pr-search]") || [];
-		const closeSearchBtns = document.querySelectorAll(".btn-close-search") || [];
-		const searchOverlay = document.querySelector(".search-overlay");
-		const ACTIVE_SEARCH_CLASS = "search-active";
-
-		const showOrHideSearchOverlay = ({ show = false }) => {
-			if (show && searchOverlay) {
-				document.body.classList.add(ACTIVE_SEARCH_CLASS);
-			} else {
-				document.body.classList.remove(ACTIVE_SEARCH_CLASS);
-			}
-		};
-
-		searchBtns.forEach((button) => {
-			button.addEventListener("click", () => {
-				showOrHideSearchOverlay({
-					show: true,
-				});
-			});
-		});
-
-		closeSearchBtns.forEach((button) => {
-			button.addEventListener("click", () => {
-				showOrHideSearchOverlay({});
-			});
-		});
-
 		// handle filter navigation on category page
 		const filterSearchBars = document.querySelectorAll(".filter-search") || [];
 

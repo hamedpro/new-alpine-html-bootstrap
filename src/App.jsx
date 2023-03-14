@@ -18,6 +18,13 @@ import { Posts } from "./partials/posts/Posts";
 import { Post } from "./partials/posts/Post";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
+import { TermsOfService } from "./components/TermsOfService";
+import { FAQ } from "./components/FAQ";
+import { NewSupportMessage } from "./components/NewSupportMessage";
+import { ContactUs } from "./components/ContactUs";
+import { AboutUs } from "./components/AboutUs";
+import { MyProfile } from "./components/MyProfile";
+import { LikedProducts } from "./components/LikedProducts";
 function CommonBottomWrapper({ children }) {
 	return (
 		<>
@@ -81,6 +88,13 @@ export const App = () => {
 						<Route path="/admin-dashboard" element={<AdminDashboard />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />
+						<Route path="/terms-of-service" element={<TermsOfService />} />
+						<Route path="/faq" element={<FAQ />} />
+						<Route path="/support-messages/new" element={<NewSupportMessage />} />
+						<Route path="/contact-us" element={<ContactUs />} />
+						<Route path="/about-us" element={<AboutUs />} />
+						<Route path="/my-profile" element={<MyProfile />} />
+						<Route path="/my-profile/liked_products" element={<LikedProducts />} />
 					</Routes>
 				</BrowserRouter>
 			</GlobalContextProvider>

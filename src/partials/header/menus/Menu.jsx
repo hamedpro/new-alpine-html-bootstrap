@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { GlobalContext } from "../../../GlobalContext";
 import { DropdownLinks } from "./DropdownLinks";
 
 export const Menu = () => {
+	var { products, product_categories, posts } = useContext(GlobalContext).global_context_state;
+	if (posts === undefined || products === undefined || product_categories === undefined) return;
 	return (
 		<ul className="navbar-nav py-lg-2 mx-auto">
 			<li className="nav-item me-lg-4 dropdown position-static">
@@ -23,24 +27,20 @@ export const Menu = () => {
 								<DropdownLinks
 									data={[
 										{
-											header: "products",
-											items: [
-												{
-													link: "/",
-													text: "product 1",
-													view_all_link: "/",
-												},
-											],
+											header: "دسته بندی ها",
+											items: product_categories.map((product_category) => ({
+												link: `/categories/${product_category._id}`,
+												text: product_category.title,
+											})),
+											view_all_link: "/categories",
 										},
 										{
-											header: "products 2",
-											items: [
-												{
-													link: "/",
-													text: "product 1",
-													view_all_link: "/",
-												},
-											],
+											header: "محصولات",
+											items: products.map((product) => ({
+												link: `/products/${product._id}`,
+												text: product.title,
+											})),
+											view_all_link: "/products",
 										},
 									]}
 								/>
@@ -82,24 +82,14 @@ export const Menu = () => {
 								<DropdownLinks
 									data={[
 										{
-											header: "products",
-											items: [
-												{
-													link: "/",
-													text: "product 1",
-													view_all_link: "/",
-												},
-											],
-										},
-										{
-											header: "products 2",
-											items: [
-												{
-													link: "/",
-													text: "product 1",
-													view_all_link: "/",
-												},
-											],
+											header: "آخرین پست ها",
+
+											items: posts.map((post) => ({
+												link: `/posts/${post._id}`,
+												text: post.title,
+											})),
+
+											view_all_link: "/posts",
 										},
 									]}
 								/>
@@ -123,14 +113,14 @@ export const Menu = () => {
 				</div>
 			</li>
 			<li className="nav-item me-lg-4">
-				<a className="nav-link fw-bolder py-lg-4" href="#">
+				<Link className="nav-link fw-bolder py-lg-4" to="/about-us">
 					درباره ما
-				</a>
+				</Link>
 			</li>
 			<li className="nav-item me-lg-4">
-				<a className="nav-link fw-bolder py-lg-4" href="#">
+				<Link className="nav-link fw-bolder py-lg-4" to="/contact-us">
 					تماس با ما
-				</a>
+				</Link>
 			</li>
 			<li className="nav-item dropdown me-lg-4">
 				<a
@@ -145,19 +135,19 @@ export const Menu = () => {
 				</a>
 				<ul className="dropdown-menu">
 					<li>
-						<a className="dropdown-item" href="/category">
+						<Link className="dropdown-item" to="/faq">
 							سوالات متداول
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="dropdown-item" href="/">
+						<Link className="dropdown-item" to="/support-messages/new">
 							درخواست پشتیبانی آنلاین
-						</a>
+						</Link>
 					</li>
 					<li>
-						<a className="dropdown-item" href="/product">
+						<Link className="dropdown-item" to="/terms-of-service">
 							شرایط و قوانین
-						</a>
+						</Link>
 					</li>
 				</ul>
 			</li>

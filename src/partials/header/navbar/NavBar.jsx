@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { LogoFull } from "../../logo/LogoFull";
 import { Menu } from "../menus/Menu";
 export const NavBar = ({ classList }) => {
@@ -48,6 +49,9 @@ export const NavBar = ({ classList }) => {
 							<button
 								className="btn btn-link px-2 text-decoration-none d-flex align-items-center"
 								data-pr-search
+								onClick={() => {
+									document.body.classList.add("search-active");
+								}}
 							>
 								<i className="ri-search-2-line ri-lg align-middle"></i>
 							</button>
@@ -63,12 +67,16 @@ export const NavBar = ({ classList }) => {
 						</li>
 
 						<li className="ms-1 d-none d-lg-inline-block">
-							<a
+							<Link
 								className="btn btn-link px-2 text-decoration-none d-flex align-items-center"
-								href="#"
+								to={
+									window.localStorage.getItem("user_id")
+										? "/my-profile"
+										: "/login"
+								}
 							>
 								<i className="ri-user-line ri-lg align-middle"></i>
-							</a>
+							</Link>
 						</li>
 
 						<li className="ms-1 d-inline-block position-relative">

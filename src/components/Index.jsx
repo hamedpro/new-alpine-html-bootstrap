@@ -34,25 +34,25 @@ export const Index = () => {
 									data-aos="fade-up"
 									data-aos-delay="1000"
 								>
-									Where will your next adventure take you?
+									وب سایت شرکت پیشرو کنترل وطن
 								</h1>
 								<div data-aos="fade-in" data-aos-delay="2000">
 									<div className="d-md-flex justify-content-center mt-4 mb-3 my-md-5">
 										<Link
-											to="/category"
+											to="/categories"
 											className="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
 										>
 											<span>
-												Shop Menswear{" "}
+												دسته بندی محصولات
 												<i className="ri-arrow-right-line align-middle fw-bold"></i>
 											</span>
 										</Link>
 										<Link
-											to="/category"
+											to="/products"
 											className="btn btn-skew-left btn-orange btn-orange-chunky text-white mx-1 w-100 w-md-auto mb-2 mb-md-0"
 										>
 											<span>
-												Shop Womenswear{" "}
+												مشاهده تمام محصولات
 												<i className="ri-arrow-right-line align-middle fw-bold"></i>
 											</span>
 										</Link>
