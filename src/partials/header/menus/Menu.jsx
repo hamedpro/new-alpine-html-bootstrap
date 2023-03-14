@@ -13,14 +13,37 @@ export const Menu = () => {
 					aria-haspopup="true"
 					aria-expanded="false"
 				>
-					Menswear
+					محصولات ما
 				</a>
 
 				<div className="dropdown-menu dropdown-megamenu">
 					<div className="container">
 						<div className="row g-0">
 							<div className="col-12 col-lg-7">
-								<DropdownLinks />
+								<DropdownLinks
+									data={[
+										{
+											header: "products",
+											items: [
+												{
+													link: "/",
+													text: "product 1",
+													view_all_link: "/",
+												},
+											],
+										},
+										{
+											header: "products 2",
+											items: [
+												{
+													link: "/",
+													text: "product 1",
+													view_all_link: "/",
+												},
+											],
+										},
+									]}
+								/>
 							</div>
 
 							<div className="d-none d-lg-block col-lg-5">
@@ -49,14 +72,37 @@ export const Menu = () => {
 					aria-haspopup="true"
 					aria-expanded="false"
 				>
-					Womenswear
+					پست ها
 				</a>
 
 				<div className="dropdown-menu dropdown-megamenu">
 					<div className="container">
 						<div className="row g-0">
 							<div className="col-12 col-lg-7">
-								<DropdownLinks />
+								<DropdownLinks
+									data={[
+										{
+											header: "products",
+											items: [
+												{
+													link: "/",
+													text: "product 1",
+													view_all_link: "/",
+												},
+											],
+										},
+										{
+											header: "products 2",
+											items: [
+												{
+													link: "/",
+													text: "product 1",
+													view_all_link: "/",
+												},
+											],
+										},
+									]}
+								/>
 							</div>
 
 							<div className="d-none d-lg-block col-lg-5">
@@ -78,12 +124,12 @@ export const Menu = () => {
 			</li>
 			<li className="nav-item me-lg-4">
 				<a className="nav-link fw-bolder py-lg-4" href="#">
-					Kidswear
+					درباره ما
 				</a>
 			</li>
 			<li className="nav-item me-lg-4">
 				<a className="nav-link fw-bolder py-lg-4" href="#">
-					Sale Items
+					تماس با ما
 				</a>
 			</li>
 			<li className="nav-item dropdown me-lg-4">
@@ -95,32 +141,22 @@ export const Menu = () => {
 					aria-haspopup="true"
 					aria-expanded="false"
 				>
-					Demo Pages
+					دسترسی سریع
 				</a>
 				<ul className="dropdown-menu">
 					<li>
-						<a className="dropdown-item" href="/">
-							Homepage
+						<a className="dropdown-item" href="/category">
+							سوالات متداول
 						</a>
 					</li>
 					<li>
-						<a className="dropdown-item" href="/category">
-							Category
+						<a className="dropdown-item" href="/">
+							درخواست پشتیبانی آنلاین
 						</a>
 					</li>
 					<li>
 						<a className="dropdown-item" href="/product">
-							Product
-						</a>
-					</li>
-					<li>
-						<a className="dropdown-item" href="/cart">
-							Cart
-						</a>
-					</li>
-					<li>
-						<a className="dropdown-item" href="/checkout">
-							Checkout
+							شرایط و قوانین
 						</a>
 					</li>
 				</ul>

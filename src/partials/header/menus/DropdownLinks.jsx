@@ -1,109 +1,37 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-export const DropdownLinks = () => {
+export const DropdownLinks = ({ data }) => {
+	//data looks like this :
+	// [{header : string , items : [{link , text}] , view_all_link : link }
+	// , another object like previos one  ]
+
+	//links are relative paths which we are going to use them with Link component
 	return (
 		<div className="row py-lg-5">
-			<div className="col col-lg-6 mb-5 mb-sm-0">
-				<h6 className="dropdown-heading">Waterproof Layers</h6>
-				<ul className="list-unstyled">
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Waterproof Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Insulated Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Down Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Softshell Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Casual Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Windproof Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Breathable Jackets
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Cleaning & Proofing
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item dropdown-link-all" href="/category">
-							View All
-						</a>
-					</li>
-				</ul>
-			</div>
+			{data.map((column) => (
+				<div className="col col-lg-6">
+					<h6 className="dropdown-heading">{column.header}</h6>
+					<ul className="list-unstyled">
+						{column.items.map((item) => (
+							<li className="dropdown-list-item">
+								<Link to={item.link} className="dropdown-item">
+									{item.text}
+								</Link>
+							</li>
+						))}
 
-			<div className="col col-lg-6">
-				<h6 className="dropdown-heading">Brands</h6>
-				<ul className="list-unstyled">
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Lifestyle & Casual
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Walking Shoes
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Running Shoes
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Military Boots
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Fabric Walking Boots
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Leather Walking Boots
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Wellies
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item" href="/category">
-							Winter Footwear
-						</a>
-					</li>
-					<li className="dropdown-list-item">
-						<a className="dropdown-item dropdown-link-all" href="/category">
-							View All
-						</a>
-					</li>
-				</ul>
-			</div>
+						<li className="dropdown-list-item">
+							<Link
+								className="dropdown-item dropdown-link-all"
+								to={column.view_all_link}
+							>
+								View All
+							</Link>
+						</li>
+					</ul>
+				</div>
+			))}
 		</div>
 	);
 };

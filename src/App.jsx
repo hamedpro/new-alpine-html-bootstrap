@@ -8,12 +8,16 @@ import { Checkout } from "./components/Checkout";
 import { Index } from "./components/Index";
 import { Product } from "./components/Product";
 import { templateName } from "../env.json";
-import { Newproduct } from "./components/Newproduct";
+import { Newproduct } from "./partials/AdminDashboard/Newproduct";
 import { GlobalContextProvider } from "./GlobalContextProvider";
 import { Footer } from "./partials/footer/Footer";
 import { Offcanvas } from "./partials/offcanvas/Offcanvas";
 import { SearchOverlay } from "./partials/search/SearchOverlay";
 import { AdminDashboard } from "./components/AdminDashboard";
+import { Posts } from "./partials/posts/Posts";
+import { Post } from "./partials/posts/Post";
+import { Register } from "./components/Register";
+import { Login } from "./components/Login";
 function CommonBottomWrapper({ children }) {
 	return (
 		<>
@@ -40,7 +44,7 @@ export const App = () => {
 							}
 						/>
 						<Route
-							path="/product"
+							path="/products/:product_id"
 							element={
 								<CommonBottomWrapper>
 									<Product />
@@ -56,7 +60,7 @@ export const App = () => {
 							}
 						/>
 						<Route
-							path="/category"
+							path="/categories/:category_id"
 							element={
 								<CommonBottomWrapper>
 									<Category />
@@ -71,9 +75,12 @@ export const App = () => {
 								</CommonBottomWrapper>
 							}
 						/>
-
+						<Route path="/posts" element={<Posts />} />
+						<Route path="/posts/:post_id" element={<Post />} />
 						<Route path="/products/new" element={<Newproduct />} />
 						<Route path="/admin-dashboard" element={<AdminDashboard />} />
+						<Route path="/register" element={<Register />} />
+						<Route path="/login" element={<Login />} />
 					</Routes>
 				</BrowserRouter>
 			</GlobalContextProvider>
