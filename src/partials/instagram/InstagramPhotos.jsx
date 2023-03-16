@@ -1,6 +1,18 @@
-import React from "react";
-
+import React, { useEffect } from "react";
+import mediumZoom from "medium-zoom";
 export const InstagramPhotos = () => {
+	useEffect(() => {
+		function init_medium_zoom() {
+			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
+
+			zoomImgs.forEach((img) => {
+				const zoom = new mediumZoom(img, {
+					margin: 30,
+				});
+			});
+		}
+		init_medium_zoom(); //make sure to destroy medium zoom instance at correct time
+	}, []);
 	return (
 		<div className="row g-2">
 			<div className="d-none d-md-block col-md-4" data-aos="fade-in" data-aos-delay="150">

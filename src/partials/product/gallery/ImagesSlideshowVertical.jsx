@@ -1,6 +1,18 @@
 import React from 'react'
-
+import mediumZoom from "medium-zoom";
 export const ImagesSlideshowVertical = () => {
+	useEffect(() => {
+		function init_medium_zoom() {
+			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
+
+			zoomImgs.forEach((img) => {
+				const zoom = new mediumZoom(img, {
+					margin: 30,
+				});
+			});
+		}
+		init_medium_zoom(); //make sure to destroy medium zoom instance at correct time
+	}, []);
   return (
 		<div className="row g-1">
 			<div className="swiper-container gallery-thumbs-vertical col-2 pb-4">

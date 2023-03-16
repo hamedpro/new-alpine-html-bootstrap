@@ -2,7 +2,7 @@ import React from "react";
 
 export const OffcanvasReview = () => {
 	return (
-		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasReview">
+		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasReview">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasReviewLabel">
 					Leave A Review

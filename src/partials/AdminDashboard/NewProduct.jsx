@@ -1,7 +1,6 @@
 import axios from "axios";
-import React from "react";
-
-export const Newproduct = () => {
+import { useEffect } from "react";
+export const NewProduct = () => {
 	async function submit_a_fake_product() {
 		var f = new FormData();
 		f.append("file", document.getElementById("file_input").files[0]);
@@ -33,9 +32,10 @@ export const Newproduct = () => {
 	}
 	return (
 		<>
-			<h1>Newproduct</h1>
+			<h1>Newproductف</h1>
 			<input type="file" id="file_input" />
 			<button onClick={submit_a_fake_product}>submit a fake product</button>
+			<div style={{ height: "300px", width: "490px", backgroundColor: "darkblue" }}></div>
 		</>
 	);
 };

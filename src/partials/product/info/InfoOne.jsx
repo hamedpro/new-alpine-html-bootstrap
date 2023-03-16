@@ -1,8 +1,39 @@
-import React from 'react'
-import { ReviewStarsSmall } from "../../reviews/ReviewStarsSmall"
-import { Share} from "../socials/Share"
+import React, { useEffect } from "react";
+import { ReviewStarsSmall } from "../../reviews/ReviewStarsSmall";
+import { Share } from "../socials/Share";
+import Choices from "choices.js";
 export const InfoOne = () => {
-  return (
+	useEffect(() => {
+		function init_choices_dot_js() {
+			var select = document.querySelectorAll("[data-choices]");
+			const elementOptions = select.dataset.choices ? JSON.parse(select.dataset.choices) : {};
+
+			const defaultOptions = {
+				shouldSort: false,
+				searchEnabled: false,
+				classNames: {
+					containerOuter: "position-relative w-100",
+					listSingle: "form-control w-100",
+					inputCloned: "form-control-xs",
+					listDropdown: "dropdown-menu",
+					itemChoice: "dropdown-item",
+					activeState: "show",
+					selectedState: "active",
+				},
+			};
+
+			const options = {
+				...elementOptions,
+				...defaultOptions,
+			};
+
+			new Choices(select, options);
+		}
+		init_choices_dot_js();
+		//todo make sure to destroy this instance
+		// when component is going to be destroyed
+	}, []);
+	return (
 		<div className="pb-3">
 			<div className="d-flex justify-content-between align-items-center mb-2">
 				<p className="small fw-bolder text-uppercase tracking-wider text-muted mb-0 lh-1">
@@ -123,5 +154,5 @@ export const InfoOne = () => {
 				</ul>
 			</div>
 		</div>
-  );
-}
+	);
+};

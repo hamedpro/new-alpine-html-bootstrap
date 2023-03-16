@@ -8,7 +8,7 @@ import { Checkout } from "./components/Checkout";
 import { Index } from "./components/Index";
 import { Product } from "./components/Product";
 import { templateName } from "../env.json";
-import { Newproduct } from "./partials/AdminDashboard/Newproduct";
+import { NewProduct } from "./partials/AdminDashboard/NewProduct";
 import { GlobalContextProvider } from "./GlobalContextProvider";
 import { Footer } from "./partials/footer/Footer";
 import { Offcanvas } from "./partials/offcanvas/Offcanvas";
@@ -84,7 +84,7 @@ export const App = () => {
 						/>
 						<Route path="/posts" element={<Posts />} />
 						<Route path="/posts/:post_id" element={<Post />} />
-						<Route path="/products/new" element={<Newproduct />} />
+						<Route path="/products/new" element={<NewProduct />} />
 						<Route path="/admin-dashboard" element={<AdminDashboard />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />

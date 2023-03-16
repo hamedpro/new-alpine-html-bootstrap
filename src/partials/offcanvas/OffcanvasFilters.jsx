@@ -5,13 +5,14 @@ import { FilterCheckbox } from "../category/filters/FilterCheckbox";
 import { FilterCheckboxTwo } from "../category/filters/FilterCheckboxTwo";
 import { FilterColour } from "../category/filters/FilterColour";
 import { GlobalContext } from "../../GlobalContext";
+import SimpleBar from "simplebar-react";
 export const OffcanvasFilters = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
 	if (filters_one === undefined) return <h1>still loading filters_one ...</h1>;
 
 	var { categories, brands, type, sizes, colours } = filters_one;
 	return (
-		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasFilters">
+		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasFilters">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasFiltersLabel">
 					Category Filters
@@ -80,7 +81,7 @@ export const OffcanvasFilters = () => {
 										</span>
 									</div>
 									<div className="simplebar-wrapper">
-										<div className="filter-options" data-pixr-simplebar>
+										<SimpleBar autoHide={false} className="filter-options">
 											{brands.map((i, index) => (
 												<FilterCheckbox
 													key={index}
@@ -89,7 +90,7 @@ export const OffcanvasFilters = () => {
 													type="brands-modal"
 												/>
 											))}
-										</div>
+										</SimpleBar>
 									</div>
 								</div>
 							</div>

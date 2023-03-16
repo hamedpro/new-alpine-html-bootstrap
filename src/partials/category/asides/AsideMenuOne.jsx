@@ -5,6 +5,7 @@ import { FilterCheckbox } from "../filters/FilterCheckbox.jsx";
 import { FilterCheckboxTwo } from "../filters/FilterCheckboxTwo";
 import { FilterColour } from "../filters/FilterColour";
 import { GlobalContext } from "../../../GlobalContext";
+import SimpleBar from "simplebar-react";
 export const AsideMenuOne = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
 	if (filters_one === undefined) return <h1>still loading filters one ...</h1>;
@@ -63,11 +64,11 @@ export const AsideMenuOne = () => {
 						</span>
 					</div>
 					<div className="simplebar-wrapper">
-						<div className="filter-options" data-pixr-simplebar>
+						<SimpleBar className="filter-options" autoHide={false}>
 							{brands.map((brand, index) => (
 								<FilterCheckbox key={index} index={index} {...brand} type="brand" />
 							))}
-						</div>
+						</SimpleBar>
 					</div>
 				</div>
 			</div>
@@ -137,7 +138,7 @@ export const AsideMenuOne = () => {
 				<div id="filter-colour" className="collapse show">
 					<div className="filter-options mt-3">
 						{colours.map((i, index) => (
-							<FilterColour key={index} index={ index}{...i} type="colours" />
+							<FilterColour key={index} index={index} {...i} type="colours" />
 						))}
 					</div>
 				</div>

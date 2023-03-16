@@ -1,8 +1,6 @@
-import React from "react";
-
 export const OffcanvasCart = () => {
 	return (
-		<div className="offcanvas offcanvas-end d-none" tabindex="-1" id="offcanvasCart">
+		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasCart">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasCartLabel">
 					Your Cart

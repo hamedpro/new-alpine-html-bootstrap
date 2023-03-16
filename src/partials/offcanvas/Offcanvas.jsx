@@ -6,7 +6,6 @@ export const Offcanvas = () => {
 	return (
 		<>
 			<OffcanvasCart />
-
 			<OffcanvasFilters />
 			<OffcanvasReview />
 		</>
