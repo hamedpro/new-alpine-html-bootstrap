@@ -9,12 +9,12 @@ export const DropdownLinks = ({ data }) => {
 	//links are relative paths which we are going to use them with Link component
 	return (
 		<div className="row py-lg-5">
-			{data.map((column) => (
-				<div className="col col-lg-6">
+			{data.map((column, column_index) => (
+				<div className="col col-lg-6" key={column_index}>
 					<h6 className="dropdown-heading">{column.header}</h6>
 					<ul className="list-unstyled">
-						{column.items.map((item) => (
-							<li className="dropdown-list-item">
+						{column.items.map((item, item_index) => (
+							<li className="dropdown-list-item" key={item_index}>
 								<Link to={item.link} className="dropdown-item">
 									{item.text}
 								</Link>

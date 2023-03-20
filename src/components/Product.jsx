@@ -6,9 +6,12 @@ import { TabsOne } from "../partials/product/tabs/TabsOne";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { GlobalContext } from "../GlobalContext";
+import { useParams } from "react-router-dom";
 export const Product = () => {
+	var { product_id } = useParams();
 	var products = useContext(GlobalContext).global_context_state.products;
 	if (products === undefined) return <h1>still loading products ...</h1>;
+	var product = products.find((i) => i._id === product_id);
 	return (
 		<>
 			<NavBar />
@@ -18,11 +21,11 @@ export const Product = () => {
 
 					<div className="row g-5">
 						<div className="col-12 col-lg-7">
-							<ImagesSlideshowVertical />
+							<ImagesSlideshowVertical product_document={product} />
 						</div>
 
 						<div className="col-12 col-lg-5">
-							<InfoOne />
+							<InfoOne product_document={product} />
 						</div>
 					</div>
 				</section>

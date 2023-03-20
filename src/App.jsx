@@ -85,7 +85,7 @@ export const App = () => {
 						<Route path="/posts" element={<Posts />} />
 						<Route path="/posts/:post_id" element={<Post />} />
 						<Route path="/products/new" element={<NewProduct />} />
-						<Route path="/admin-dashboard" element={<AdminDashboard />} />
+						<Route path="/admin-dashboard/*" element={<AdminDashboard />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />
 						<Route path="/terms-of-service" element={<TermsOfService />} />

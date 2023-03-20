@@ -1,6 +1,7 @@
-import React from 'react'
+import React from "react";
 import mediumZoom from "medium-zoom";
-export const ImagesSlideshowVertical = () => {
+import { useEffect } from "react";
+export const ImagesSlideshowVertical = ({ product_document }) => {
 	useEffect(() => {
 		function init_medium_zoom() {
 			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
@@ -11,99 +12,39 @@ export const ImagesSlideshowVertical = () => {
 				});
 			});
 		}
-		init_medium_zoom(); //make sure to destroy medium zoom instance at correct time
+		init_medium_zoom(); //todo make sure to destroy medium zoom instance at correct time
 	}, []);
-  return (
+	return (
 		<div className="row g-1">
 			<div className="swiper-container gallery-thumbs-vertical col-2 pb-4">
 				<div className="swiper-wrapper">
-					<div className="swiper-slide bg-light bg-light h-auto">
-						<picture>
-							<img
-								className="img-fluid mx-auto d-table"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5.jpg`,
-										api_endpoint
-									).href
-								}
-							/>
-						</picture>
-					</div>
-					<div className="swiper-slide bg-light bg-light h-auto">
-						<picture>
-							<img
-								className="img-fluid mx-auto d-table"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5b.jpg`,
-										api_endpoint
-									).href
-								}
-							/>
-						</picture>
-					</div>
-					<div className="swiper-slide bg-light bg-light h-auto">
-						<picture>
-							<img
-								className="img-fluid mx-auto d-table"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5c.jpg`,
-										api_endpoint
-									).href
-								}
-							/>
-						</picture>
-					</div>
+					{product_document.image_files_ids.map((i) => (
+						<div className="swiper-slide bg-light bg-light h-auto" key={i}>
+							<picture>
+								<img
+									className="img-fluid mx-auto d-table"
+									src={new URL(`/files/${i}`, api_endpoint).href}
+								/>
+							</picture>
+						</div>
+					))}
 				</div>
 			</div>
 			<div className="swiper-container gallery-top-vertical col-10">
 				<div className="swiper-wrapper">
-					<div className="swiper-slide bg-white h-auto">
-						<picture>
-							<img
-								className="img-fluid d-table mx-auto"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="swiper-slide bg-white h-auto">
-						<picture>
-							<img
-								className="img-fluid d-table mx-auto"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5b.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="swiper-slide bg-white h-auto">
-						<picture>
-							<img
-								className="img-fluid d-table mx-auto"
-								src={
-									new URL(
-										`/static/assets/images/products/product-5c.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
+					{product_document.image_files_ids.map((i) => (
+						<div className="swiper-slide bg-white h-auto" key={i}>
+							<picture>
+								<img
+									className="img-fluid d-table mx-auto"
+									src={new URL(`/files/${i}`, api_endpoint).href}
+									data-zoomable
+								/>
+							</picture>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
-  );
-}
+	);
+};

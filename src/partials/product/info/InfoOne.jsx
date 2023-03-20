@@ -1,11 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { ReviewStarsSmall } from "../../reviews/ReviewStarsSmall";
 import { Share } from "../socials/Share";
 import Choices from "choices.js";
-export const InfoOne = () => {
+import { GlobalContext } from "../../../GlobalContext";
+import { average } from "../../../helpers";
+export const InfoOne = ({ product_document }) => {
+	var { product_categories, product_reviews } = useContext(GlobalContext).global_context_state;
+	if (product_categories === undefined || product_reviews === undefined)
+		return <h1>loading product categories ... </h1>;
+	var product_reviews_of_this_product = product_reviews.filter(
+		(i) => i.product_id === product_document._id
+	);
 	useEffect(() => {
 		function init_choices_dot_js() {
-			var select = document.querySelectorAll("[data-choices]");
+			var select = document.querySelector("[data-choices]");
 			const elementOptions = select.dataset.choices ? JSON.parse(select.dataset.choices) : {};
 
 			const defaultOptions = {
@@ -37,20 +45,39 @@ export const InfoOne = () => {
 		<div className="pb-3">
 			<div className="d-flex justify-content-between align-items-center mb-2">
 				<p className="small fw-bolder text-uppercase tracking-wider text-muted mb-0 lh-1">
-					Billabong
+					{
+						product_categories.find((i) => i._id === product_document.category_id)[
+							"title"
+						]
+					}
 				</p>
 				<div className="d-flex justify-content-start align-items-center">
-					<ReviewStarsSmall />
-					<small className="text-muted d-inline-block ms-2 fs-bolder">(1288)</small>
+					<ReviewStarsSmall
+						width={
+							average(product_reviews_of_this_product.map((i) => Number(i.width))) ||
+							0
+						}
+					/>
+					<small className="text-muted d-inline-block ms-2 fs-bolder">
+						({product_reviews_of_this_product.length})
+					</small>
 				</div>
 			</div>
-			<h1 className="mb-2 fs-2 fw-bold">Coastline Plus Waterproof Stormbreaker</h1>
+			<h1 className="mb-2 fs-2 fw-bold">{product_document.title}</h1>
 			<div className="d-flex justify-content-start align-items-center">
-				<p className="lead fw-bolder m-0 fs-3 lh-1 text-danger me-2">$84.99</p>
+				<p className="lead fw-bolder m-0 fs-3 lh-1 text-danger me-2">
+					$
+					{(product_document.price *
+						(100 - Number(product_document.discount_percentage))) /
+						100}
+				</p>
 				<s className="lh-1 me-2">
-					<span className="fw-bolder m-0">$94.99</span>
+					<span className="fw-bolder m-0">${product_document.price}</span>
 				</s>
-				<p className="lead fw-bolder m-0 fs-6 lh-1 text-success">Save $10.00</p>
+				<p className="lead fw-bolder m-0 fs-6 lh-1 text-success">
+					Save $
+					{(product_document.price * Number(product_document.discount_percentage)) / 100}
+				</p>
 			</div>
 
 			<div className="d-flex justify-content-start mt-3">
@@ -58,7 +85,12 @@ export const InfoOne = () => {
 					<div className="d-flex justify-content-start align-items-center">
 						<i className="ri-fire-fill lh-1 text-orange"></i>
 						<div className="ms-2">
-							<small className="opacity-75 fw-bolder lh-1">167 views today</small>
+							<small className="opacity-75 fw-bolder lh-1">
+								{product_reviews_of_this_product.filter(
+									(i) => i.time > new Date().getTime() - 24 * 1000 * 3600
+								)}{" "}
+								new reviews today
+							</small>
 						</div>
 					</div>
 				</div>

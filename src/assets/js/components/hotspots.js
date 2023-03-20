@@ -1,6 +1,6 @@
 import tippy from "tippy.js";
 
-class Hotspot {
+export class Hotspot {
 	constructor(hotspot) {
 		this.hotspot = hotspot;
 		this.options =
@@ -62,10 +62,3 @@ class Hotspot {
 		});
 	}
 }
-document.addEventListener("DOMContentLoaded", function () {
-	const hotspots = document.querySelectorAll(".hotspot") || [];
-
-	hotspots.forEach((hotspot) => {
-		new Hotspot(hotspot);
-	});
-});

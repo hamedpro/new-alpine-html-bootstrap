@@ -1,10 +1,18 @@
-import React from 'react'
-import { ReviewStarsSmall } from '../reviews/ReviewStarsSmall'
-import svg_divider_top_lr from "../svg/svg-divider-top-lr.svg"
-import svg_divider_bottom_rl from "../svg/svg-divider-bottom-rl.svg"
+import React, { useEffect } from "react";
+import { ReviewStarsSmall } from "../reviews/ReviewStarsSmall";
+import svg_divider_top_lr from "../svg/svg-divider-top-lr.svg";
+import svg_divider_bottom_rl from "../svg/svg-divider-bottom-rl.svg";
 import product3 from "../../assets/images/products/product-3.jpg";
+import { Hotspot } from "../../assets/js/components/hotspots";
 export const BannerImageHotspot = () => {
-  return (
+	useEffect(() => {
+		const hotspots = document.querySelectorAll(".hotspot");
+
+		hotspots.forEach((hotspot) => {
+			new Hotspot(hotspot);
+		});
+	});
+	return (
 		<>
 			<div className="position-absolute z-index-50 text-white top-0 start-0 end-0">
 				<img
@@ -96,5 +104,5 @@ export const BannerImageHotspot = () => {
 				/>
 			</div>
 		</>
-  );
-}
+	);
+};

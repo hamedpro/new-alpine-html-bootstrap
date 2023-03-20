@@ -1,6 +1,11 @@
 import React from "react";
+import { useContext } from "react";
+import { GlobalContext } from "../../GlobalContext";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 export const SearchOverlay = () => {
+	var { products } = useContext(GlobalContext).global_context_state
+	if(products === undefined) return <h1>loading products ...</h1>
+	
 	return (
 		<section className="search-overlay">
 			<div className="container search-container">
@@ -31,38 +36,12 @@ export const SearchOverlay = () => {
 						<div className="row">
 							<div className="col-12 col-md-6 col-lg-3 mb-3 mb-lg-0">
 								<ListingCard
-									{...{
-										_id: "640d8126eef774a41003d931",
-										title: "Mens Sherpa Hoodie",
-										brand: "Timberland",
-										price: "150.00",
-										currency: "$",
-										options: "Availble in 4 colours, 7 sizes",
-										"sale-price": "599.55",
-										"discount-percentage": "-25%",
-										"review-count": "4.4 (1289)",
-										"review-width": "60%",
-										image_file_id: "16785602512517061",
-										hover_image_file_id: "16785602512517061",
-									}}
+									{...products[0]}
 								/>
 							</div>
 							<div className="col-12 col-md-6 col-lg-3">
 								<ListingCard
-									{...{
-										_id: "640d8126eef774a41003d931",
-										title: "Mens Sherpa Hoodie",
-										brand: "Timberland",
-										price: "150.00",
-										currency: "$",
-										options: "Availble in 4 colours, 7 sizes",
-										"sale-price": "599.55",
-										"discount-percentage": "-25%",
-										"review-count": "4.4 (1289)",
-										"review-width": "60%",
-										image_file_id: "16785602512517061",
-										hover_image_file_id: "16785602512517061",
-									}}
+									{...products[0]}
 								/>
 							</div>
 						</div>

@@ -3,7 +3,10 @@ import React from "react";
 export const ReviewStarsSmall = ({ colour, width }) => {
 	return (
 		<div className="rating position-relative d-table">
-			<div className="position-absolute stars" style={{ width: width || "80%" }}>
+			<div
+				className="position-absolute stars"
+				style={{ width: isNaN(width) ? "80%" : width }}
+			>
 				<i className={`ri-star-fill ${colour || "text-dark"} mr-1`}></i>
 				<i className={`ri-star-fill ${colour || "text-dark"} mr-1`}></i>
 				<i className={`ri-star-fill ${colour || "text-dark"} mr-1`}></i>

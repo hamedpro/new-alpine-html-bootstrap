@@ -70,7 +70,6 @@ export function generator(db) {
 		var file_id = await new Promise((resolve, reject) => {
 			var f = formidable({ uploadDir: "./uploads" });
 			f.parse(request, (err, fields, files) => {
-				console.log(files);
 				if (err) {
 					reject(err);
 					return;

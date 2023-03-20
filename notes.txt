@@ -1,1 +1,6 @@
 make sure about using index as key in .maps
+
+make sure about transforming files in assets/js ->
+3rd party libraries and modifying dom directly and ...
+
+when showing stars if there is not any reviews we must not show empty stars
