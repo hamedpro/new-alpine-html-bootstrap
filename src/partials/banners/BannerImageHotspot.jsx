@@ -83,7 +83,7 @@ export const BannerImageHotspot = () => {
 						</div>
 						<div className="px-4 py-4 text-center">
 							<div className="d-flex justify-content-center align-items-center mx-auto mb-1">
-								<ReviewStarsSmall /> {/*  width="80%" */}
+								<ReviewStarsSmall width={80} />
 								<span className="small fw-bolder ms-2 text-muted"> 4.4 (1289)</span>
 							</div>
 							<p className="mb-0 mx-4">Pusher Outdoor Jeans Black Women</p>

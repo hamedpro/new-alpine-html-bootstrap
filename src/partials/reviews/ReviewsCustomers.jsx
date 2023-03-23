@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { GlobalContext } from "../../GlobalContext";
 import { ReviewStarsMedium } from "../reviews/ReviewStarsMedium";
 import { ReviewStarsSmall } from "../reviews/ReviewStarsSmall";
-export const ReviewsCustomers = () => {
+import { average } from "../../helpers";
+import { Review } from "./Review";
+export const ReviewsCustomers = ({ product }) => {
+	var { product_reviews } = useContext(GlobalContext).global_context_state;
+	var [shown_reviews_limit, set_shown_reviews_limit] = useState(3);
+	if (product_reviews === undefined) return <h1>loading product reviews ...</h1>;
+	//total_rating either a number from 0 to 100 or
+	//undefined(for when there is not any reviews for this product)
+	var total_rating = average(
+		product_reviews.filter((i) => i.product_id === product._id).map((i) => Number(i.width))
+	);
 	return (
 		<section className="reviews">
 			<div className="col-lg-12 text-center pb-5">
 				<h2 className="fs-1 fw-bold d-flex align-items-center justify-content-center">
-					4.88{" "}
+					{total_rating === undefined ? "?" : total_rating / 20}{" "}
 					<small className="text-muted fw-bolder ms-3 fw-bolder fs-6">
-						(1288 reviews)
+						({product_reviews.length} reviews)
 					</small>
 				</h2>
 				<div className="d-flex justify-content-center">
-					<ReviewStarsMedium />
+					<ReviewStarsMedium width={total_rating} />
 				</div>
 
-				<div className="bg-light rounded py-3 px-4 mt-3 col-12 col-md-6 col-lg-5 mx-auto">
+				{/* <div className="bg-light rounded py-3 px-4 mt-3 col-12 col-md-6 col-lg-5 mx-auto">
 					<ul className="list-group list-group-flush">
 						<li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
 							<span className="fw-bolder">Fit</span>
@@ -34,8 +45,19 @@ export const ReviewsCustomers = () => {
 							<ReviewStarsSmall width="90%" />
 						</li>
 					</ul>
+				</div> */}
+				{/* 
+					this div down is just something i have extracted from the top div
+					replace that when possible 
+				*/}
+				<div className="bg-light rounded py-3 px-4 mt-3 col-12 col-md-6 col-lg-5 mx-auto">
+					<ul className="list-group list-group-flush">
+						<li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
+							<span className="fw-bolder">total</span>
+							<ReviewStarsSmall width={total_rating} />
+						</li>
+					</ul>
 				</div>
-
 				<button
 					type="button"
 					className="btn btn-dark mt-4 hover-lift-sm hover-boxshadow disable-child-pointer"
@@ -46,173 +68,31 @@ export const ReviewsCustomers = () => {
 					Write A Review <i className="ri-discuss-line align-bottom ms-1"></i>
 				</button>
 			</div>
+			{product_reviews.slice(0, shown_reviews_limit).map((product_review, index, array) => (
+				<Review
+					border_bottom={true}
+					width={product_review.width}
+					border_top={index === 0}
+					key={product_review._id}
+					user_id={product_review.user_id}
+					user_badge={"something about user"}
+					title={product_review.title}
+					text={product_review.text}
+					has_recommended_this_product={product_review.has_recommended_this_product}
+					time={product_review.time}
+				/>
+			))}
 
-			<article className="py-5 border-bottom border-top">
-				<div className="row">
-					<div className="col-12 col-md-4">
-						<small className="text-muted fw-bolder">08/12/2021</small>
-						<p className="fw-bolder">Ben Sandhu, Ireland</p>
-						<span className="bg-success-faded fs-xs fw-bolder text-uppercase p-2">
-							Verified Customer
-						</span>
-					</div>
-					<div className="col-12 col-md-8 mt-4 mt-md-0">
-						<ReviewStarsSmall width="80%" />
-						<p className="fw-bolder mt-4">Happy with this considering the price</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi,
-							architecto placeat nam officia sapiente ipsam at dolorum quisquam, ipsa
-							earum qui laboriosam. Pariatur recusandae nihil, architecto
-							reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Distinctio sint nesciunt velit quae,
-							quisquam ullam veritatis itaque repudiandae. Inventore quae doloribus
-							modi nihil illum accusamus voluptas suscipit neque perferendis totam!
-						</p>
-
-						<small className="fw-bolder bg-light d-table rounded py-1 px-2">
-							Yes, I would recommend the product
-						</small>
-						<div className="d-block d-md-flex mt-3 justify-content-between align-items-center">
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
-								title=""
-							>
-								<small>
-									Was this review helpful?
-									<i className="ri-thumb-up-line ms-4"></i> 112{" "}
-									<i className="ri-thumb-down-line ms-2"></i>
-									23
-								</small>
-							</a>
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
-								title=""
-							>
-								<small>
-									Flag as inappropriate <i className="ri-flag-2-line ms-2"></i>
-								</small>
-							</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-			<article className="py-5 border-bottom ">
-				<div className="row">
-					<div className="col-12 col-md-4">
-						<small className="text-muted fw-bolder">08/12/2021</small>
-						<p className="fw-bolder">Patricia Smith, London</p>
-						<span className="bg-success-faded fs-xs fw-bolder text-uppercase p-2">
-							Verified Customer
-						</span>
-					</div>
-					<div className="col-12 col-md-8 mt-4 mt-md-0">
-						<ReviewStarsSmall width="80%" />
-						<p className="fw-bolder mt-4">Very happy with my purchase so far...</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi,
-							architecto placeat nam officia sapiente ipsam at dolorum quisquam, ipsa
-							earum qui laboriosam. Pariatur recusandae nihil, architecto
-							reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Distinctio sint nesciunt velit quae,
-							quisquam ullam veritatis itaque repudiandae. Inventore quae doloribus
-							modi nihil illum accusamus voluptas suscipit neque perferendis totam!
-						</p>
-
-						<small className="fw-bolder bg-light d-table rounded py-1 px-2">
-							Yes, I would recommend the product
-						</small>
-						<div className="d-block d-md-flex mt-3 justify-content-between align-items-center">
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
-								title=""
-							>
-								<small>
-									Was this review helpful?
-									<i className="ri-thumb-up-line ms-4"></i> 112{" "}
-									<i className="ri-thumb-down-line ms-2"></i>
-									23
-								</small>
-							</a>
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
-								title=""
-							>
-								<small>
-									Flag as inappropriate <i className="ri-flag-2-line ms-2"></i>
-								</small>
-							</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-			<article className="py-5 border-bottom ">
-				<div className="row">
-					<div className="col-12 col-md-4">
-						<small className="text-muted fw-bolder">08/12/2021</small>
-						<p className="fw-bolder">Jack Jones, Scotland</p>
-						<span className="bg-success-faded fs-xs fw-bolder text-uppercase p-2">
-							Verified Customer
-						</span>
-					</div>
-					<div className="col-12 col-md-8 mt-4 mt-md-0">
-						<ReviewStarsSmall width="80%" />
-						<p className="fw-bolder mt-4">
-							I wish it was a little cheaper - otherwise love this!
-						</p>
-						<p>
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit sequi,
-							architecto placeat nam officia sapiente ipsam at dolorum quisquam, ipsa
-							earum qui laboriosam. Pariatur recusandae nihil, architecto
-							reprehenderit perferendis obcaecati. Lorem ipsum dolor, sit amet
-							consectetur adipisicing elit. Distinctio sint nesciunt velit quae,
-							quisquam ullam veritatis itaque repudiandae. Inventore quae doloribus
-							modi nihil illum accusamus voluptas suscipit neque perferendis totam!
-						</p>
-
-						<small className="fw-bolder bg-light d-table rounded py-1 px-2">
-							Yes, I would recommend the product
-						</small>
-						<div className="d-block d-md-flex mt-3 justify-content-between align-items-center">
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start"
-								title=""
-							>
-								<small>
-									Was this review helpful?
-									<i className="ri-thumb-up-line ms-4"></i> 112{" "}
-									<i className="ri-thumb-down-line ms-2"></i>
-									23
-								</small>
-							</a>
-							<a
-								href="#"
-								className="btn btn-link text-muted p-0 text-decoration-none w-100 w-md-auto fw-bolder text-start mt-3 mt-md-0"
-								title=""
-							>
-								<small>
-									Flag as inappropriate <i className="ri-flag-2-line ms-2"></i>
-								</small>
-							</a>
-						</div>
-					</div>
-				</div>
-			</article>
-
-			<a
-				href="#"
+			<button
+				onClick={() => set_shown_reviews_limit((prev) => prev + 3)}
 				className="btn btn-dark d-table mx-auto mt-6 mb-3 hover-lift-sm hover-boxshadow"
 				title=""
 			>
-				Load More Reviews
-			</a>
-			<p className="text-muted text-center fw-bolder">Showing 3 of 1234</p>
+				Load 3 More Reviews
+			</button>
+			<p className="text-muted text-center fw-bolder">
+				Showing at maximum {shown_reviews_limit} of all reviews ({product_reviews.length})
+			</p>
 		</section>
 	);
 };

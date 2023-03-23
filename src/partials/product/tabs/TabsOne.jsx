@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 import { ReviewsCustomers } from "../../reviews/ReviewsCustomers";
-export const TabsOne = () => {
-  return (
+export const TabsOne = ({ product }) => {
+	return (
 		<>
 			<ul
 				className="nav justify-content-center nav-tabs nav-tabs-border mb-4"
@@ -61,7 +61,6 @@ export const TabsOne = () => {
 					</a>
 				</li>
 			</ul>
-
 			<div className="tab-content" id="myTabContent">
 				<div
 					className="tab-pane fade show active py-5"
@@ -72,21 +71,13 @@ export const TabsOne = () => {
 					<div className="col-12 col-lg-10 mx-auto">
 						<div className="row g-5">
 							<div className="col-12 col-md-6">
-								<p>
-									Soft, stretchy - the most flattering product of the season! What
-									could be easier? Beautifully soft and light cotton-modal jersey,
-									with the extra advantage of stretch, cut in an A-line - the
-									universally flattering shape for every body. We promise you,
-									once you've tried these lovely products - you'll be hooked..
-								</p>
+								<p>{product.description}</p>
 							</div>
 							<div className="col-12 col-md-6">
 								<ul>
-									<li>Stretchy cotton-modal jersey stripe</li>
-									<li>Garment washed</li>
-									<li>Flat, covered elastic waistband</li>
-									<li>58% pima cotton/38% viscose </li>
-									<li>Modal/4% Lycra® elastane</li>
+									{product.options.map((i, index) => (
+										<li key={index}>{i}</li>
+									))}
 								</ul>
 							</div>
 						</div>
@@ -99,7 +90,7 @@ export const TabsOne = () => {
 					role="tabpanel"
 					aria-labelledby="reviews-tab"
 				>
-					<ReviewsCustomers />
+					<ReviewsCustomers product={product} />
 				</div>
 
 				<div
@@ -204,5 +195,5 @@ export const TabsOne = () => {
 				</div>
 			</div>
 		</>
-  );
-}
+	);
+};

@@ -2,6 +2,7 @@ import React from 'react'
 import { Route, Routes } from "react-router-dom";
 import { NewCategory } from "../partials/AdminDashboard/NewCategory";
 import { NewPost } from "../partials/AdminDashboard/NewPost";
+import { AdminDashboardOthers } from "./AdminDashboardOthers";
 
 export const AdminDashboard = () => {
 	return (
@@ -11,6 +12,7 @@ export const AdminDashboard = () => {
 				<Route path="new_category" element={<NewCategory />} />
 				<Route path="new_post" element={<NewPost />} />
 				<Route path="manage_header" element={<NewPost />} />
+				<Route path="others" element={<AdminDashboardOthers />} />
 			</Routes>
 		</>
 	);

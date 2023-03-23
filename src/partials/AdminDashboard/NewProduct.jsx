@@ -1,10 +1,12 @@
 import axios from "axios";
 import { Fragment, useEffect } from "react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
 var input_value = (element_id) => document.getElementById(element_id).value;
 export const NewProduct = () => {
 	var [product_categories, set_product_categories] = useState();
+	var [options, set_options] = useState([]);
 	var [selected_product_category, set_selected_product_category] = useState();
 	useEffect(() => {
 		axios({
@@ -54,17 +56,19 @@ export const NewProduct = () => {
 					title: input_value("title_input"),
 					price: input_value("price_input"),
 					currency: "$",
-					options: input_value("options_input"),
+
 					image_files_ids: files_ids,
 					category_id: selected_product_category.value,
 					discount_percentage: input_value("discount_percentage_input"),
+					options,
+					description: document.getElementById("description").value,
 				},
 			},
 		});
 		alert("done !");
 	}
 	return (
-		<>
+		<div className="p-2">
 			<h1>new product</h1>
 			<h1>select images of this product </h1>
 			<p>
@@ -72,7 +76,7 @@ export const NewProduct = () => {
 				as product's hover image{" "}
 			</p>
 			<input type="file" id="image_files_ids" multiple />
-			{["discount_percentage", "title", "price", "options"].map((key) => (
+			{["discount_percentage", "title", "price"].map((key) => (
 				<Fragment {...{ key }}>
 					<p>
 						{key}
@@ -82,12 +86,34 @@ export const NewProduct = () => {
 				</Fragment>
 			))}
 			<p>currency : $</p>
+			<h3>product's description : </h3>
+			<textarea id="description" />
+			<h3>options </h3>
+			<ul>
+				{options.map((i, index) => (
+					<li>{i}</li>
+				))}
+			</ul>
+
+			<button
+				onClick={() =>
+					set_options((prev) => [...prev, window.prompt("enter option text here")])
+				}
+			>
+				new option{" "}
+			</button>
+			<h3>select a product category :</h3>
+			<p>
+				if what you are looking for doesnt exist you must create it first{" "}
+				<Link to="/products/new">here</Link>
+			</p>
 			<ReactSelect
 				options={product_categories.map((i) => ({ value: i._id, label: i.title }))}
 				onChange={set_selected_product_category}
 				value={selected_product_category}
 			/>
+
 			<button onClick={submit_product}>submit product</button>
-		</>
+		</div>
 	);
 };

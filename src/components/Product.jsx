@@ -33,7 +33,7 @@ export const Product = () => {
 				<section>
 					<div className="mt-7 pt-5 border-top">
 						<div className="container">
-							<TabsOne />
+							<TabsOne product={product} />
 						</div>
 					</div>
 				</section>

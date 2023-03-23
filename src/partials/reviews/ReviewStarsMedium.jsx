@@ -1,9 +1,9 @@
 import React from "react";
 
-export const ReviewStarsMedium = ({ colour , width}) => {
+export const ReviewStarsMedium = ({ colour, width /* undefined || numebr from 0 to 100  */ }) => {
 	return (
 		<div className="rating position-relative d-table">
-			<div className="position-absolute stars" style={{ width: width || "80%" }}>
+			<div className="position-absolute stars" style={{ width: width ? width + "%" : "80%" }}>
 				<i className={`ri-star-fill ${colour || "text-dark"} ri-2x mr-1`}></i>
 				<i className={`ri-star-fill ${colour || "text-dark"} ri-2x mr-1`}></i>
 				<i className={`ri-star-fill ${colour || "text-dark"} ri-2x mr-1`}></i>

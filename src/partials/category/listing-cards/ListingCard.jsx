@@ -22,18 +22,17 @@ export const ListingCard = (props) => {
 			)}
 
 			<div className="card-header">
-				<picture className="position-relative overflow-hidden d-block bg-light">
+				<div className="w-100 ratio ratio-1x1 d-flex align-items-center justify-content-center"></div>
+				<picture className="overflow-hidden d-block bg-light">
 					<img
 						className="w-100 img-fluid position-relative z-index-10"
-						title=""
 						src={new URL(`/files/${props.image_files_ids[0]}`, api_endpoint).href}
 					/>
 				</picture>
 				{props.image_files_ids.length > 1 && (
-					<picture className="position-absolute z-index-20 start-0 top-0 hover-show bg-light">
+					<picture className="position-absolute z-index-20 start-0 top-0 hover-show bg-light invisible">
 						<img
 							className="w-100 img-fluid"
-							title=""
 							src={new URL(`/files/${props.image_files_ids[1]}`, api_endpoint).href}
 						/>
 					</picture>

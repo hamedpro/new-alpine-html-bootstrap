@@ -5,5 +5,5 @@ export function average(array_of_numbers) {
 	}
 	var total = 0;
 	array_of_numbers.forEach((i) => (total += i));
-	return (total / array_of_numbers.length) * 100;
+	return total / array_of_numbers.length;
 }

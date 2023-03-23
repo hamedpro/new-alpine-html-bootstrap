@@ -15,7 +15,7 @@ export const ReviewsCompany = () => {
 						<small className="text-muted d-block mb-2 fw-bolder">
 							John Doe, London
 						</small>
-						<ReviewStarsSmall width="75%" />
+						<ReviewStarsSmall width={75} />
 					</div>
 				</div>
 				<div className="col-12 col-lg-4" data-aos="fade-left" data-aos-delay="150">
@@ -29,7 +29,7 @@ export const ReviewsCompany = () => {
 						<small className="text-muted d-block mb-2 fw-bolder">
 							Sally Smith, Dublin
 						</small>
-						<ReviewStarsSmall width="75%" />
+						<ReviewStarsSmall width={75} />
 					</div>
 				</div>
 				<div className="col-12 col-lg-4" data-aos="fade-left" data-aos-delay="300">
@@ -43,7 +43,7 @@ export const ReviewsCompany = () => {
 						<small className="text-muted d-block mb-2 fw-bolder">
 							John Patrick, London
 						</small>
-						<ReviewStarsSmall width="75%" />
+						<ReviewStarsSmall width={75} />
 					</div>
 				</div>
 			</div>
@@ -51,7 +51,7 @@ export const ReviewsCompany = () => {
 				<h3 className="mb-4 fw-bold fs-4">See what others have said</h3>
 				<div className="d-flex justify-content-center align-items-center">
 					<span className="fs-3 fw-bold me-4">4.85 / 5</span>
-					<ReviewStarsMedium colour="text-dark" width="88%" />
+					<ReviewStarsMedium colour="text-dark" width={88} />
 				</div>
 				<a href="#" className="btn btn-dark rounded-0 mt-4">
 					Read 4,215 more reviews

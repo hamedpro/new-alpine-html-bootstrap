@@ -16,4 +16,11 @@ interface product_review_document extends mongodb_document {
 	width: string;
 	product_id: string;
 	time: string /* unix timestamp */;
+	title: string;
+	text: string;
+}
+interface cart_items_document extends mongodb_document {
+	user_id: string;
+	product_id: string;
+	count: number;
 }
