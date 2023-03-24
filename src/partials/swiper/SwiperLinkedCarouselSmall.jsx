@@ -1,12 +1,37 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../../GlobalContext";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 
 export const SwiperLinkedCarouselSmall = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
+	var swiper_linked_carousel_small_swiper_container = useRef();
+	useEffect(() => {
+		var options = {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			roundLengths: true,
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-next-linked",
+				prevEl: ".swiper-prev-linked",
+			},
+			pagination: {
+				el: ".swiper-pagination-custom",
+			},
+			controller: {
+				control: linkedCarouselLarge,
+			},
+		};
+		Object.assign(swiper_linked_carousel_small_swiper_container.current, options);
+		swiper_linked_carousel_small_swiper_container.current.initialize();
+	}, []);
 	if (products === undefined) return <h1>loading products ... </h1>;
 	return (
-		<div className="swiper-container swiper-linked-carousel-small">
+		<swiper-contaienr
+			init="false"
+			ref={swiper_linked_carousel_small_swiper_container}
+			class="swiper-container swiper-linked-carousel-small"
+		>
 			<div className="swiper-pagination-blocks mb-4">
 				<div className="swiper-pagination-custom"></div>
 			</div>
@@ -24,6 +49,6 @@ export const SwiperLinkedCarouselSmall = () => {
 					<ListingCard {...products[0]} />
 				</div>
 			</div>
-		</div>
+		</swiper-contaienr>
 	);
 };

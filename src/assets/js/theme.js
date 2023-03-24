@@ -11,7 +11,6 @@ import "./components/popover";
 import "./components/product";
 import "./components/scroll-to";
 import "./components/search";
-import './components/swiper';
 import './components/tooltip';
 
 // Add a body class once page has loaded

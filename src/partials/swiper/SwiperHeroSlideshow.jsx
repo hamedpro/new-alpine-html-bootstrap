@@ -2,21 +2,16 @@ import React from "react";
 
 export const SwiperHeroSlideshow = () => {
 	return (
-		<div
-			className="swiper-container overflow-hidden bg-light w-100 h-100"
-			data-swiper
-			data-options='{
-    "slidesPerView": 1,
-    "speed": 1500,
-    "loop": true,
-    "effect": "fade",
-    "autoplay": {
-      "delay": 5000
-    }
-  }'
+		<swiper-container
+			slides-per-view="1"
+			speed="1500"
+			loop="true"
+			effect="fade"
+			autoplay-delay="5000"
+			class="overflow-hidden bg-light w-100 h-100 swiper-container"
 		>
 			<div className="swiper-wrapper">
-				<div className="swiper-slide position-relative">
+				<swiper-slide class="position-relative swiper-slide">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
 						style={{
@@ -28,8 +23,9 @@ export const SwiperHeroSlideshow = () => {
 							})`,
 						}}
 					></div>
-				</div>
-				<div className="swiper-slide position-relative">
+				</swiper-slide>
+
+				<swiper-slide class="swiper-slide position-relative">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
 						style={{
@@ -41,8 +37,9 @@ export const SwiperHeroSlideshow = () => {
 							})`,
 						}}
 					></div>
-				</div>
-				<div className="swiper-slide position-relative">
+				</swiper-slide>
+
+				<swiper-slide class="swiper-slide position-relative">
 					<div
 						className="w-100 h-100 bg-img-cover animation-move bg-pos-center-center"
 						style={{
@@ -54,8 +51,8 @@ export const SwiperHeroSlideshow = () => {
 							})`,
 						}}
 					></div>
-				</div>
+				</swiper-slide>
 			</div>
-		</div>
+		</swiper-container>
 	);
 };

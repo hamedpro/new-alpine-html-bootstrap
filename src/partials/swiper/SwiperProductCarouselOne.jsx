@@ -1,42 +1,44 @@
-import React from 'react'
+import React, { useEffect, useRef } from "react";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 
 export const SwiperProductCarouselOne = ({ entries }) => {
+	var swiper_container = useRef();
+	useEffect(() => {
+		var options = {
+			spaceBetween: 25,
+			cssMode: true,
+			navigation: {
+				nextEl: ".swiper-next",
+				prevEl: ".swiper-prev",
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				},
+			},
+		};
+
+		Object.assign(swiper_container.current, options);
+		swiper_container.current.initialize();
+	}, []);
 	return (
-		<div
-			className="swiper-container overflow-visible"
-			data-swiper
-			data-options='{
-    "spaceBetween": 25,
-    "cssMode": true,
-    "navigation": {
-      "nextEl": ".swiper-next",
-      "prevEl": ".swiper-prev"
-    },  
-    "breakpoints": {
-      "576": {
-        "slidesPerView": 1
-      },
-      "768": {
-        "slidesPerView": 2
-      },
-      "992": {
-        "slidesPerView": 3
-      },
-      "1200": {
-        "slidesPerView": 4
-      }            
-    }
-  }'
-		>
+		<swiper-container ref={swiper_container} init="false" class="overflow-visible">
 			<div className="swiper-wrapper pb-1 pe-1">
 				{entries.map((i) => (
-					<div className="swiper-slide d-flex h-auto">
+					<swiper-slide class="swiper-slide d-flex h-auto">
 						<ListingCard {...i} key={i._id} />
-					</div>
+					</swiper-slide>
 				))}
-
-				<div className="swiper-slide d-flex h-auto justify-content-center align-items-center">
+				<swiper-slide class="swiper-slide d-flex h-auto justify-content-center align-items-center">
 					<a
 						href="/category"
 						className="d-flex text-decoration-none flex-column justify-content-center align-items-center"
@@ -46,7 +48,7 @@ export const SwiperProductCarouselOne = ({ entries }) => {
 						</span>
 						<span className="lead fw-bolder">See All</span>
 					</a>
-				</div>
+				</swiper-slide>
 			</div>
 
 			<div className="swiper-btn swiper-disabled-hide swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg ms-n3">
@@ -55,6 +57,6 @@ export const SwiperProductCarouselOne = ({ entries }) => {
 			<div className="swiper-btn swiper-disabled-hide swiper-next swiper-btn-side swiper-btn-side-right btn-icon bg-dark text-white me-n3 shadow-lg">
 				<i className="ri-arrow-right-s-line ri-lg"></i>
 			</div>
-		</div>
+		</swiper-container>
 	);
 };

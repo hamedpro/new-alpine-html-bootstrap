@@ -1,48 +1,51 @@
-import React from "react";
+import React, { Fragment, useEffect, useRef } from "react";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 
 export const SwiperProductCarouselScrollbar = ({ products }) => {
+	var swiper_container = useRef();
+	useEffect(() => {
+		var options = {
+			spaceBetween: 25,
+			cssMode: true,
+			roundLengths: true,
+			scrollbar: {
+				el: ".swiper-scrollbar",
+				hide: false,
+				draggable: true,
+			},
+			navigation: {
+				nextEl: ".swiper-next",
+				prevEl: ".swiper-prev",
+			},
+			breakpoints: {
+				576: {
+					slidesPerView: 1,
+				},
+				768: {
+					slidesPerView: 2,
+				},
+				992: {
+					slidesPerView: 3,
+				},
+				1200: {
+					slidesPerView: 4,
+				},
+			},
+		};
+		Object.assign(swiper_container.current, options);
+		swiper_container.current.initialize();
+	}, []);
 	return (
-		<div
-			className="swiper-container overflow-visible"
-			data-swiper
-			data-options='{
-    "spaceBetween": 25,
-    "cssMode": true,
-    "roundLengths": true,
-    "scrollbar": {
-      "el": ".swiper-scrollbar",
-      "hide": false,
-      "draggable": true
-    },      
-    "navigation": {
-      "nextEl": ".swiper-next",
-      "prevEl": ".swiper-prev"
-    },  
-    "breakpoints": {
-      "576": {
-        "slidesPerView": 1
-      },
-      "768": {
-        "slidesPerView": 2
-      },
-      "992": {
-        "slidesPerView": 3
-      },
-      "1200": {
-        "slidesPerView": 4
-      }            
-    }
-  }'
-		>
+		<swiper-container class="overflow-visible" init="false" ref={swiper_container}>
 			<div className="swiper-wrapper pb-5 pe-1">
 				{products.map((i) => (
-					<div className="swiper-slide d-flex h-auto" key={i._id}>
-						<ListingCard {...i} />
-					</div>
+					<Fragment key={i._id}>
+						<swiper-slide class="d-flex h-auto">
+							<ListingCard {...i} />
+						</swiper-slide>
+					</Fragment>
 				))}
-
-				<div className="swiper-slide d-flex h-auto justify-content-center align-items-center">
+				<swiper-slide class="d-flex h-auto justify-content-center align-items-center">
 					<a
 						href="/category"
 						className="d-flex text-decoration-none flex-column justify-content-center align-items-center"
@@ -52,7 +55,7 @@ export const SwiperProductCarouselScrollbar = ({ products }) => {
 						</span>
 						<span className="lead fw-bolder">See All</span>
 					</a>
-				</div>
+				</swiper-slide>
 			</div>
 
 			<div className="swiper-btn swiper-disabled-hide swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg mt-n5 ms-n4">
@@ -63,6 +66,6 @@ export const SwiperProductCarouselScrollbar = ({ products }) => {
 			</div>
 
 			<div className="swiper-scrollbar"></div>
-		</div>
+		</swiper-container>
 	);
 };

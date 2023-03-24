@@ -25,6 +25,10 @@ import { ContactUs } from "./components/ContactUs";
 import { AboutUs } from "./components/AboutUs";
 import { MyProfile } from "./components/MyProfile";
 import { LikedProducts } from "./components/LikedProducts";
+import { register } from "swiper/element/bundle";
+
+register();
+
 function CommonBottomWrapper({ children }) {
 	return (
 		<>

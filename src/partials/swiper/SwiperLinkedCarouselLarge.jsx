@@ -1,12 +1,30 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../../GlobalContext";
 import { ListingCard } from "../category/listing-cards/ListingCard";
 export const SwiperLinkedCarouselLarge = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
+	var swiper_linked_carousel_large = useRef();
+	useEffect(() => {
+		var options = {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			roundLengths: true,
+			loop: true,
+			controller: {
+				control: linkedCarouselSmall,
+			},
+		};
+		Object.assign(swiper_linked_carousel_large.current, options);
+		swiper_linked_carousel_large.current.initialize();
+	}, []);
 	if (products === undefined) return <h1>loading products ... </h1>;
 
 	return (
-		<div className="swiper-container h-100 swiper-linked-carousel-large">
+		<swiper-container
+			init="false"
+			ref={swiper_linked_carousel_large}
+			class="swiper-container h-100 swiper-linked-carousel-large"
+		>
 			<div className="swiper-wrapper h-100">
 				<div className="swiper-slide">
 					<div className="row g-3">
@@ -59,6 +77,6 @@ export const SwiperLinkedCarouselLarge = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</swiper-container>
 	);
 };
