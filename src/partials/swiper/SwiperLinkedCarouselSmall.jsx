@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../../GlobalContext";
 import { ListingCard } from "../category/listing-cards/ListingCard";
+import { SwiperLinkedCarouselLarge } from "./SwiperLinkedCarouselLarge";
 
 export const SwiperLinkedCarouselSmall = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
@@ -19,7 +20,7 @@ export const SwiperLinkedCarouselSmall = () => {
 				el: ".swiper-pagination-custom",
 			},
 			controller: {
-				control: linkedCarouselLarge,
+				control: SwiperLinkedCarouselLarge,
 			},
 		};
 		Object.assign(swiper_linked_carousel_small_swiper_container.current, options);
@@ -27,7 +28,7 @@ export const SwiperLinkedCarouselSmall = () => {
 	}, []);
 	if (products === undefined) return <h1>loading products ... </h1>;
 	return (
-		<swiper-contaienr
+		<swiper-container
 			init="false"
 			ref={swiper_linked_carousel_small_swiper_container}
 			class="swiper-container swiper-linked-carousel-small"
@@ -49,6 +50,6 @@ export const SwiperLinkedCarouselSmall = () => {
 					<ListingCard {...products[0]} />
 				</div>
 			</div>
-		</swiper-contaienr>
+		</swiper-container>
 	);
 };

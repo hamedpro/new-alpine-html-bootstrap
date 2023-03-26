@@ -1,61 +1,51 @@
-import React from "react";
+import React, { useContext } from "react";
+import { GlobalContext } from "../../GlobalContext";
 import { ReviewStarsMedium } from "../reviews/ReviewStarsMedium";
 import { ReviewStarsSmall } from "../reviews/ReviewStarsSmall";
+import { average } from "../../helpers";
+import { Link } from "react-router-dom";
 export const ReviewsCompany = () => {
+	var { overall_reviews, users } = useContext(GlobalContext).global_context_state;
+
+	if (overall_reviews === undefined || users === undefined)
+		return "overall reviews or users are being loaded ...";
 	return (
 		<>
 			<div className="row g-3">
-				<div className="col-12 col-lg-4" data-aos="fade-left">
-					<div className="bg-light p-4 d-flex h-100 justify-content-start align-items-center flex-column text-center">
-						<p className="fw-bolder lead">Amazing Service!</p>
-						<p className="mb-3">
-							I have shopped with them for a few years now. Very easy to select items,
-							items always as described. Never had to return any item. Good value.
-						</p>
-						<small className="text-muted d-block mb-2 fw-bolder">
-							John Doe, London
-						</small>
-						<ReviewStarsSmall width={75} />
+				{overall_reviews.slice(0, 3).map((i) => (
+					<div key={i._id} className="col-12 col-lg-4" data-aos="fade-left">
+						<div className="bg-light p-4 d-flex h-100 justify-content-start align-items-center flex-column text-center">
+							<p className="fw-bolder lead">{i.title}</p>
+							<p className="mb-3">{i.text}</p>
+							<small className="text-muted d-block mb-2 fw-bolder">
+								@{users.find((user) => user._id === i.user_id).username}
+							</small>
+							<ReviewStarsSmall width={i.width} />
+						</div>
 					</div>
-				</div>
-				<div className="col-12 col-lg-4" data-aos="fade-left" data-aos-delay="150">
-					<div className="bg-light p-4 d-flex h-100 justify-content-start align-items-center flex-column text-center">
-						<p className="fw-bolder lead">Great Prices</p>
-						<p className="mb-3">
-							Always find these guys competitive,and with a huge range of
-							products,coupled with great marketing,its difficult not to buy
-							something.
-						</p>
-						<small className="text-muted d-block mb-2 fw-bolder">
-							Sally Smith, Dublin
-						</small>
-						<ReviewStarsSmall width={75} />
-					</div>
-				</div>
-				<div className="col-12 col-lg-4" data-aos="fade-left" data-aos-delay="300">
-					<div className="bg-light p-4 d-flex h-100 justify-content-start align-items-center flex-column text-center">
-						<p className="fw-bolder lead">Fantastic Website</p>
-						<p className="mb-3">
-							My package was missing an item but customer services resolved it
-							immediately and i got another delivery quite promptly. Also the product
-							was absolutely lovely
-						</p>
-						<small className="text-muted d-block mb-2 fw-bolder">
-							John Patrick, London
-						</small>
-						<ReviewStarsSmall width={75} />
-					</div>
-				</div>
+				))}
 			</div>
 			<div className="d-flex justify-content-center flex-column mt-7 align-items-center">
 				<h3 className="mb-4 fw-bold fs-4">See what others have said</h3>
 				<div className="d-flex justify-content-center align-items-center">
-					<span className="fs-3 fw-bold me-4">4.85 / 5</span>
-					<ReviewStarsMedium colour="text-dark" width={88} />
+					<span className="fs-3 fw-bold me-4">
+						{overall_reviews.length === 0
+							? "?"
+							: average(overall_reviews.map((i) => Number(i.width))) / 20}{" "}
+						/ 5
+					</span>
+					<ReviewStarsMedium
+						colour="text-dark"
+						width={
+							overall_reviews.length === 0
+								? undefined
+								: average(overall_reviews.map((i) => Number(i.width)))
+						}
+					/>
 				</div>
-				<a href="#" className="btn btn-dark rounded-0 mt-4">
-					Read 4,215 more reviews
-				</a>
+				<Link to="/overall_reviews" className="btn btn-dark rounded-0 mt-4">
+					Read all {overall_reviews.length} reviews
+				</Link>
 			</div>
 		</>
 	);

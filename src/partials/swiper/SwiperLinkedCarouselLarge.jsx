@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import { GlobalContext } from "../../GlobalContext";
 import { ListingCard } from "../category/listing-cards/ListingCard";
+import { SwiperLinkedCarouselSmall } from "./SwiperLinkedCarouselSmall";
 export const SwiperLinkedCarouselLarge = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
 	var swiper_linked_carousel_large = useRef();
@@ -11,7 +12,7 @@ export const SwiperLinkedCarouselLarge = () => {
 			roundLengths: true,
 			loop: true,
 			controller: {
-				control: linkedCarouselSmall,
+				control: SwiperLinkedCarouselSmall,
 			},
 		};
 		Object.assign(swiper_linked_carousel_large.current, options);

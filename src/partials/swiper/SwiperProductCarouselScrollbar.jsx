@@ -36,16 +36,20 @@ export const SwiperProductCarouselScrollbar = ({ products }) => {
 		swiper_container.current.initialize();
 	}, []);
 	return (
-		<swiper-container class="overflow-visible" init="false" ref={swiper_container}>
+		<swiper-container
+			class="swiper-container overflow-visible"
+			init="false"
+			ref={swiper_container}
+		>
 			<div className="swiper-wrapper pb-5 pe-1">
 				{products.map((i) => (
 					<Fragment key={i._id}>
-						<swiper-slide class="d-flex h-auto">
+						<swiper-slide class="d-flex h-auto swiper-slide">
 							<ListingCard {...i} />
 						</swiper-slide>
 					</Fragment>
 				))}
-				<swiper-slide class="d-flex h-auto justify-content-center align-items-center">
+				<swiper-slide class="swiper-slide d-flex h-auto justify-content-center align-items-center">
 					<a
 						href="/category"
 						className="d-flex text-decoration-none flex-column justify-content-center align-items-center"
@@ -58,10 +62,10 @@ export const SwiperProductCarouselScrollbar = ({ products }) => {
 				</swiper-slide>
 			</div>
 
-			<div className="swiper-btn swiper-disabled-hide swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg mt-n5 ms-n4">
+			<div className="swiper-btn  swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg mt-n5 ms-n4">
 				<i className="ri-arrow-left-s-line ri-lg"></i>
 			</div>
-			<div className="swiper-btn swiper-disabled-hide swiper-next swiper-btn-side swiper-btn-side-right btn-icon bg-dark text-white me-n4 shadow-lg mt-n5">
+			<div className="swiper-btn  swiper-next swiper-btn-side swiper-btn-side-right btn-icon bg-dark text-white me-n4 shadow-lg mt-n5">
 				<i className="ri-arrow-right-s-line ri-lg"></i>
 			</div>
 

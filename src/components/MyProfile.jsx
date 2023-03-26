@@ -1,5 +1,10 @@
 import React from "react";
+import { Routes } from "react-router-dom";
 
 export const MyProfile = () => {
-	return <div>MyProfile</div>;
+	return (
+		<div>
+			<h1>MyProfile</h1>
+		</div>
+	);
 };

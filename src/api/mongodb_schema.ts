@@ -11,13 +11,18 @@ interface product_document extends mongodb_document {
 	currency: string;
 	price: string;
 }
-interface product_review_document extends mongodb_document {
+interface review_document_base extends mongodb_document {
 	user_id: string;
-	width: string;
-	product_id: string;
+	width: number;
 	time: string /* unix timestamp */;
 	title: string;
 	text: string;
+}
+interface product_review_document extends review_document_base {
+	product_id: string;
+}
+interface overall_review_document extends review_document_base {
+	/* these reviews are about overall exprience of our services */
 }
 interface cart_items_document extends mongodb_document {
 	user_id: string;

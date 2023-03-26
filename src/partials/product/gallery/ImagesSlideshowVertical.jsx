@@ -40,7 +40,7 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 			<swiper-container
 				init="false"
 				ref={gallery_thumbs_vertical_swiper_container}
-				class="gallery-thumbs-vertical swiper-container col-2 pb-4"
+				class="swiper-container gallery-thumbs-vertical swiper-container col-2 pb-4"
 			>
 				<div className="swiper-wrapper">
 					{product_document.image_files_ids.map((i) => (

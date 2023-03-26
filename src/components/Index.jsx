@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { SwiperHeroSlideshow } from "../partials/swiper/SwiperHeroSlideshow";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
@@ -17,8 +17,11 @@ import logo7 from "../assets/images/logos/logo-7.svg";
 import { GlobalContext } from "../GlobalContext";
 export const Index = () => {
 	//console.log("global context", useContext(GlobalContext));
-	var products = useContext(GlobalContext).global_context_state.products;
-	if (products === undefined) return <h1>still loading products ... </h1>;
+	var { products, key_values, product_categories } =
+		useContext(GlobalContext).global_context_state;
+
+	if ([product_categories, key_values, products].some((i) => i === undefined))
+		return <h1>still loading data ... </h1>;
 	return (
 		<>
 			<div className="position-relative z-index-30">
@@ -151,22 +154,62 @@ export const Index = () => {
 						</div>
 					</div>
 				</div>
-
-				<section className="mb-9 mt-5" data-aos="fade-up">
-					<div className="container">
-						<div className="w-md-50 mb-5">
-							<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">
-								Summer Favourites
-							</p>
-							<h2 className="display-5 fw-bold mb-3">Staff Picks</h2>
-							<p className="lead">
-								We've sorted through our feed to put together a collection of our
-								products perfect for a summer outdoors.
-							</p>
+				{key_values.find(
+					(i) => i.key === "index_page_product_carousel_scrollbar_product_category_id"
+				) !== undefined ? (
+					<section className="mb-9 mt-5" data-aos="fade-up">
+						<div className="container">
+							<div className="w-md-50 mb-5">
+								<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">
+									chosen category
+								</p>
+								<h2 className="display-5 fw-bold mb-3">
+									{
+										product_categories.find(
+											(i) =>
+												i._id ===
+												key_values.find(
+													(i) =>
+														i.key ===
+														"index_page_product_carousel_scrollbar_product_category_id"
+												).value
+										).title
+									}
+								</h2>
+								<p className="lead">
+									{
+										product_categories.find(
+											(i) =>
+												i._id ===
+												key_values.find(
+													(i) =>
+														i.key ===
+														"index_page_product_carousel_scrollbar_product_category_id"
+												).value
+										).description
+									}
+								</p>
+							</div>
+							{products && (
+								<SwiperProductCarouselScrollbar
+									products={products
+										.filter(
+											(i) =>
+												i.category_id ===
+												key_values.find(
+													(i) =>
+														i.key ===
+														"index_page_product_carousel_scrollbar_product_category_id"
+												).value
+										)
+										.slice(0, 5)}
+								/>
+							)}
 						</div>
-						{products && <SwiperProductCarouselScrollbar products={products} />}
-					</div>
-				</section>
+					</section>
+				) : (
+					<h1>there is not any product category chosen to be shown here </h1>
+				)}
 
 				<section className="my-10 position-relative">
 					<BannerImageHotspot />
@@ -213,7 +256,9 @@ export const Index = () => {
 
 				<section>
 					<div className="container" data-aos="fade-in">
-						<h2 className="fs-1 fw-bold mb-3 text-center mb-5">Customer Reviews</h2>
+						<h2 className="fs-1 fw-bold mb-3 text-center mb-5">
+							Customers Overall Reviews
+						</h2>
 						<ReviewsCompany />
 					</div>
 				</section>

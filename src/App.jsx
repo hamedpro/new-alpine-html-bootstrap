@@ -26,6 +26,8 @@ import { AboutUs } from "./components/AboutUs";
 import { MyProfile } from "./components/MyProfile";
 import { LikedProducts } from "./components/LikedProducts";
 import { register } from "swiper/element/bundle";
+import { OverallReviews } from "./components/OverallReviews";
+import { NewOverallReview } from "./components/NewOverallReview";
 
 register();
 
@@ -54,6 +56,10 @@ export const App = () => {
 								</CommonBottomWrapper>
 							}
 						/>
+
+						<Route path="/overall_reviews" element={<OverallReviews />} />
+						<Route path="/overall_reviews/new" element={<NewOverallReview />} />
+
 						<Route
 							path="/products/:product_id"
 							element={

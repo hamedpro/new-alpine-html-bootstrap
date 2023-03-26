@@ -24,7 +24,10 @@ export const NewCategory = () => {
 			url: `/collections/product_categories`,
 			method: "post",
 			data: {
-				document: { title: document.getElementById("title_input").value },
+				document: {
+					title: document.getElementById("title_input").value,
+					description: document.getElementById("description_input"),
+				},
 			},
 		});
 		await fetch_data();
@@ -44,6 +47,7 @@ export const NewCategory = () => {
 			<h1>adding a new product category </h1>
 			<p>enter a title for this category :</p>
 			<input id="title_input" />
+			<input id="description_input" />
 			<button onClick={submit_new_product_category}>submit</button>
 		</>
 	);

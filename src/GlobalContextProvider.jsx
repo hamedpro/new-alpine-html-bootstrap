@@ -17,6 +17,8 @@ export const GlobalContextProvider = ({ children }) => {
 			"cart_items",
 			"products_likes",
 			"key_values",
+			"overall_reviews",
+			"users",
 		].forEach(async (collection_name) => {
 			var collection = (
 				await axios({

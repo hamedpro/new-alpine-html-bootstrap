@@ -31,7 +31,11 @@ export const SwiperProductCarouselOne = ({ entries }) => {
 		swiper_container.current.initialize();
 	}, []);
 	return (
-		<swiper-container ref={swiper_container} init="false" class="overflow-visible">
+		<swiper-container
+			ref={swiper_container}
+			init="false"
+			class="overflow-visible swiper-container"
+		>
 			<div className="swiper-wrapper pb-1 pe-1">
 				{entries.map((i) => (
 					<swiper-slide class="swiper-slide d-flex h-auto">
@@ -51,10 +55,10 @@ export const SwiperProductCarouselOne = ({ entries }) => {
 				</swiper-slide>
 			</div>
 
-			<div className="swiper-btn swiper-disabled-hide swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg ms-n3">
+			<div className="swiper-btn  swiper-prev swiper-btn-side btn-icon bg-dark text-white ms-3 shadow-lg ms-n3">
 				<i className="ri-arrow-left-s-line ri-lg"></i>
 			</div>
-			<div className="swiper-btn swiper-disabled-hide swiper-next swiper-btn-side swiper-btn-side-right btn-icon bg-dark text-white me-n3 shadow-lg">
+			<div className="swiper-btn  swiper-next swiper-btn-side swiper-btn-side-right btn-icon bg-dark text-white me-n3 shadow-lg">
 				<i className="ri-arrow-right-s-line ri-lg"></i>
 			</div>
 		</swiper-container>

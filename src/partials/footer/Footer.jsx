@@ -2,48 +2,11 @@ import React from "react";
 import { InstagramPhotos } from "../instagram/InstagramPhotos";
 import { templateName } from "../../../env.json";
 import { InfoBoxes } from "../info-boxes/InfoBoxes";
+import { FollowUs } from "../../components/FollowUs";
 export const Footer = ({ classList }) => {
 	return (
 		<footer className={`bg-dark mt-10  ${classList}`}>
-			<div className="bg-light py-4">
-				<div className="container d-flex justify-content-center align-items-center py-2">
-					<p className="lead fw-bolder mb-0 lh-1">Find us online</p>
-					<ul className="list-unstyled d-flex justify-content-start align-items-center mb-0 ms-3 lh-1">
-						<li className="mx-1 mb-0 lh-1">
-							<a
-								className="text-muted text-decoration-none opacity-75-hover transition-all lh-1"
-								href="#"
-							>
-								<i className="ri-instagram-fill ri-xl lh-1"></i>
-							</a>
-						</li>
-						<li className="mx-1 mb-0 lh-1">
-							<a
-								className="text-muted text-decoration-none opacity-75-hover transition-all lh-1"
-								href="#"
-							>
-								<i className="ri-facebook-fill ri-xl lh-1"></i>
-							</a>
-						</li>
-						<li className="mx-1 mb-0 lh-1">
-							<a
-								className="text-muted text-decoration-none opacity-75-hover transition-all lh-1"
-								href="#"
-							>
-								<i className="ri-twitter-fill ri-xl lh-1"></i>
-							</a>
-						</li>
-						<li className="mx-1 mb-0 lh-1">
-							<a
-								className="text-muted text-decoration-none opacity-75-hover transition-all lh-1"
-								href="#"
-							>
-								<i className="ri-snapchat-fill ri-xl lh-1"></i>
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			<FollowUs />
 
 			<div className="container pt-8">
 				<InstagramPhotos />

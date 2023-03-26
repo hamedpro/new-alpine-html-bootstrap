@@ -3,15 +3,30 @@ import { ReviewStarsSmall } from "../reviews/ReviewStarsSmall";
 import svg_divider_top_lr from "../svg/svg-divider-top-lr.svg";
 import svg_divider_bottom_rl from "../svg/svg-divider-bottom-rl.svg";
 import product3 from "../../assets/images/products/product-3.jpg";
-import { Hotspot } from "../../assets/js/components/hotspots";
+import { init_hotspot } from "../../assets/js/components/hotspots";
+import background_image from "../../assets/images/image.avif";
 export const BannerImageHotspot = () => {
 	useEffect(() => {
-		const hotspots = document.querySelectorAll(".hotspot");
-
-		hotspots.forEach((hotspot) => {
-			new Hotspot(hotspot);
+		init_hotspot("hotspot1", {
+			placement: {
+				left: "68%",
+				bottom: "40%",
+			},
+			alwaysVisible: true,
+			alwaysAnimate: true,
+			contentTarget: "#hotspot-one",
+			trigger: "mouseenter",
 		});
-	});
+		init_hotspot("hotspot2", {
+			placement: {
+				left: "53%",
+				top: "40%",
+			},
+			alwaysVisible: true,
+			alwaysAnimate: true,
+			contentTarget: "#hotspot-one",
+		});
+	}, []);
 	return (
 		<>
 			<div className="position-absolute z-index-50 text-white top-0 start-0 end-0">
@@ -25,35 +40,11 @@ export const BannerImageHotspot = () => {
 			<div
 				className="w-100 h-100 bg-img-cover bg-pos-center-center hotspot-container py-5 py-md-7 py-lg-10"
 				style={{
-					backgroundimage:
-						"url(https://images.unsplash.com/photo-1508746829417-e6f548d8d6ed?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)",
+					backgroundImage: `url(${background_image})`,
 				}}
 			>
-				<div
-					className="hotspot d-none d-lg-block"
-					data-options='{
-            "placement": {
-                "left": "68%",
-                "bottom": "40%"
-            },
-            "alwaysVisible": true,
-            "alwaysAnimate": true,
-            "contentTarget": "#hotspot-one",
-            "trigger": "mouseenter"
-        }'
-				></div>
-				<div
-					className="hotspot d-none d-lg-block"
-					data-options='{
-            "placement": {
-                "left": "53%",
-                "top": "40%"
-            },
-            "alwaysVisible": true,
-            "alwaysAnimate": true,
-            "contentTarget": "#hotspot-one"
-        }'
-				></div>
+				<div className="hotspot d-none d-lg-block" id="hotspot1"></div>
+				<div className="hotspot d-none d-lg-block" id="hotspot2"></div>
 				<div
 					className="container py-lg-8 position-relative z-index-10 d-flex align-items-center"
 					data-aos="fade-left"

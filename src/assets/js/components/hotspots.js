@@ -1,64 +1,50 @@
 import tippy from "tippy.js";
+export function init_hotspot(element_id, options = {}) {
+	var hotspot = document.getElementById(element_id);
+	var type = options.type || "tippy";
+	var trigger = options.trigger || "click";
+	var hotspotContent = null;
 
-export class Hotspot {
-	constructor(hotspot) {
-		this.hotspot = hotspot;
-		this.options =
-			this.hotspot.dataset && this.hotspot.dataset.options
-				? JSON.parse(this.hotspot.dataset.options)
-				: false;
-		this.type = this.options && this.options.type ? this.options.type : "tippy";
-		this.trigger = this.options && this.options.trigger ? this.options.trigger : "click";
-		this.hotspotContent = null;
-
-		this.init();
+	if (options.placement) {
+		function positionHotspot() {
+			Object.keys(options.placement).forEach((key) => {
+				hotspot.style[key] = `${options.placement[key]}`;
+			});
+		}
+		positionHotspot();
 	}
-
-	init() {
-		if (this.options.placement) {
-			this.positionHotspot();
-		}
-		if (this.options.alwaysVisible) {
-			this.hotspot.classList.add("always-show");
-		}
-		if (this.options.alwaysAnimate) {
-			this.hotspot.classList.add("always-animate");
-		}
-
-		this.setHotspotContent();
-
-		tippy(this.hotspot, {
-			allowHTML: true,
-			trigger: this.trigger,
-			content: this.hotspotContent,
-			theme: "light",
-			animation: "shift-away",
-			interactive: true,
-			hideOnClick: true,
-			appendTo: document.body,
-		});
+	if (options.alwaysVisible) {
+		hotspot.classList.add("always-show");
 	}
-
-	setHotspotContent() {
-		if (this.options.contentTarget) {
-			let content = document.querySelector(`${this.options.contentTarget}`);
+	if (options.alwaysAnimate) {
+		hotspot.classList.add("always-animate");
+	}
+	function setHotspotContent() {
+		if (options.contentTarget) {
+			let content = document.querySelector(`${options.contentTarget}`);
 			if (content) {
-				this.hotspotContent = content.innerHTML;
+				hotspotContent = content.innerHTML;
 			} else {
-				this.hotspotContent = "Missing content";
+				hotspotContent = "Missing content";
 			}
 			return;
 		}
-		if (this.options.content) {
-			this.hotspotContent = this.options.content;
+		if (options.content) {
+			hotspotContent = options.content;
 			return;
 		}
-		this.hotspotContent = "Missing content";
+		hotspotContent = "Missing content";
 	}
+	setHotspotContent();
 
-	positionHotspot() {
-		Object.keys(this.options.placement).forEach((key) => {
-			this.hotspot.style[key] = `${this.options.placement[key]}`;
-		});
-	}
+	tippy(hotspot, {
+		allowHTML: true,
+		trigger: trigger,
+		content: hotspotContent,
+		theme: "light",
+		animation: "shift-away",
+		interactive: true,
+		hideOnClick: true,
+		appendTo: document.body,
+	});
 }
