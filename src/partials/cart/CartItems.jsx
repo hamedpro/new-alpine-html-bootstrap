@@ -2,14 +2,14 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../GlobalContext";
 export const CartItems = () => {
 	var cart_items = useContext(GlobalContext).global_context_state.cart_items;
-	if (cart_items === undefined) return <h1>still loading cart_items ...</h1>;
+	if (cart_items === undefined) return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
 	return (
 		<table className="table">
 			<thead>
 				<tr>
 					<th className="d-none d-sm-table-cell"></th>
-					<th className="ps-sm-3">Details</th>
-					<th>Qty</th>
+					<th className="ps-sm-3">جزئیات</th>
+					<th>تعداد</th>
 					<th></th>
 				</tr>
 			</thead>

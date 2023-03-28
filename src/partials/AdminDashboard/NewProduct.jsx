@@ -19,17 +19,17 @@ export const NewProduct = () => {
 			.then((response) => response.data)
 			.then((data) => set_product_categories(data));
 	}, []);
-	if (product_categories === undefined) return <h1>loading current product categories ... </h1>;
+	if (product_categories === undefined) return <h1>در حال بارگذاری دسته بندی های کالا ها ...</h1>;
 	async function submit_product() {
 		var files = document.getElementById("image_files_ids").files;
 
 		if (files.length === 0) {
-			alert("please select at least 1 image for this product");
+			alert("حداقل یک عکس برای این کالا انتخاب کنید");
 			return;
 		}
 		if (selected_product_category === undefined) {
 			alert(
-				"please select a product category and if there is nothing to select create one first. "
+				"لطفا یک دسته بندی برای این محصول انتخاب کنید و اگر دسته بندی مورد نظر شما وجود ندارد ابتدا آن را بسازید."
 			);
 			return;
 		}
@@ -65,15 +65,15 @@ export const NewProduct = () => {
 				},
 			},
 		});
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
 	return (
 		<div className="p-2">
-			<h1>new product</h1>
-			<h1>select images of this product </h1>
+			<h1>محصول جدید</h1>
+			<h1>انتخاب عکس های این محصول جدید </h1>
 			<p>
-				at least one photo must be selected and if there is a second one that will be used
-				as product's hover image{" "}
+				حداقل یک عکس برای این محصول باید انتخاب شود و اگر عکس دومی انتخاب شود به عنوان عکس
+				هاور این محصول در نظر گرفته خواهد شد
 			</p>
 			<input type="file" id="image_files_ids" multiple />
 			{["discount_percentage", "title", "price"].map((key) => (
@@ -85,10 +85,10 @@ export const NewProduct = () => {
 					<input type={"text"} id={`${key}_input`} />
 				</Fragment>
 			))}
-			<p>currency : $</p>
-			<h3>product's description : </h3>
+			<p>واحد پول : $</p>
+			<h3>توضیحات محصول : </h3>
 			<textarea id="description" />
-			<h3>options </h3>
+			<h3>موارد این محصول </h3>
 			<ul>
 				{options.map((i, index) => (
 					<li>{i}</li>
@@ -97,15 +97,18 @@ export const NewProduct = () => {
 
 			<button
 				onClick={() =>
-					set_options((prev) => [...prev, window.prompt("enter option text here")])
+					set_options((prev) => [
+						...prev,
+						window.prompt("متن این مورد را اینجا وارد کنید "),
+					])
 				}
 			>
-				new option{" "}
+				مورد جدید{" "}
 			</button>
-			<h3>select a product category :</h3>
+			<h3>یک دسته بندی برای این محصول انتخاب کنید :</h3>
 			<p>
-				if what you are looking for doesnt exist you must create it first{" "}
-				<Link to="/products/new">here</Link>
+				اگر دسته بندی مورد نظر شما هم اکنون موجود نیست ابتدا آن را از اینجا ایجاد کنید{" "}
+				<Link to="/products/new">: ایجاد</Link>
 			</p>
 			<ReactSelect
 				options={product_categories.map((i) => ({ value: i._id, label: i.title }))}
@@ -113,7 +116,7 @@ export const NewProduct = () => {
 				value={selected_product_category}
 			/>
 
-			<button onClick={submit_product}>submit product</button>
+			<button onClick={submit_product}>ثبت محصول</button>
 		</div>
 	);
 };

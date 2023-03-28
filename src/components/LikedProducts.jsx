@@ -1,5 +1,5 @@
 import React from "react";
 
 export const LikedProducts = () => {
-	return <div>LikedProducts</div>;
+	return <div>محصولات پسند شده</div>;
 };

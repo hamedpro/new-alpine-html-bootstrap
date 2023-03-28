@@ -3,12 +3,12 @@ import React from "react";
 export const CheckoutShipping = () => {
 	return (
 		<div className="checkout-panel">
-			<h5 className="title-checkout">Shipping Address</h5>
+			<h5 className="title-checkout">آدرس تحویل کالا</h5>
 			<div className="row">
 				<div className="col-sm-6">
 					<div className="form-group">
 						<label htmlFor="firstName" className="form-label">
-							First name
+							نام 
 						</label>
 						<input
 							type="text"
@@ -24,7 +24,7 @@ export const CheckoutShipping = () => {
 				<div className="col-sm-6">
 					<div className="form-group">
 						<label htmlFor="lastName" className="form-label">
-							Last name
+							نام خانوادگی
 						</label>
 						<input
 							type="text"
@@ -40,7 +40,7 @@ export const CheckoutShipping = () => {
 				<div className="col-12">
 					<div className="form-group">
 						<label htmlFor="address" className="form-label">
-							Address
+							آدرس
 						</label>
 						<input
 							type="text"
@@ -55,11 +55,11 @@ export const CheckoutShipping = () => {
 				<div className="col-md-12">
 					<div className="form-group">
 						<label htmlFor="country" className="form-label">
-							Country
+							کشور
 						</label>
 						<select className="form-select" id="country" required="">
-							<option value="">Please Select...</option>
-							<option>United States</option>
+							<option value="">لطفا منتظر بمانید</option>
+							<option>ایالات متحده آمریکا</option>
 						</select>
 					</div>
 				</div>
@@ -67,11 +67,11 @@ export const CheckoutShipping = () => {
 				<div className="col-md-6">
 					<div className="form-group">
 						<label htmlFor="state" className="form-label">
-							State
+							ایالت
 						</label>
 						<select className="form-select" id="state" required="">
-							<option value="">Please Select...</option>
-							<option>California</option>
+							<option value="">لطفا منتظر بمانید</option>
+							<option>کالیفرنیا</option>
 						</select>
 					</div>
 				</div>
@@ -79,7 +79,7 @@ export const CheckoutShipping = () => {
 				<div className="col-md-6">
 					<div className="form-group">
 						<label htmlFor="zip" className="form-label">
-							Zip/Post Code
+							کد پستی
 						</label>
 						<input
 							type="text"

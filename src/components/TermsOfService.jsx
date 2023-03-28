@@ -1,5 +1,5 @@
 import React from "react";
 
 export const TermsOfService = () => {
-	return <div>TermsOfService</div>;
+	return <div>شرایط استفاده از سرویس</div>;
 };

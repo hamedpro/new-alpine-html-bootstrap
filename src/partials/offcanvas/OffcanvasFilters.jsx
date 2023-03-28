@@ -15,7 +15,7 @@ export const OffcanvasFilters = () => {
 		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasFilters">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasFiltersLabel">
-					Category Filters
+					فیلتر های دسته بندی
 				</h5>
 				<button
 					type="button"
@@ -49,7 +49,7 @@ export const OffcanvasFilters = () => {
 								aria-expanded="false"
 								aria-controls="filter-modal-price"
 							>
-								Price
+								قیمت
 							</a>
 							<div id="filter-modal-price" className="collapse">
 								<FilterPrice />
@@ -66,7 +66,7 @@ export const OffcanvasFilters = () => {
 									aria-expanded="false"
 									aria-controls="filter-modal-brands"
 								>
-									Brands
+									برند ها
 								</a>
 								<div id="filter-modal-brands" className="collapse">
 									<div className="input-group my-3 py-1">
@@ -106,7 +106,7 @@ export const OffcanvasFilters = () => {
 									aria-expanded="false"
 									aria-controls="filter-modal-type"
 								>
-									Type
+									نوع
 								</a>
 								<div id="filter-modal-type" className="collapse">
 									<div className="input-group my-3 py-1">
@@ -144,7 +144,7 @@ export const OffcanvasFilters = () => {
 									aria-expanded="false"
 									aria-controls="filter-modal-sizes"
 								>
-									Sizes
+									اندازه ها
 								</a>
 								<div id="filter-modal-sizes" className="collapse">
 									<div className="filter-options mt-3">
@@ -171,7 +171,7 @@ export const OffcanvasFilters = () => {
 									aria-expanded="false"
 									aria-controls="filter-modal-colour"
 								>
-									Colour
+									رنگ
 								</a>
 								<div id="filter-modal-colour" className="collapse">
 									<div className="filter-options mt-3">
@@ -194,7 +194,7 @@ export const OffcanvasFilters = () => {
 							href="#"
 							className="btn btn-dark mt-2 d-block hover-lift-sm hover-boxshadow"
 						>
-							Done
+							انجام شد
 						</a>
 					</div>
 				</div>

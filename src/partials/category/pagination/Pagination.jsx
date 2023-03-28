@@ -9,7 +9,7 @@ export const Pagination = () => {
 			<ul className="pagination">
 				<li className="page-item">
 					<a className="page-link" href="#">
-						<i className="ri-arrow-left-line align-bottom"></i> Prev
+						<i className="ri-arrow-left-line align-bottom"></i> قبلی
 					</a>
 				</li>
 			</ul>
@@ -33,7 +33,7 @@ export const Pagination = () => {
 			<ul className="pagination">
 				<li className="page-item">
 					<a className="page-link" href="#">
-						Next <i className="ri-arrow-right-line align-bottom"></i>
+						بعدی <i className="ri-arrow-right-line align-bottom"></i>
 					</a>
 				</li>
 			</ul>

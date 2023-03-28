@@ -8,7 +8,7 @@ export const ReviewsCompany = () => {
 	var { overall_reviews, users } = useContext(GlobalContext).global_context_state;
 
 	if (overall_reviews === undefined || users === undefined)
-		return "overall reviews or users are being loaded ...";
+		return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<>
 			<div className="row g-3">
@@ -26,7 +26,7 @@ export const ReviewsCompany = () => {
 				))}
 			</div>
 			<div className="d-flex justify-content-center flex-column mt-7 align-items-center">
-				<h3 className="mb-4 fw-bold fs-4">See what others have said</h3>
+				<h3 className="mb-4 fw-bold fs-4">نظرات دیگران را مشاهده کنید</h3>
 				<div className="d-flex justify-content-center align-items-center">
 					<span className="fs-3 fw-bold me-4">
 						{overall_reviews.length === 0
@@ -44,7 +44,7 @@ export const ReviewsCompany = () => {
 					/>
 				</div>
 				<Link to="/overall_reviews" className="btn btn-dark rounded-0 mt-4">
-					Read all {overall_reviews.length} reviews
+					مشاهده همه {overall_reviews.length} نظر
 				</Link>
 			</div>
 		</>

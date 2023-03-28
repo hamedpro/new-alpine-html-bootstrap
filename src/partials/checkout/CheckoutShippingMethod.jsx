@@ -3,7 +3,7 @@ import React from "react";
 export const CheckoutShippingMethod = () => {
 	return (
 		<div className="checkout-panel">
-			<h5 className="title-checkout">Shipping Method</h5>
+			<h5 className="title-checkout">نحوه ارسال کالا</h5>
 
 			<div className="form-check form-group form-check-custom form-radio-custom mb-3">
 				<input

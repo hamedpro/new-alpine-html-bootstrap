@@ -36,24 +36,24 @@ export const AdminDashboardSocialMedia = () => {
 			});
 		}
 		refresh_global_context_state();
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
-	if (key_values === undefined) return "loading key_values collection ... ";
+	if (key_values === undefined) return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<>
-			<h1>AdminDashboardSocialMedia</h1>
+			<h1>مدیریت ادرس شبکه های اجتماعی</h1>
 			{["instagram_id", "twitter_id", "facebook_id"].map((i) => (
 				<Fragment key={i}>
 					<h2>{i}</h2>
 					<p>
-						current value :{" "}
+						مقدار فعلی :{" "}
 						{key_values.find((row) => row.key === i)
 							? key_values.find((row) => row.key === i).value
-							: "there is not any value set for this"}
+							: "هیچ مقداری ثبت نشده است"}
 					</p>
-					<p>set a new value :</p>
+					<p>تنظیم مقدار جدید برای این مورد :</p>
 					<input type="text" id={i} />
-					<button onClick={() => submit_new_value(i)}>submit </button>
+					<button onClick={() => submit_new_value(i)}>ثبت اطلاعات </button>
 				</Fragment>
 			))}
 		</>

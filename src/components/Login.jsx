@@ -24,7 +24,7 @@ export const Login = () => {
 			baseURL: api_endpoint,
 			method: "post",
 			data: {
-				password: document.getElementById("password_input").value,
+				password,
 				user_id: user._id,
 			},
 		});
@@ -38,15 +38,15 @@ export const Login = () => {
 	}
 	return (
 		<>
-			<h1>username : </h1>
+			<h1>نام کاربری : </h1>
 			<input id="username_input" />
 
-			<h1>password : </h1>
+			<h1>رمز عبور : </h1>
 			<input id="password_input" type="password" />
 
-			<button onClick={login_handler}>login</button>
+			<button onClick={login_handler}>ورود به حساب کاربری</button>
 			<p>
-				and if you have not registered you can register <Link to="/register">here</Link>
+				اگر هنوز ثبت نام نکرده اید از <Link to="/register">اینجا</Link> ثبت نام کنید
 			</p>
 		</>
 	);

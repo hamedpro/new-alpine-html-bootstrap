@@ -4,14 +4,14 @@ export const ToolbarTop = () => {
 	return (
 		<div className="mb-4 d-md-flex justify-content-between align-items-center">
 			<div className="d-flex justify-content-start align-items-center flex-grow-1 mb-4 mb-md-0">
-				<small className="d-inline-block fw-bolder">Filtered by:</small>
+				<small className="d-inline-block fw-bolder">فیلتر شده بر اساس :</small>
 				<ul className="list-unstyled d-inline-block mb-0 ms-2">
 					<li className="bg-light py-1 fw-bolder px-2 cursor-pointer d-inline-block me-1 small">
 						Type: Slip On <i className="ri-close-circle-line align-bottom ms-1"></i>
 					</li>
 				</ul>
 				<span className="fw-bolder text-muted-hover text-decoration-underline ms-2 cursor-pointer small">
-					Clear All
+					پاک کردن همه
 				</span>
 			</div>
 			<div className="d-flex align-items-center flex-column flex-md-row">
@@ -22,7 +22,7 @@ export const ToolbarTop = () => {
 					data-bs-target="#offcanvasFilters"
 					aria-controls="offcanvasFilters"
 				>
-					<i className="ri-equalizer-line me-2"></i> Filters
+					<i className="ri-equalizer-line me-2"></i> فیلتر ها
 				</button>
 
 				<div className="dropdown ms-md-2 lh-1 p-3 bg-light w-100 mb-2 mb-md-0 w-md-auto">
@@ -32,7 +32,8 @@ export const ToolbarTop = () => {
 						data-bs-toggle="dropdown"
 						aria-expanded="false"
 					>
-						Sort By <i className="ri-arrow-drop-down-line ri-lg align-bottom"></i>
+						مرتب کردن بر اساس{" "}
+						<i className="ri-arrow-drop-down-line ri-lg align-bottom"></i>
 					</p>
 					<ul className="dropdown-menu">
 						<li>
@@ -56,7 +57,7 @@ export const ToolbarTop = () => {
 								className="dropdown-item fs-xs fw-bold text-uppercase text-muted-hover mb-2"
 								href="#"
 							>
-								Name
+								نام
 							</a>
 						</li>
 					</ul>

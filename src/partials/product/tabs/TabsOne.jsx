@@ -18,7 +18,7 @@ export const TabsOne = ({ product }) => {
 						aria-controls="details"
 						aria-selected="true"
 					>
-						The Details
+						جزئیات
 					</a>
 				</li>
 				<li className="nav-item w-100 mb-2 mb-sm-0 w-sm-auto mx-sm-3" role="presentation">
@@ -31,7 +31,7 @@ export const TabsOne = ({ product }) => {
 						aria-controls="reviews"
 						aria-selected="false"
 					>
-						Reviews
+						نظرات
 					</a>
 				</li>
 				<li className="nav-item w-100 mb-2 mb-sm-0 w-sm-auto mx-sm-3" role="presentation">
@@ -44,7 +44,7 @@ export const TabsOne = ({ product }) => {
 						aria-controls="delivery"
 						aria-selected="false"
 					>
-						Delivery
+						تحویل کالا
 					</a>
 				</li>
 				<li className="nav-item w-100 mb-2 mb-sm-0 w-sm-auto mx-sm-3" role="presentation">
@@ -57,7 +57,7 @@ export const TabsOne = ({ product }) => {
 						aria-controls="returns"
 						aria-selected="false"
 					>
-						Returns
+						بازگشت کالا
 					</a>
 				</li>
 			</ul>

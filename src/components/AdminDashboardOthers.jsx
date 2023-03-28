@@ -5,7 +5,7 @@ import { GlobalContext } from "../GlobalContext";
 export const AdminDashboardOthers = () => {
 	var { key_values } = useContext(GlobalContext).global_context_state;
 	var { refresh_global_context_state } = useContext(GlobalContext);
-	if (key_values === undefined) return <h1>loading key values collection ...</h1>;
+	if (key_values === undefined) return <h1>در حال بارگذاری اطلاعات از سرور...</h1>;
 	async function submit_new_products_bottom_sentence() {
 		if (key_values.find((i) => i.key === "products_bottom_sentence")) {
 			await axios({
@@ -38,18 +38,18 @@ export const AdminDashboardOthers = () => {
 	}
 	return (
 		<>
-			<h1>AdminDashboardOthers</h1>
+			<h1>گزینه های مدیریتی بیشتر</h1>
 			<hr />
-			<h1>products_bottom_sentence</h1>
+			<h1>جمله پایین هر محصول</h1>
 			<p>
-				current value :{" "}
+				مقدار فعلی :{" "}
 				{key_values.find((i) => i.key === "products_bottom_sentence")
 					? key_values.find((i) => i.key === "products_bottom_sentence").value
-					: "empty"}
+					: "بدون مقدار"}
 			</p>
-			<p>new value :</p>
+			<p>مقدار جدید :</p>
 			<input id="products_bottom_sentence" />
-			<button onClick={submit_new_products_bottom_sentence}>submit</button>
+			<button onClick={submit_new_products_bottom_sentence}>ثبت اطلاعات</button>
 		</>
 	);
 };

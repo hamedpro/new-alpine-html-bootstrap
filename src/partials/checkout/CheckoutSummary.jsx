@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../GlobalContext";
 export const CheckoutSummary = () => {
 	var cart_items = useContext(GlobalContext).global_context_state.cart_items;
-	if (cart_items === undefined) return <h1>still loading cart_items ...</h1>;
+	if (cart_items === undefined) return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
 
 	return (
 		<div className="bg-light p-4 sticky-md-top top-5">
@@ -42,7 +42,7 @@ export const CheckoutSummary = () => {
 					<p className="m-0 fs-6 fw-bolder">$422.99</p>
 				</div>
 				<div className="d-flex justify-content-between align-items-center ">
-					<p className="m-0 fw-bolder fs-6">Shipping</p>
+					<p className="m-0 fw-bolder fs-6">هزینه ارسال</p>
 					<p className="m-0 fs-6 fw-bolder">$8.95</p>
 				</div>
 			</div>

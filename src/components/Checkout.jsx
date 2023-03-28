@@ -11,10 +11,9 @@ export const Checkout = () => {
 		<>
 			<NavBar />
 			<section className="mt-5 container">
-				<h1 className="mb-4 display-5 fw-bold text-center">Checkout Securely</h1>
+				<h1 className="mb-4 display-5 fw-bold text-center">تکمیل ایمن سفارش</h1>
 				<p className="text-center mx-auto">
-					Please fill in the details below to complete your order. Already registered?
-					<a href="#">Login here.</a>
+					لطفا برای تکمیل سفارش خود فرم زیر را تکمیل کنید
 				</p>
 
 				<div className="row g-md-8 mt-4">

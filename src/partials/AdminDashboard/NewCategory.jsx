@@ -17,7 +17,8 @@ export const NewCategory = () => {
 			});
 	}
 	useEffect(fetch_data, []);
-	if (product_categories === undefined) return <h1>loading product categories ... </h1>;
+	if (product_categories === undefined)
+		return <h1>در حال بارگذاری دسته بندی های کالا ها ... </h1>;
 	async function submit_new_product_category() {
 		await axios({
 			baseURL: api_endpoint,
@@ -31,12 +32,12 @@ export const NewCategory = () => {
 			},
 		});
 		await fetch_data();
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
 	return (
 		<>
-			<h1>NewCategory</h1>
-			<h1>existing product categories : </h1>
+			<h1>دسته بندی جدید</h1>
+			<h1>دسته بندی های فعلی : </h1>
 			{product_categories.map((i) => (
 				<Fragment key={i._id}>
 					<p>{JSON.stringify(i)}</p>
@@ -44,11 +45,11 @@ export const NewCategory = () => {
 				</Fragment>
 			))}
 
-			<h1>adding a new product category </h1>
-			<p>enter a title for this category :</p>
+			<h1>اضافه کردن دسته بندی جدید : </h1>
+			<p>برای این دسته بندی جدید عنوانی انتخاب کنید :</p>
 			<input id="title_input" />
 			<input id="description_input" />
-			<button onClick={submit_new_product_category}>submit</button>
+			<button onClick={submit_new_product_category}>ثبت اطلاعات </button>
 		</>
 	);
 };

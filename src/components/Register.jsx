@@ -23,15 +23,15 @@ export const Register = () => {
 	}
 	return (
 		<>
-			<h1>Register</h1>
+			<h1>ثبت نام کاربر جدید</h1>
 
-			<h1>username : </h1>
+			<h1>نام کاربری : </h1>
 			<input id="username_input" />
 
-			<h1>password :</h1>
+			<h1>رمز عبور :</h1>
 			<input id="password_input" />
 
-			<button onClick={register_handler}>register </button>
+			<button onClick={register_handler}>ثبت نام کاربر جدید </button>
 		</>
 	);
 };

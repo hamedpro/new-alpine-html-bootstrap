@@ -1,5 +1,4 @@
 import React from "react";
-
 export const InfoBoxes = () => {
 	return (
 		<div className="row">
@@ -7,12 +6,12 @@ export const InfoBoxes = () => {
 				<div className="border-white-opacity border-2 p-4 d-flex flex-column flex-lg-row justify-content-start align-items-start h-100">
 					<i className="ri-questionnaire-line ri-lg mb-3 mb-lg-0"></i>
 					<div className="ms-lg-4">
-						<p className="mb-1 lh-1 fw-bold">Customer Services</p>
+						<p className="mb-1 lh-1 fw-bold">خدمات مشتریان</p>
 						<small className="text-muted">
 							<a className="text-muted" href="#">
-								Click here
+								اینجا کلیک کنید
 							</a>{" "}
-							to chat with our support team
+							تا با تیم پشتیبانی ما صحبت کنید
 						</small>
 					</div>
 				</div>
@@ -26,9 +25,9 @@ export const InfoBoxes = () => {
 				<div className="border-white-opacity border-2 p-4 d-flex flex-column flex-lg-row justify-content-start align-items-start h-100">
 					<i className="ri-truck-line ri-lg mb-3 mb-lg-0"></i>
 					<div className="ms-lg-4">
-						<p className="mb-1 lh-1 fw-bold">Free Delivery</p>
+						<p className="mb-1 lh-1 fw-bold">تحویل رایگان</p>
 						<small className="text-muted">
-							Free standard delivery on all orders over $100
+							تحویل استاندارد رایگان برای سفارش های بالای ۱۰۰ هزار تومن
 						</small>
 					</div>
 				</div>
@@ -42,9 +41,9 @@ export const InfoBoxes = () => {
 				<div className="border-white-opacity border-2 p-4 d-flex flex-column flex-lg-row justify-content-start align-items-start h-100">
 					<i className="ri-repeat-line ri-lg mb-3 mb-lg-0"></i>
 					<div className="ms-lg-4">
-						<p className="mb-1 lh-1 fw-bold">Returns</p>
+						<p className="mb-1 lh-1 fw-bold">بازگشت کالا</p>
 						<small className="text-muted">
-							30 day money-back returns if you change your mind
+							ضمانت ۳۰ روزه بازگشت وجه در صورت تغییر عقیده
 						</small>
 					</div>
 				</div>

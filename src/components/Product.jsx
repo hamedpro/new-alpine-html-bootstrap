@@ -10,7 +10,7 @@ import { useParams } from "react-router-dom";
 export const Product = () => {
 	var { product_id } = useParams();
 	var products = useContext(GlobalContext).global_context_state.products;
-	if (products === undefined) return <h1>still loading products ...</h1>;
+	if (products === undefined) return <h1>در حال بارگذاری محصولات ...</h1>;
 	var product = products.find((i) => i._id === product_id);
 	return (
 		<>
@@ -39,7 +39,7 @@ export const Product = () => {
 				</section>
 
 				<div className="container my-8">
-					<h3 className="fs-4 fw-bold mb-5 text-center">You May Also Like</h3>
+					<h3 className="fs-4 fw-bold mb-5 text-center">ممکن است بپسندید</h3>
 					<SwiperProductCarouselScrollbar products={products} />
 				</div>
 			</section>

@@ -3,7 +3,7 @@ export const OffcanvasCart = () => {
 		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasCart">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasCartLabel">
-					Your Cart
+					سبد خرید شما
 				</h5>
 				<button
 					type="button"
@@ -18,7 +18,8 @@ export const OffcanvasCart = () => {
 						<div className="mt-4 mb-5">
 							<p className="mb-2 fs-6">
 								<i className="ri-truck-line align-bottom me-2"></i>{" "}
-								<span className="fw-bolder">$22</span> away from free delivery
+								<span className="fw-bolder">۲۲ هزار تومن</span> باقی مانده تا ارسال
+								رایگان
 							</p>
 							<div className="progress f-h-1">
 								<div
@@ -99,13 +100,13 @@ export const OffcanvasCart = () => {
 							href="/checkout"
 							className="btn btn-orange btn-orange-chunky mt-5 mb-2 d-block text-center"
 						>
-							Checkout
+							ثبت نهایی سفارش
 						</a>
 						<a
 							href="/cart"
 							className="btn btn-dark fw-bolder d-block text-center transition-all opacity-50-hover"
 						>
-							View Cart
+							مشاهده سبد خرید
 						</a>
 					</div>
 				</div>

@@ -26,7 +26,7 @@ export const DropdownLinks = ({ data }) => {
 								className="dropdown-item dropdown-link-all"
 								to={column.view_all_link}
 							>
-								View All
+								مشاهده همه
 							</Link>
 						</li>
 					</ul>

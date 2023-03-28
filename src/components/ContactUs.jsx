@@ -1,5 +1,5 @@
 import React from "react";
 
 export const ContactUs = () => {
-	return <div>ContactUs</div>;
+	return <div>راه های ارتباطی با ما</div>;
 };

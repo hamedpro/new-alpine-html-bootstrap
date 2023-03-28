@@ -22,13 +22,13 @@ export const OffcanvasReview = () => {
 				},
 			},
 		});
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
 	return (
 		<div className="offcanvas offcanvas-end" tabIndex="-1" id="offcanvasReview">
 			<div className="offcanvas-header d-flex align-items-center">
 				<h5 className="offcanvas-title" id="offcanvasReviewLabel">
-					Leave A Review
+					نوشتن یک نظر
 				</h5>
 				<button
 					type="button"
@@ -42,7 +42,7 @@ export const OffcanvasReview = () => {
 					<form>
 						<div className="form-group mb-3 mt-2">
 							<label className="form-label" htmlFor="formReviewTitle">
-								Your Review Title
+								عنوان نظر شما
 							</label>
 							<input
 								type="text"
@@ -53,7 +53,7 @@ export const OffcanvasReview = () => {
 						</div>
 						<div className="form-group mb-3 mt-2">
 							<label className="form-label" htmlFor="formReviewReview">
-								Your Review
+								نظر شما
 							</label>
 							<textarea
 								className="form-control"
@@ -64,24 +64,26 @@ export const OffcanvasReview = () => {
 								placeholder="Your Review"
 							></textarea>
 						</div>
-						<p>i recommend this product to others : {has_recommended_this_product}</p>
+						<p>
+							من این کالا را به دیگران پیشنهاد میدهم : {has_recommended_this_product}
+						</p>
 						<button onClick={() => set_has_recommended_this_product((prev) => !prev)}>
-							toggle{" "}
+							تغییر وضعیت{" "}
 						</button>
-						<h3>rate this product by entering a number from 0 to 100 :</h3>
+						<h3>به این محصول از ۰ تا ۱۰۰ امتیاز دهید :</h3>
 						<input id="rating_width" type="number" className="d-block" />
 						<button
 							onClick={submit_new_product_review}
 							type="submit"
 							className="btn btn-dark hover-lift hover-boxshadow"
 						>
-							Submit Review
+							ثبت نظر
 						</button>
 					</form>
 				) : (
 					<>
-						<h1>you have to be loged in in order to write a new product review.</h1>
-						<a href="/login">login</a>
+						<h1>برای ثبت نظر باید وارد حساب کاربری خود شده باشید.</h1>
+						<a href="/login">ورود به حساب کاربری</a>
 					</>
 				)}
 			</div>

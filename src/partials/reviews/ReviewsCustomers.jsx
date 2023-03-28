@@ -8,7 +8,7 @@ export const ReviewsCustomers = ({ product }) => {
 	
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
 	var [shown_reviews_limit, set_shown_reviews_limit] = useState(3);
-	if (product_reviews === undefined) return <h1>loading product reviews ...</h1>;
+	if (product_reviews === undefined) return <h1>در حال بارگذاری نظرات کاربران ...</h1>;
 
 	//total_rating either a number from 0 to 100 or
 	//undefined(for when there is not any reviews for this product)
@@ -21,8 +21,7 @@ export const ReviewsCustomers = ({ product }) => {
 				<h2 className="fs-1 fw-bold d-flex align-items-center justify-content-center">
 					{total_rating === undefined ? "?" : total_rating / 20}{" "}
 					<small className="text-muted fw-bolder ms-3 fw-bolder fs-6">
-						({product_reviews.filter((i) => i.product_id === product._id).length}{" "}
-						reviews)
+						({product_reviews.filter((i) => i.product_id === product._id).length} نظر )
 					</small>
 				</h2>
 				<div className="d-flex justify-content-center">
@@ -56,7 +55,7 @@ export const ReviewsCustomers = ({ product }) => {
 				<div className="bg-light rounded py-3 px-4 mt-3 col-12 col-md-6 col-lg-5 mx-auto">
 					<ul className="list-group list-group-flush">
 						<li className="list-group-item d-flex justify-content-between align-items-center border-0 px-0 bg-transparent">
-							<span className="fw-bolder">total</span>
+							<span className="fw-bolder">در مجموع</span>
 							<ReviewStarsSmall width={total_rating} />
 						</li>
 					</ul>
@@ -68,11 +67,11 @@ export const ReviewsCustomers = ({ product }) => {
 					data-bs-target="#offcanvasReview"
 					aria-controls="offcanvasReview"
 				>
-					Write A Review <i className="ri-discuss-line align-bottom ms-1"></i>
+					نوشتن یک نظر <i className="ri-discuss-line align-bottom ms-1"></i>
 				</button>
 			</div>
 			{product_reviews.filter((i) => i.product_id === product._id).length === 0
-				? "there is not any product reviews for this product yet"
+				? "هنوز هیچ نظری برای این کالا وجود ندارد."
 				: product_reviews
 						.filter((i) => i.product_id === product._id)
 						.slice(0, shown_reviews_limit)
@@ -83,7 +82,7 @@ export const ReviewsCustomers = ({ product }) => {
 								border_top={index === 0}
 								key={product_review._id}
 								user_id={product_review.user_id}
-								user_badge={"something about user"}
+								user_badge={"چیزی در مورد این کاربر"}
 								title={product_review.title}
 								text={product_review.text}
 								has_recommended_this_product={
@@ -98,10 +97,10 @@ export const ReviewsCustomers = ({ product }) => {
 				className="btn btn-dark d-table mx-auto mt-6 mb-3 hover-lift-sm hover-boxshadow"
 				title=""
 			>
-				Load 3 More Reviews
+				بارگیری ۳ نظر بیشتر
 			</button>
 			<p className="text-muted text-center fw-bolder">
-				Showing at maximum {shown_reviews_limit} of all reviews ({product_reviews.length})
+				حداکثر {shown_reviews_limit} تا از نظرات قابل مشاهده هستند ( از {product_reviews.length})
 			</p>
 		</section>
 	);

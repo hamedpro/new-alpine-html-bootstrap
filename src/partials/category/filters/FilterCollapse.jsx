@@ -6,17 +6,17 @@ import { GlobalContext } from "../../../GlobalContext";
 
 export const FilterCollapse = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
-	if (filters_one === undefined) return <h1>still loading filters_one ...</h1>;
+	if (filters_one === undefined) return <h1>در حال بارگذاری اطلاعات ...</h1>;
 	var { sizes, colours } = filters_one;
 	return (
 		<div className="row gx-5">
 			<div className="col-4 widget-filter-price">
-				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Price</p>
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">قیمت</p>
 				<FilterPrice />
 			</div>
 
 			<div className="col-4">
-				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Sizes</p>
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">اندازه ها</p>
 				<div>
 					<div className="filter-options mt-3">
 						{sizes.map((i, index) => (
@@ -27,7 +27,7 @@ export const FilterCollapse = () => {
 			</div>
 
 			<div className="col-4">
-				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">Colour</p>
+				<p className="small fs-6 fw-bolder border-bottom pb-3 mb-4">رنگ</p>
 				<div>
 					<div className="filter-options mt-3">
 						{colours.map((i, index) => (

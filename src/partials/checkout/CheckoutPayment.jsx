@@ -3,7 +3,7 @@ import React from "react";
 export const CheckoutPayment = () => {
 	return (
 		<div className="checkout-panel">
-			<h5 className="title-checkout">Payment Information</h5>
+			<h5 className="title-checkout">اطلاعات پرداخت</h5>
 
 			<div className="row">
 				<div className="col-12">
@@ -18,9 +18,7 @@ export const CheckoutPayment = () => {
 						<label className="form-check-label" htmlFor="checkoutPaymentStripe">
 							<span className="d-flex justify-content-between align-items-start">
 								<span>
-									<span className="mb-0 fw-bolder d-block">
-										Credit Card (Stripe)
-									</span>
+									<span className="mb-0 fw-bolder d-block">کارت اعتباری</span>
 								</span>
 								<i className="ri-bank-card-line"></i>
 							</span>

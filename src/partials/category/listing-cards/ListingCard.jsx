@@ -11,7 +11,7 @@ var average = (array_of_numbers) => {
 export const ListingCard = (props) => {
 	var [product_reviews, set_product_reviews] = useState();
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
-	if (product_reviews === undefined) return <h1>loading product reviews ...</h1>;
+	if (product_reviews === undefined) return <h1>در حال بارگذاری بررسی های کالا ها ...</h1>;
 
 	return (
 		<div className="card position-relative h-100 card-listing hover-trigger">
@@ -45,7 +45,7 @@ export const ListingCard = (props) => {
 
 				<div className="card-actions">
 					<span className="small text-uppercase tracking-wide fw-bolder text-center d-block">
-						Quick Add
+						اضافه کردن سریع
 					</span>
 					<div className="d-flex justify-content-center align-items-center flex-wrap mt-3">
 						<button className="btn btn-outline-dark btn-sm mx-2">S</button>

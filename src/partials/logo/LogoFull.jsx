@@ -1,5 +1,5 @@
 import React from "react";
-
+import { templateName } from "../../../env.json";
 export const LogoFull = () => {
 	return (
 		<div className="d-flex align-items-center">
@@ -17,7 +17,7 @@ export const LogoFull = () => {
 					/>
 				</svg>
 			</div>{" "}
-			<span className="fs-5">Alpine</span>
+			<span className="fs-5">{templateName}</span>
 		</div>
 	);
 };

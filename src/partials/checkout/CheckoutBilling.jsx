@@ -9,7 +9,7 @@ export const CheckoutBilling = () => {
 				<div className="col-sm-6">
 					<div className="form-group">
 						<label htmlFor="firstNameAddress" className="form-label">
-							First name
+							نام
 						</label>
 						<input
 							type="text"
@@ -25,7 +25,7 @@ export const CheckoutBilling = () => {
 				<div className="col-sm-6">
 					<div className="form-group">
 						<label htmlFor="lastNameAddress" className="form-label">
-							Last name
+							نام خانوادگی
 						</label>
 						<input
 							type="text"
@@ -41,7 +41,7 @@ export const CheckoutBilling = () => {
 				<div className="col-12">
 					<div className="form-group">
 						<label htmlFor="addressAddress" className="form-label">
-							Address
+							آدرس
 						</label>
 						<input
 							type="text"
@@ -56,7 +56,7 @@ export const CheckoutBilling = () => {
 				<div className="col-md-12">
 					<div className="form-group">
 						<label htmlFor="countryAddress" className="form-label">
-							Country
+							کشور
 						</label>
 						<select className="form-select" id="countryAddress" required="">
 							<option value="">Please Select...</option>
@@ -68,7 +68,7 @@ export const CheckoutBilling = () => {
 				<div className="col-md-6">
 					<div className="form-group">
 						<label htmlFor="stateAddress" className="form-label">
-							State
+							ایالت
 						</label>
 						<select className="form-select" id="stateAddress" required="">
 							<option value="">Please Select...</option>
@@ -80,7 +80,7 @@ export const CheckoutBilling = () => {
 				<div className="col-md-6">
 					<div className="form-group">
 						<label htmlFor="zipAddress" className="form-label">
-							Zip/Post Code
+							کد پستی
 						</label>
 						<input
 							type="text"

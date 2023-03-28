@@ -6,7 +6,7 @@ export const AdminDashboardInstagramImages = () => {
 	async function submit_handler() {
 		var input_element = document.getElementById("input");
 		if (input_element.files.length !== 9) {
-			alert("please select exactly 9 files ");
+			alert("لطفا دقیقا ۹ عکس انتخاب کنید");
 			return;
 		}
 		var uploaded_files_ids = [];
@@ -44,15 +44,19 @@ export const AdminDashboardInstagramImages = () => {
 			},
 		});
 		await refresh_global_context_state();
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
 	return (
 		<>
-			<h1>AdminDashboardInstagramImages</h1>
-			<p>please select 9 photos and click submit </p>
-			<p>if there are any images set these will be replaced with them</p>
+			<h1>مدیریت بخش عکس های اینستاگرام</h1>
+
+			<p>لطفا دقیقا ۹ عکس انتخاب کنید و بر روی اپلود محتوا کلیک کنید</p>
+			<p>
+				اگر هم اکنون عکس هایی برای این بخش تنظیم شده است این عکس های جدید جایگزین آنها
+				خواهند شد{" "}
+			</p>
 			<input type="file" id="input" multiple />
-			<button onClick={submit_handler}>submit</button>
+			<button onClick={submit_handler}>آپلود محتوا</button>
 		</>
 	);
 };

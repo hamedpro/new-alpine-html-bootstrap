@@ -1,5 +1,5 @@
 import React from "react";
 
 export const FAQ = () => {
-	return <div>FAQ</div>;
+	return <div>سوالات متداول</div>;
 };

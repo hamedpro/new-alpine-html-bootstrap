@@ -1,5 +1,5 @@
 import React from "react";
 
 export const Post = () => {
-	return <div>Post</div>;
+	return <div>پست</div>;
 };

@@ -57,7 +57,7 @@ export const SwiperProductCarouselScrollbar = ({ products }) => {
 						<span className="btn btn-dark btn-icon mb-3">
 							<i className="ri-arrow-right-line ri-lg lh-1"></i>
 						</span>
-						<span className="lead fw-bolder">See All</span>
+						<span className="lead fw-bolder">مشاهده همه</span>
 					</a>
 				</swiper-slide>
 			</div>

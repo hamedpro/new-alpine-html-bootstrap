@@ -8,7 +8,7 @@ import { GlobalContext } from "../../../GlobalContext";
 import SimpleBar from "simplebar-react";
 export const AsideMenuOne = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
-	if (filters_one === undefined) return <h1>still loading filters one ...</h1>;
+	if (filters_one === undefined) return <h1>در حال بارگذاری اطلاعات ...</h1>;
 	var { categories, brands, type, sizes, colours } = filters_one;
 
 	return (
@@ -33,7 +33,7 @@ export const AsideMenuOne = () => {
 					aria-expanded="true"
 					aria-controls="filter-price"
 				>
-					Price
+					قیمت
 				</a>
 				<div id="filter-price" className="collapse show">
 					<FilterPrice />
@@ -49,7 +49,7 @@ export const AsideMenuOne = () => {
 					aria-expanded="true"
 					aria-controls="filter-brands"
 				>
-					Brands
+					برند ها
 				</a>
 				<div id="filter-brands" className="collapse show">
 					<div className="input-group my-3 py-1">
@@ -82,7 +82,7 @@ export const AsideMenuOne = () => {
 					aria-expanded="true"
 					aria-controls="filter-type"
 				>
-					Type
+					نوع
 				</a>
 				<div id="filter-type" className="collapse show">
 					<div className="input-group my-3 py-1">
@@ -113,7 +113,7 @@ export const AsideMenuOne = () => {
 					aria-expanded="true"
 					aria-controls="filter-sizes"
 				>
-					Sizes
+					اندازه ها
 				</a>
 				<div id="filter-sizes" className="collapse show">
 					<div className="filter-options mt-3">
@@ -133,7 +133,7 @@ export const AsideMenuOne = () => {
 					aria-expanded="true"
 					aria-controls="filter-colour"
 				>
-					Colour
+					رنگ
 				</a>
 				<div id="filter-colour" className="collapse show">
 					<div className="filter-options mt-3">

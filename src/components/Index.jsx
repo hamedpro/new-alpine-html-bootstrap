@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { SwiperHeroSlideshow } from "../partials/swiper/SwiperHeroSlideshow";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
@@ -21,7 +21,7 @@ export const Index = () => {
 		useContext(GlobalContext).global_context_state;
 
 	if ([product_categories, key_values, products].some((i) => i === undefined))
-		return <h1>still loading data ... </h1>;
+		return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
 	return (
 		<>
 			<div className="position-relative z-index-30">
@@ -147,7 +147,7 @@ export const Index = () => {
 									</a>
 								</div>
 								<a href="/category" className="btn btn-link fw-bolder">
-									Explore All Brands{" "}
+									با همه برند ها اشنا شوید{" "}
 									<i className="ri-arrow-right-line align-bottom fw-bold"></i>
 								</a>
 							</div>
@@ -161,7 +161,7 @@ export const Index = () => {
 						<div className="container">
 							<div className="w-md-50 mb-5">
 								<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">
-									chosen category
+									دسته بندی منتخب
 								</p>
 								<h2 className="display-5 fw-bold mb-3">
 									{
@@ -208,7 +208,7 @@ export const Index = () => {
 						</div>
 					</section>
 				) : (
-					<h1>there is not any product category chosen to be shown here </h1>
+					<h1>دسته بندی منتخب محصولات انتخاب نشده است</h1>
 				)}
 
 				<section className="my-10 position-relative">
@@ -221,9 +221,9 @@ export const Index = () => {
 							<div className="col-12 col-md-7" data-aos="fade-right">
 								<div className="m-0">
 									<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">
-										all categories
+										همه دسته بندی های محصولات
 									</p>
-									<h2 className="display-5 fw-bold mb-6">Our Latest Products</h2>
+									<h2 className="display-5 fw-bold mb-6">اخرین محصولات ما</h2>
 									<div className="px-8 position-relative">
 										<SwiperLinkedCarouselSmall />
 
@@ -254,9 +254,7 @@ export const Index = () => {
 
 				<section>
 					<div className="container" data-aos="fade-in">
-						<h2 className="fs-1 fw-bold mb-3 text-center mb-5">
-							Customers Overall Reviews
-						</h2>
+						<h2 className="fs-1 fw-bold mb-3 text-center mb-5">نظرات کلی کاربران</h2>
 						<ReviewsCompany />
 					</div>
 				</section>

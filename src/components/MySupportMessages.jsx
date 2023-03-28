@@ -1,5 +1,5 @@
 import React from "react";
 
 export const MySupportMessages = () => {
-	return <div>MySupportMessages</div>;
+	return <div>درخواست های پشتیبانی من</div>;
 };

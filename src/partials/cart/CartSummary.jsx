@@ -4,15 +4,17 @@ export const CartSummary = () => {
   return (
 		<>
 			<div className="bg-dark p-4 p-md-5 text-white">
-				<h3 className="fs-3 fw-bold m-0 text-center">Order Summary</h3>
+				<h3 className="fs-3 fw-bold m-0 text-center">خلاصه سفارش</h3>
 				<div className="py-3 border-bottom-white-opacity">
 					<div className="d-flex justify-content-between align-items-center mb-2 flex-column flex-sm-row">
-						<p className="m-0 fw-bolder fs-6">Subtotal</p>
+						<p className="m-0 fw-bolder fs-6">مجموع قیمت</p>
 						<p className="m-0 fs-6 fw-bolder">$422.99</p>
 					</div>
 					<div className="d-flex justify-content-between align-items-center flex-column flex-sm-row mt-3 m-sm-0">
-						<p className="m-0 fw-bolder fs-6">Shipping</p>
-						<span className="text-white opacity-75 small">Will be set at checkout</span>
+						<p className="m-0 fw-bolder fs-6">نحوه تحویل محصولات</p>
+						<span className="text-white opacity-75 small">
+							در هنگام تکمیل سفارش انتخاب خواهد شد
+						</span>
 					</div>
 				</div>
 				<div className="py-3 border-bottom-white-opacity">

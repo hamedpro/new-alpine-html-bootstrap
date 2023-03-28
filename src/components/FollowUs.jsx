@@ -4,11 +4,11 @@ import { GlobalContext } from "../GlobalContext";
 export const FollowUs = () => {
 	var { key_values } = useContext(GlobalContext).global_context_state;
 
-	if (key_values === undefined) return "loading key_values collection ...";
+	if (key_values === undefined) return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<div className="bg-light py-4">
 			<div className="container d-flex justify-content-center align-items-center py-2">
-				<p className="lead fw-bolder mb-0 lh-1">Find us online</p>
+				<p className="lead fw-bolder mb-0 lh-1">در فضای مجازی ما را دنبال کنید</p>
 				<ul className="list-unstyled d-flex justify-content-start align-items-center mb-0 ms-3 lh-1">
 					<li className="mx-1 mb-0 lh-1">
 						<div
@@ -21,7 +21,7 @@ export const FollowUs = () => {
 													.value
 											}`
 									  )
-									: alert("instagram account's id is not set")
+									: alert("ادرس اینستاگرامی ثبت نشده است")
 							}
 						>
 							<i className="ri-instagram-fill ri-xl lh-1"></i>
@@ -38,7 +38,7 @@ export const FollowUs = () => {
 												key_values.find((i) => i.key === "twitter_id").value
 											}`
 									  )
-									: alert("twitter account's id is not set")
+									: alert("ادرس حساب کاربری توییتر ثبت نشده است")
 							}
 						>
 							<i className="ri-twitter-fill ri-xl lh-1"></i>
@@ -55,7 +55,7 @@ export const FollowUs = () => {
 													.value
 											}`
 									  )
-									: alert("facebook account's id is not set")
+									: alert("آدرس حساب کاربری فیسبوک ثبت نشده است")
 							}
 						>
 							<i className="ri-facebook-fill ri-xl lh-1"></i>

@@ -1,5 +1,5 @@
 import React from "react";
 
 export const SupportMessagesManagement = () => {
-	return <div>SupportMessagesManagement</div>;
+	return <div>مدیریت درخواست های پشتیبانی </div>;
 };

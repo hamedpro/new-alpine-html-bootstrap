@@ -9,7 +9,7 @@ export const Cart = () => {
 			<NavBar />
 
 			<section className="mt-5 container">
-				<h1 className="mb-6 display-5 fw-bold text-center">Your Cart</h1>
+				<h1 className="mb-6 display-5 fw-bold text-center">سبد خرید شما</h1>
 
 				<div className="row g-4 g-md-8">
 					<div className="col-12 col-lg-6 col-xl-7">

@@ -84,7 +84,7 @@ export const InfoOne = ({ product_document }) => {
 			},
 		});
 		await refresh_global_context_state();
-		alert("done ");
+		alert("با موفقیت انجام شد !");
 	}
 	async function toggle_product_like() {
 		//todo this system may not work properly if button is clicked many times at once
@@ -159,7 +159,7 @@ export const InfoOne = ({ product_document }) => {
 					<span className="fw-bolder m-0">${product_document.price}</span>
 				</s>
 				<p className="lead fw-bolder m-0 fs-6 lh-1 text-success">
-					Save $
+					ذخیره کنید $
 					{(product_document.price * Number(product_document.discount_percentage)) / 100}
 				</p>
 			</div>
@@ -175,7 +175,7 @@ export const InfoOne = ({ product_document }) => {
 										(i) => i.time > new Date().getTime() - 24 * 1000 * 3600
 									).length
 								}
-								new reviews today
+								نظر جدید در امروز
 							</small>
 						</div>
 					</div>
@@ -185,7 +185,7 @@ export const InfoOne = ({ product_document }) => {
 			<div className="border-top mt-4 mb-3">
 				<div className="product-option mb-4 mt-4">
 					<small className="text-uppercase d-block fw-bolder mb-2">
-						Colour : <span className="selected-option fw-bold">Crimson Blue</span>
+						رنگ : <span className="selected-option fw-bold">آبی</span>
 					</small>
 					<div className="d-flex justify-content-start">
 						<div className="form-group d-inline-block mr-1 mb-1 form-check-solid-bg-checkmark form-check-custom">
@@ -234,11 +234,11 @@ export const InfoOne = ({ product_document }) => {
 				</div>
 				<div className="product-option">
 					<small className="text-uppercase d-block fw-bolder mb-2">
-						Size (UK) : <span className="selected-option fw-bold"></span>
+						اندازه : <span className="selected-option fw-bold"></span>
 					</small>
 					<div className="form-group">
 						<select name="selectSize" className="form-control" data-choices>
-							<option value="">Please Select Size</option>
+							<option value="">لطفا اندازه را انتخاب کنید</option>
 							<option value="Extra Small">XS</option>
 							<option value="Medium">M</option>
 							<option value="Large">L</option>
@@ -255,14 +255,14 @@ export const InfoOne = ({ product_document }) => {
 						i.user_id === localStorage.getItem("user_id")
 				) ? (
 					<button className="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white">
-						alredy added to cart
+						به سبد خرید اضافه شده است
 					</button>
 				) : (
 					<button
 						onClick={add_to_cart}
 						className="btn btn-dark btn-dark-chunky flex-grow-1 me-2 text-white"
 					>
-						Add To Cart
+						افزودن به سبد خرید
 					</button>
 				)}
 				<button onClick={toggle_product_like} className="btn btn-orange btn-orange-chunky">
@@ -295,7 +295,7 @@ export const InfoOne = ({ product_document }) => {
 						<span className="fs-6 ms-3">
 							{key_values.find((i) => i.key === "products_bottom_sentence")
 								? key_values.find((i) => i.key === "products_bottom_sentence").value
-								: "nothing to show"}
+								: "چیزی برای نمایش وجود ندارد"}
 						</span>
 					</li>
 				</ul>

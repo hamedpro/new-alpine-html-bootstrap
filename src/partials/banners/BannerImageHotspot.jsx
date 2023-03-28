@@ -6,7 +6,7 @@ import { GlobalContext } from "../../GlobalContext";
 export const BannerImageHotspot = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
 	if (products === undefined) {
-		return <h1>loading products ...</h1>;
+		return <h1>در حال بارگذاری محصولات ...</h1>;
 	} else {
 		return (
 			<>

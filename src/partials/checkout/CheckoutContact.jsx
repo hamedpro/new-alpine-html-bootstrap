@@ -3,12 +3,12 @@ import React from "react";
 export const CheckoutContact = () => {
 	return (
 		<div className="checkout-panel">
-			<h5 className="title-checkout">Contact Information</h5>
+			<h5 className="title-checkout">اطلاعات تماس</h5>
 			<div className="row">
 				<div className="col-12">
 					<div className="form-group">
 						<label htmlFor="email" className="form-label">
-							Email
+							آدرس ایمیل
 						</label>
 						<input
 							type="email"
@@ -26,7 +26,7 @@ export const CheckoutContact = () => {
 							readOnly /* todo make this work  */
 						/>
 						<label className="form-check-label" htmlFor="add-mailinglist">
-							Keep me updated with your latest news and offers
+							آخرین اخبار و اطلاعات را به من اطلاع بده
 						</label>
 					</div>
 				</div>

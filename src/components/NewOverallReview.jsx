@@ -21,23 +21,23 @@ export const NewOverallReview = () => {
 			},
 		});
 		refresh_global_context_state();
-		alert("done ! ");
+		alert("با موفقیت انجام شد‌ !");
 	}
 	return (
 		<>
-			<h1>NewOverallReview</h1>
+			<h1>نظر کلی جدید</h1>
 			{user_id !== null ? (
 				<>
-					<p>title : </p>
+					<p>عنوان : </p>
 					<input id="title_input" />
-					<p>text : </p>
+					<p>متن نظر : </p>
 					<input id="text_input" />
-					<p>rate from 0 to 100 : </p>
+					<p>از ۰ تا ۱۰۰ امتیاز دهید : </p>
 					<input type="number" min={0} max={100} id="width_input" />
-					<button onClick={submit_new_overall_review}>submit </button>
+					<button onClick={submit_new_overall_review}>ثبت اطلاعات </button>
 				</>
 			) : (
-				<h1>you have to be loged in in order to submit a new overall review</h1>
+				<h1>برای ثبت نظر کلی باید وارد حساب کاربری خود شوید .</h1>
 			)}
 		</>
 	);

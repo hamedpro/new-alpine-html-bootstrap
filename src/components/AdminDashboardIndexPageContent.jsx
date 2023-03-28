@@ -7,7 +7,7 @@ export const AdminDashboardIndexPageContent = () => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 
 	if (product_categories === undefined || key_values === undefined)
-		return "loading product categories ...";
+		return "در حال بارگذاری دسته بندی های کالا ها ...";
 
 	if (
 		key_values.find(
@@ -48,13 +48,15 @@ export const AdminDashboardIndexPageContent = () => {
 			});
 		}
 		refresh_global_context_state();
-		alert("done !");
+		alert("با موفقیت انجام شد !");
 	}
 	return (
 		<>
-			<h1>AdminDashboardIndexPageContent</h1>
-			<h3>swiper product carouesl scrollbar </h3>
-			<p>select a product category to be shown there :</p>
+			<h1>مدیریت محتوای صفحه اصلی</h1>
+			<h3>اسلایدر محصولات صفحه اصلی{/* swiper product carouesl scrollbar */} </h3>
+
+			<p>یکی از دسته بندی های کالا را انتخاب کنید که کالاهای آن در این بخش نمایش داده شود</p>
+
 			<ReactSelect
 				value={
 					index_page_product_carousel_scrollbar_product_category_id !== undefined

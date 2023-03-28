@@ -36,8 +36,8 @@ export const Review = ({
 
 					<small className="fw-bolder bg-light d-table rounded py-1 px-2">
 						{has_recommended_this_product
-							? "Yes, I would recommend the product"
-							: "No, I dont recommend the product"}
+							? "بله من این کالا را پیشنهاد میدهم"
+							: "خیر من این کالا را پیشنهاد نمیدهم "}
 					</small>
 					<div className="d-block d-md-flex mt-3 justify-content-between align-items-center">
 						<a
@@ -46,7 +46,7 @@ export const Review = ({
 							title=""
 						>
 							<small>
-								Was this review helpful?
+								آیا این نظر مفید بود؟
 								<i className="ri-thumb-up-line ms-4"></i> 112{" "}
 								<i className="ri-thumb-down-line ms-2"></i>
 								23
@@ -58,7 +58,7 @@ export const Review = ({
 							title=""
 						>
 							<small>
-								Flag as inappropriate <i className="ri-flag-2-line ms-2"></i>
+								علامت زدن به عنوان نامناسب <i className="ri-flag-2-line ms-2"></i>
 							</small>
 						</a>
 					</div>
