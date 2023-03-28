@@ -221,11 +221,9 @@ export const Index = () => {
 							<div className="col-12 col-md-7" data-aos="fade-right">
 								<div className="m-0">
 									<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">
-										Hiking Essentials
+										all categories
 									</p>
-									<h2 className="display-5 fw-bold mb-6">
-										Our Latest Must-Have Products
-									</h2>
+									<h2 className="display-5 fw-bold mb-6">Our Latest Products</h2>
 									<div className="px-8 position-relative">
 										<SwiperLinkedCarouselSmall />
 

@@ -64,9 +64,9 @@ export const InfoOne = ({ product_document }) => {
 		key_values === undefined
 	)
 		return <h1>loading product categories ... </h1>;
-	var product_reviews_of_this_product = product_reviews.filter(
-		(i) => i.product_id === product_document._id
-	);
+	var product_reviews_of_this_product = product_reviews.filter((i) => {
+		return i.product_id === product_document._id;
+	});
 
 	async function add_to_cart() {
 		//when this function is called user must be loged

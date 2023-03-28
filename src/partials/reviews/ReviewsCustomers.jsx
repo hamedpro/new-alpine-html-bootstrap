@@ -5,9 +5,11 @@ import { ReviewStarsSmall } from "../reviews/ReviewStarsSmall";
 import { average } from "../../helpers";
 import { Review } from "./Review";
 export const ReviewsCustomers = ({ product }) => {
+	
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
 	var [shown_reviews_limit, set_shown_reviews_limit] = useState(3);
 	if (product_reviews === undefined) return <h1>loading product reviews ...</h1>;
+
 	//total_rating either a number from 0 to 100 or
 	//undefined(for when there is not any reviews for this product)
 	var total_rating = average(
@@ -19,7 +21,8 @@ export const ReviewsCustomers = ({ product }) => {
 				<h2 className="fs-1 fw-bold d-flex align-items-center justify-content-center">
 					{total_rating === undefined ? "?" : total_rating / 20}{" "}
 					<small className="text-muted fw-bolder ms-3 fw-bolder fs-6">
-						({product_reviews.length} reviews)
+						({product_reviews.filter((i) => i.product_id === product._id).length}{" "}
+						reviews)
 					</small>
 				</h2>
 				<div className="d-flex justify-content-center">
@@ -68,20 +71,27 @@ export const ReviewsCustomers = ({ product }) => {
 					Write A Review <i className="ri-discuss-line align-bottom ms-1"></i>
 				</button>
 			</div>
-			{product_reviews.slice(0, shown_reviews_limit).map((product_review, index, array) => (
-				<Review
-					border_bottom={true}
-					width={product_review.width}
-					border_top={index === 0}
-					key={product_review._id}
-					user_id={product_review.user_id}
-					user_badge={"something about user"}
-					title={product_review.title}
-					text={product_review.text}
-					has_recommended_this_product={product_review.has_recommended_this_product}
-					time={product_review.time}
-				/>
-			))}
+			{product_reviews.filter((i) => i.product_id === product._id).length === 0
+				? "there is not any product reviews for this product yet"
+				: product_reviews
+						.filter((i) => i.product_id === product._id)
+						.slice(0, shown_reviews_limit)
+						.map((product_review, index, array) => (
+							<Review
+								border_bottom={true}
+								width={product_review.width}
+								border_top={index === 0}
+								key={product_review._id}
+								user_id={product_review.user_id}
+								user_badge={"something about user"}
+								title={product_review.title}
+								text={product_review.text}
+								has_recommended_this_product={
+									product_review.has_recommended_this_product
+								}
+								time={product_review.time}
+							/>
+						))}
 
 			<button
 				onClick={() => set_shown_reviews_limit((prev) => prev + 3)}

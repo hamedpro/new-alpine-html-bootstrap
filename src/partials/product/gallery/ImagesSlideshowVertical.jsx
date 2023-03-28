@@ -27,10 +27,10 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 
 		options = {
 			spaceBetween: 0,
-			effect: "fade",
-			thumbs: {
+			effect: "fade" /* todo idont know to use this thumbs prop */,
+			/* thumbs: {
 				swiper: galleryThumbs,
-			},
+			}, */
 		};
 		Object.assign(gallery_top_vertical_swiper_container.current, options);
 		gallery_top_vertical_swiper_container.current.initialize();

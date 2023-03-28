@@ -1,6 +1,12 @@
-import React, { useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import mediumZoom from "medium-zoom";
+import { GlobalContext } from "../../GlobalContext";
 export const InstagramPhotos = () => {
+	//when you want to use this component , "instagram_images_file_ids" must be in key_values collection
+	var { key_values } = useContext(GlobalContext).global_context_state;
+	var instagram_images_file_ids = key_values.find(
+		(i) => i.key === "instagram_images_file_ids"
+	).value;
 	useEffect(() => {
 		function init_medium_zoom() {
 			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
@@ -19,128 +25,24 @@ export const InstagramPhotos = () => {
 				<picture>
 					<img
 						className="img-fluid"
-						src={
-							new URL(`/static/assets/images/instagram/instagram-1.jpg`, api_endpoint)
-								.href
-						}
+						src={new URL(`/files/${instagram_images_file_ids[0]}`, api_endpoint).href}
 						data-zoomable
 					/>
 				</picture>
 			</div>
 			<div className="col-12 col-md-8" data-aos="fade-in" data-aos-delay="300">
 				<div className="row g-2">
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-2.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-3.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-4.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-5.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-6.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-7.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-8.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
-					<div className="col-3">
-						<picture>
-							<img
-								className="img-fluid"
-								src={
-									new URL(
-										`/static/assets/images/instagram/instagram-9.jpg`,
-										api_endpoint
-									).href
-								}
-								data-zoomable
-							/>
-						</picture>
-					</div>
+					{instagram_images_file_ids.slice(1, 9).map((i) => (
+						<div className="col-3" key={i}>
+							<picture>
+								<img
+									className="img-fluid"
+									src={new URL(`/files/${i}`, api_endpoint).href}
+									data-zoomable
+								/>
+							</picture>
+						</div>
+					))}
 				</div>
 			</div>
 		</div>
