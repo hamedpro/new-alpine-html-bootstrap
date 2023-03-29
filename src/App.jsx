@@ -28,6 +28,7 @@ import { LikedProducts } from "./components/LikedProducts";
 import { register } from "swiper/element/bundle";
 import { OverallReviews } from "./components/OverallReviews";
 import { NewOverallReview } from "./components/NewOverallReview";
+import { DownloadCenter } from "./components/DownloadCenter";
 
 register();
 
@@ -56,7 +57,14 @@ export const App = () => {
 								</CommonBottomWrapper>
 							}
 						/>
-
+						<Route
+							path="/download_center"
+							element={
+								<CommonBottomWrapper>
+									<DownloadCenter />
+								</CommonBottomWrapper>
+							}
+						/>
 						<Route path="/overall_reviews" element={<OverallReviews />} />
 						<Route path="/overall_reviews/new" element={<NewOverallReview />} />
 

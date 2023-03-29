@@ -163,11 +163,12 @@ export const Footer = ({ classList }) => {
 						<div className="col-12 col-md-5">
 							<h6 className="mb-4 fw-bolder fs-6">عضویت در خبرنامه</h6>
 							<p className="opacity-75">
-								Sign up to our newsletter to be informed of our new news. By
+								{/* Sign up to our newsletter to be informed of our new news. By
 								subscribing to our mailing list you agree to our terms and
-								conditions. با وارد کردن آدرس ایمیل خود در خبرنامه ما عضو شوید تا در
-								جریان آخرین اخبار و اتفاقات ما باشید. با عضویت در خبرنامه شما با
-								شرایط و قوانین استفاده انداز سرویس موافقت میکنید
+								conditions. */}{" "}
+								با وارد کردن آدرس ایمیل خود در خبرنامه ما عضو شوید تا در جریان آخرین
+								اخبار و اتفاقات ما باشید. با عضویت در خبرنامه شما با شرایط و قوانین
+								استفاده انداز سرویس موافقت میکنید
 							</p>
 							<form className="bg-white d-flex justify-content-start align-items-center border-dark-focus-within transition-all mt-4">
 								<div className="input-group m-0">

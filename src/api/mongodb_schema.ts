@@ -29,6 +29,10 @@ interface cart_items_document extends mongodb_document {
 	product_id: string;
 	count: number;
 }
-interface newsletter_subscribed_emails extends mongodb_document {
+interface newsletter_subscribed_email extends mongodb_document {
 	email_address: string;
+}
+interface download_center_item extends mongodb_document {
+	file_id: string;
+	title: string;
 }

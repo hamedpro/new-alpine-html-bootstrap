@@ -149,6 +149,11 @@ export const Menu = () => {
 							شرایط و قوانین
 						</Link>
 					</li>
+					<li>
+						<Link className="dropdown-item" to="/download_center">
+							دانلود ها
+						</Link>
+					</li>
 				</ul>
 			</li>
 		</ul>
