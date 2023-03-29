@@ -3,7 +3,7 @@ interface mongodb_document {
 }
 interface product_document extends mongodb_document {
 	discount_percentage?: string;
-	image_file_id?: string;
+	image_files_ids?: string[];
 	review_width: string;
 	review_count: string;
 	title: string;

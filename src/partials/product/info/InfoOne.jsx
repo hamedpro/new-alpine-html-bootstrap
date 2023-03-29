@@ -80,6 +80,7 @@ export const InfoOne = ({ product_document }) => {
 				document: {
 					user_id: window.localStorage.getItem("user_id"),
 					product_id: product_document._id,
+					count: 1,
 				},
 			},
 		});

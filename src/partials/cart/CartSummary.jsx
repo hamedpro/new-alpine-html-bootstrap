@@ -1,7 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export const CartSummary = () => {
-  return (
+	return (
 		<>
 			<div className="bg-dark p-4 p-md-5 text-white">
 				<h3 className="fs-3 fw-bold m-0 text-center">خلاصه سفارش</h3>
@@ -17,17 +17,6 @@ export const CartSummary = () => {
 						</span>
 					</div>
 				</div>
-				<div className="py-3 border-bottom-white-opacity">
-					<div className="d-flex justify-content-between align-items-center flex-column flex-sm-row">
-						<div>
-							<p className="m-0 fs-5 fw-bold">Grand Total</p>
-							<span className="text-white opacity-75 small">
-								Inc $45.89 sales tax
-							</span>
-						</div>
-						<p className="mt-3 m-sm-0 fs-5 fw-bold">$422.99</p>
-					</div>
-				</div>
 
 				<button
 					className="btn btn-link p-0 mt-2 text-white fw-bolder text-decoration-none"
@@ -37,7 +26,7 @@ export const CartSummary = () => {
 					aria-expanded="false"
 					aria-controls="collapseExample"
 				>
-					Have a coupon code?
+					آیا کد تخفیف دارید؟
 				</button>
 				<div className="collapse" id="collapseExample">
 					<div className="card card-body bg-transparent p-0">
@@ -47,18 +36,25 @@ export const CartSummary = () => {
 								className="form-control border-0"
 								placeholder="Enter coupon code"
 							/>
-							<button className="btn btn-white text-dark px-3 btn-sm border-0 d-flex justify-content-center align-items-center">
+							<button
+								onClick={() =>
+									alert(
+										"قابلیت استفاده از کد تخفیف هنوز در دسترس قرار نگرفته است"
+									)
+								}
+								className="btn btn-white text-dark px-3 btn-sm border-0 d-flex justify-content-center align-items-center"
+							>
 								<i className="ri-checkbox-circle-line ri-lg"></i>
 							</button>
 						</div>
 					</div>
 				</div>
 
-				<a href="/checkout" className="btn btn-white w-100 text-center mt-3" role="button">
-					<i className="ri-secure-payment-line align-bottom"></i> Proceed to checkout
-				</a>
+				{/* <a href="/checkout" className="btn btn-white w-100 text-center mt-3" role="button">
+					<i className="ri-secure-payment-line align-bottom"></i> Checkout with PayPal
+				</a> */}
 				<a href="/checkout" className="btn btn-orange w-100 text-center mt-3" role="button">
-					<i className="ri-paypal-line align-bottom"></i> Checkout with PayPal
+					<i className="ri-paypal-line align-bottom"></i>تکمیل سفارش
 				</a>
 			</div>
 
@@ -77,5 +73,5 @@ export const CartSummary = () => {
 				</li>
 			</ul>
 		</>
-  );
-}
+	);
+};

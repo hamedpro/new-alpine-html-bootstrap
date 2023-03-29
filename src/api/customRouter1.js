@@ -26,7 +26,7 @@ export function generator(db) {
 		//response contains an array of documents that match filters passed in body
 		var filters = req.body.filters || {};
 		if (Object.keys(filters).includes("_id")) {
-			filters["_id"] = ObjectId(filters["_id"]);
+			filters["_id"] = new ObjectId(filters["_id"]);
 		}
 		res.json(await db.collection(req.params.collection_name).find(filters).toArray());
 	});
@@ -36,7 +36,7 @@ export function generator(db) {
 		//response is what .updateMany method returns
 		var update_filter = req.body.update_filter;
 		if (update_filter._id !== undefined) {
-			update_filter._id = ObjectId(update_filter._id);
+			update_filter._id = new ObjectId(update_filter._id);
 		}
 		var update_statement = await db
 			.collection(req.params.collection_name)
@@ -50,7 +50,7 @@ export function generator(db) {
 
 		var filters = req.body.filters;
 		if (Object.keys(filters).includes("_id")) {
-			filters["_id"] = ObjectId(filters["_id"]);
+			filters["_id"] = new ObjectId(filters["_id"]);
 		}
 		res.json(await db.collection(req.params.collection_name).deleteMany(filters));
 	});
@@ -91,7 +91,7 @@ export function generator(db) {
 		//body schema : user_id : string , password : any
 		var user = await db
 			.collection("users")
-			.findOne({ _id: new ObjectId(request.body.user_id) });
+			.findOne({ _id: new new ObjectId(request.body.user_id)() });
 		if (user === null) {
 			response.status(404).json("user you are looking for doesnt exist");
 			return;
