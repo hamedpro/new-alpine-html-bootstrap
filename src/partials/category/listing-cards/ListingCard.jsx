@@ -11,7 +11,6 @@ var average = (array_of_numbers) => {
 export const ListingCard = (props) => {
 	var [product_reviews, set_product_reviews] = useState();
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
-	if (product_reviews === undefined) return <h1>در حال بارگذاری بررسی های کالا ها ...</h1>;
 
 	return (
 		<div className="card position-relative h-100 card-listing hover-trigger">

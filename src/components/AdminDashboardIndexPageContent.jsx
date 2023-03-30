@@ -5,10 +5,6 @@ import { GlobalContext } from "../GlobalContext";
 export const AdminDashboardIndexPageContent = () => {
 	var { product_categories, key_values } = useContext(GlobalContext).global_context_state;
 	var { refresh_global_context_state } = useContext(GlobalContext);
-
-	if (product_categories === undefined || key_values === undefined)
-		return "در حال بارگذاری دسته بندی های کالا ها ...";
-
 	if (
 		key_values.find(
 			(i) => i.key === "index_page_product_carousel_scrollbar_product_category_id"

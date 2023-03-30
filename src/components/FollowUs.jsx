@@ -4,7 +4,6 @@ import { GlobalContext } from "../GlobalContext";
 export const FollowUs = () => {
 	var { key_values } = useContext(GlobalContext).global_context_state;
 
-	if (key_values === undefined) return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<div className="bg-light py-4">
 			<div className="container d-flex justify-content-center align-items-center py-2">

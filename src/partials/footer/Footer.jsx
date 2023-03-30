@@ -24,8 +24,7 @@ export const Footer = ({ classList }) => {
 		alert("با موفقیت انجام شد !");
 	}
 	var { key_values, product_categories } = useContext(GlobalContext).global_context_state;
-	if (key_values === undefined || product_categories === undefined)
-		return "در حال بارگذاری اطلاعات از سرور ...";
+
 	return (
 		<footer className={`bg-dark mt-10  ${classList}`}>
 			<FollowUs />

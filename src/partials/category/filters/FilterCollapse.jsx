@@ -6,7 +6,6 @@ import { GlobalContext } from "../../../GlobalContext";
 
 export const FilterCollapse = () => {
 	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
-	if (filters_one === undefined) return <h1>در حال بارگذاری اطلاعات ...</h1>;
 	var { sizes, colours } = filters_one;
 	return (
 		<div className="row gx-5">

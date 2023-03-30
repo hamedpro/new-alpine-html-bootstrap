@@ -7,8 +7,6 @@ import { Link } from "react-router-dom";
 export const ReviewsCompany = () => {
 	var { overall_reviews, users } = useContext(GlobalContext).global_context_state;
 
-	if (overall_reviews === undefined || users === undefined)
-		return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<>
 			<div className="row g-3">

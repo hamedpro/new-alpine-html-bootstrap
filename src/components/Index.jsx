@@ -16,12 +16,10 @@ import logo5 from "../assets/images/logos/logo-5.svg";
 import logo7 from "../assets/images/logos/logo-7.svg";
 import { GlobalContext } from "../GlobalContext";
 export const Index = () => {
-	//console.log("global context", useContext(GlobalContext));
 	var { products, key_values, product_categories } =
 		useContext(GlobalContext).global_context_state;
 
-	if ([product_categories, key_values, products].some((i) => i === undefined))
-		return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
+	
 	return (
 		<>
 			<div className="position-relative z-index-30">

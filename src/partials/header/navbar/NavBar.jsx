@@ -5,7 +5,6 @@ import { LogoFull } from "../../logo/LogoFull";
 import { Menu } from "../menus/Menu";
 export const NavBar = ({ classList }) => {
 	var { cart_items } = useContext(GlobalContext).global_context_state;
-	if (cart_items === undefined) return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<nav
 			className={`navbar navbar-expand-lg navbar-light bg-white border-bottom mx-0 p-0 flex-column  ${classList}`}

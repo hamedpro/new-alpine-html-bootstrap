@@ -8,7 +8,6 @@ import { ListingCard } from "../partials/category/listing-cards/ListingCard";
 import { GlobalContext } from "../GlobalContext";
 export const Category = () => {
 	var products = useContext(GlobalContext).global_context_state.products;
-	if (products === undefined) return <h1>در حال بارگذاری محصولات ...</h1>;
 	return (
 		<>
 			<NavBar />

@@ -5,8 +5,7 @@ import background_image from "../../assets/images/image.avif";
 import { GlobalContext } from "../../GlobalContext";
 export const BannerImageHotspot = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
-	if (products === undefined) {
-		return <h1>در حال بارگذاری محصولات ...</h1>;
+	
 	} else {
 		return (
 			<>

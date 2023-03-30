@@ -34,36 +34,13 @@ export const InfoOne = ({ product_document }) => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 	var { product_categories, product_reviews, cart_items, products_likes, key_values } =
 		useContext(GlobalContext).global_context_state;
-	var init_choices_dot_js_is_called = useRef(false);
 	useEffect(() => {
-		if (
-			!(
-				product_categories === undefined ||
-				product_reviews === undefined ||
-				cart_items === undefined ||
-				products_likes === undefined ||
-				key_values === undefined
-			) &&
-			init_choices_dot_js_is_called === false
-		) {
-			init_choices_dot_js_is_called.current = true;
-			init_choices_dot_js();
+		init_choices_dot_js();
 
-			//todo make sure to destroy this instance
-			// when component is going to be destroyed
-
-			/* todo make sure to set 
-			init_choices_dot_js_is_called = true in correct time  */
-		}
+		//todo make sure to destroy this instance
+		// when component is going to be destroyed
 	});
-	if (
-		product_categories === undefined ||
-		product_reviews === undefined ||
-		cart_items === undefined ||
-		products_likes === undefined ||
-		key_values === undefined
-	)
-		return <h1>loading product categories ... </h1>;
+
 	var product_reviews_of_this_product = product_reviews.filter((i) => {
 		return i.product_id === product_document._id;
 	});

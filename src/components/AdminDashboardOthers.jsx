@@ -5,7 +5,6 @@ import { GlobalContext } from "../GlobalContext";
 export const AdminDashboardOthers = () => {
 	var { key_values } = useContext(GlobalContext).global_context_state;
 	var { refresh_global_context_state } = useContext(GlobalContext);
-	if (key_values === undefined) return <h1>در حال بارگذاری اطلاعات از سرور...</h1>;
 	async function submit_new_products_bottom_sentence() {
 		if (key_values.find((i) => i.key === "products_bottom_sentence")) {
 			await axios({

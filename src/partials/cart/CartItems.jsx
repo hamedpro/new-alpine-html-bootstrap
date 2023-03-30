@@ -5,8 +5,7 @@ import { calc_discounted_price } from "../../helpers";
 export const CartItems = () => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 	var { cart_items, products } = useContext(GlobalContext).global_context_state;
-	if (cart_items === undefined || products === undefined)
-		return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
+
 	async function remove_cart_item(cart_item_id) {
 		await axios({
 			baseURL: api_endpoint,

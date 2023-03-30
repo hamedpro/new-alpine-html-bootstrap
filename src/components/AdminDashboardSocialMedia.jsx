@@ -38,7 +38,6 @@ export const AdminDashboardSocialMedia = () => {
 		refresh_global_context_state();
 		alert("با موفقیت انجام شد !");
 	}
-	if (key_values === undefined) return "در حال بارگذاری اطلاعات از سرور ...";
 	return (
 		<>
 			<h1>مدیریت ادرس شبکه های اجتماعی</h1>

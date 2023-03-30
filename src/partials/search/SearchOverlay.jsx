@@ -6,8 +6,6 @@ import { ListingCard } from "../category/listing-cards/ListingCard";
 export const SearchOverlay = () => {
 	var [search_query, set_search_query] = useState();
 	var { products, product_categories, posts } = useContext(GlobalContext).global_context_state;
-	if ([product_categories, posts, products].some((i) => i === undefined))
-		return <h1>در حال بارگذاری اطلاعات ...</h1>;
 
 	function search(search_query) {
 		var tmp = { name: "hamed is here", lname: "hamed is not here" };

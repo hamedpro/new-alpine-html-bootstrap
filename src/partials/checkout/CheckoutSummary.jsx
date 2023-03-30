@@ -2,7 +2,6 @@ import React, { useContext } from "react";
 import { GlobalContext } from "../../GlobalContext";
 export const CheckoutSummary = () => {
 	var cart_items = useContext(GlobalContext).global_context_state.cart_items;
-	if (cart_items === undefined) return <h1>در حال بارگذاری اطلاعات از سرور ...</h1>;
 
 	return (
 		<div className="bg-light p-4 sticky-md-top top-5">

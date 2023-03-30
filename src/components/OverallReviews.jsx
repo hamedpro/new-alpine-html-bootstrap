@@ -3,7 +3,6 @@ import { GlobalContext } from "../GlobalContext";
 
 export const OverallReviews = () => {
 	var { overall_reviews } = useContext(GlobalContext).global_context_state;
-	if (overall_reviews === undefined) return "در حال بارگذاری درخواست های پشتیبانی کلی ...";
 	return (
 		<>
 			<h1>درخواست های پشتیبانی کلی </h1>

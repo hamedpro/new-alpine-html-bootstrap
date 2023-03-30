@@ -8,7 +8,6 @@ export const ReviewsCustomers = ({ product }) => {
 	
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
 	var [shown_reviews_limit, set_shown_reviews_limit] = useState(3);
-	if (product_reviews === undefined) return <h1>در حال بارگذاری نظرات کاربران ...</h1>;
 
 	//total_rating either a number from 0 to 100 or
 	//undefined(for when there is not any reviews for this product)

@@ -5,7 +5,6 @@ import { DropdownLinks } from "./DropdownLinks";
 
 export const Menu = () => {
 	var { products, product_categories, posts } = useContext(GlobalContext).global_context_state;
-	if (posts === undefined || products === undefined || product_categories === undefined) return;
 	return (
 		<ul className="navbar-nav py-lg-2 mx-auto">
 			<li className="nav-item me-lg-4 dropdown position-static">

@@ -10,7 +10,6 @@ import { useParams } from "react-router-dom";
 export const Product = () => {
 	var { product_id } = useParams();
 	var products = useContext(GlobalContext).global_context_state.products;
-	if (products === undefined) return <h1>در حال بارگذاری محصولات ...</h1>;
 	var product = products.find((i) => i._id === product_id);
 	return (
 		<>

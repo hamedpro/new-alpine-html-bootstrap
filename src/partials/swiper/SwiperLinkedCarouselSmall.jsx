@@ -26,7 +26,6 @@ export const SwiperLinkedCarouselSmall = () => {
 		Object.assign(swiper_linked_carousel_small_swiper_container.current, options);
 		swiper_linked_carousel_small_swiper_container.current.initialize();
 	}, []);
-	if (products === undefined) return <h1>در حال بارگذاری محصولات ...</h1>;
 	return (
 		<swiper-container
 			init="false"

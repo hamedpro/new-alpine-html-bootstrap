@@ -7,8 +7,6 @@ export const OffcanvasCart = () => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 	var { cart_items, products, product_categories } =
 		useContext(GlobalContext).global_context_state;
-	if (cart_items === undefined || products === undefined || product_categories === undefined)
-		return "در حال بارگذاری اطلاعات از سرور ...";
 	async function remove_cart_item(cart_item_id) {
 		await axios({
 			baseURL: api_endpoint,
