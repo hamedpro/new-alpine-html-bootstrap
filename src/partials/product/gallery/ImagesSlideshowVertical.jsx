@@ -27,10 +27,10 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 
 		options = {
 			spaceBetween: 0,
-			effect: "fade" /* todo idont know to use this thumbs prop */,
-			/* thumbs: {
-				swiper: galleryThumbs,
-			}, */
+			effect: "fade",
+			thumbs: {
+				swiper: gallery_thumbs_vertical_swiper_container.current,
+			},
 		};
 		Object.assign(gallery_top_vertical_swiper_container.current, options);
 		gallery_top_vertical_swiper_container.current.initialize();
@@ -42,18 +42,16 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 				ref={gallery_thumbs_vertical_swiper_container}
 				class="swiper-container gallery-thumbs-vertical swiper-container col-2 pb-4"
 			>
-				<div className="swiper-wrapper">
-					{product_document.image_files_ids.map((i) => (
-						<div className="swiper-slide bg-light bg-light h-auto" key={i}>
-							<picture>
-								<img
-									className="img-fluid mx-auto d-table"
-									src={new URL(`/files/${i}`, api_endpoint).href}
-								/>
-							</picture>
-						</div>
-					))}
-				</div>
+				{product_document.image_files_ids.map((i) => (
+					<swiper-slide class="swiper-slide bg-light bg-light h-auto" key={i}>
+						<picture>
+							<img
+								className="img-fluid mx-auto d-table"
+								src={new URL(`/files/${i}`, api_endpoint).href}
+							/>
+						</picture>
+					</swiper-slide>
+				))}
 			</swiper-container>
 
 			<swiper-container
@@ -61,19 +59,17 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 				ref={gallery_top_vertical_swiper_container}
 				class="swiper-container gallery-top-vertical col-10"
 			>
-				<div className="swiper-wrapper">
-					{product_document.image_files_ids.map((i) => (
-						<swiper-slide class="swiper-slide bg-white h-auto" key={i}>
-							<picture>
-								<img
-									className="img-fluid d-table mx-auto"
-									src={new URL(`/files/${i}`, api_endpoint).href}
-									data-zoomable
-								/>
-							</picture>
-						</swiper-slide>
-					))}
-				</div>
+				{product_document.image_files_ids.map((i) => (
+					<swiper-slide class="swiper-slide bg-white h-auto" key={i}>
+						<picture>
+							<img
+								className="img-fluid d-table mx-auto"
+								src={new URL(`/files/${i}`, api_endpoint).href}
+								data-zoomable
+							/>
+						</picture>
+					</swiper-slide>
+				))}
 			</swiper-container>
 		</div>
 	);

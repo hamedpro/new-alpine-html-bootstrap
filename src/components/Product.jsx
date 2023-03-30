@@ -38,7 +38,7 @@ export const Product = () => {
 					</div>
 				</section>
 
-				<div className="container my-8">
+				<div className="container my-8 position-relative">
 					<h3 className="fs-4 fw-bold mb-5 text-center">ممکن است بپسندید</h3>
 					<SwiperProductCarouselScrollbar products={products} />
 				</div>

@@ -55,8 +55,6 @@ export const NewProduct = () => {
 				document: {
 					title: input_value("title_input"),
 					price: input_value("price_input"),
-					currency: "$",
-
 					image_files_ids: files_ids,
 					category_id: selected_product_category.value,
 					discount_percentage: input_value("discount_percentage_input"),
@@ -85,7 +83,7 @@ export const NewProduct = () => {
 					<input type={"text"} id={`${key}_input`} />
 				</Fragment>
 			))}
-			<p>واحد پول : $</p>
+			<p>واحد پول : تومان</p>
 			<h3>توضیحات محصول : </h3>
 			<textarea id="description" />
 			<h3>موارد این محصول </h3>
