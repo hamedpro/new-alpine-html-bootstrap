@@ -130,7 +130,7 @@ export const Menu = () => {
 					aria-haspopup="true"
 					aria-expanded="false"
 				>
-					دسترسی سریع
+					دیگر بخش ها
 				</a>
 				<ul className="dropdown-menu">
 					<li>

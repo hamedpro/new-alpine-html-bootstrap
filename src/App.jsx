@@ -29,6 +29,8 @@ import { register } from "swiper/element/bundle";
 import { OverallReviews } from "./components/OverallReviews";
 import { NewOverallReview } from "./components/NewOverallReview";
 import { DownloadCenter } from "./components/DownloadCenter";
+import { Products } from "./components/Products";
+import { Categories } from "./components/Categories";
 
 register();
 
@@ -73,6 +75,22 @@ export const App = () => {
 							element={
 								<CommonBottomWrapper>
 									<Product />
+								</CommonBottomWrapper>
+							}
+						/>
+						<Route
+							path="/products"
+							element={
+								<CommonBottomWrapper>
+									<Products />{" "}
+								</CommonBottomWrapper>
+							}
+						/>
+						<Route
+							path="/categories"
+							element={
+								<CommonBottomWrapper>
+									<Categories />{" "}
 								</CommonBottomWrapper>
 							}
 						/>

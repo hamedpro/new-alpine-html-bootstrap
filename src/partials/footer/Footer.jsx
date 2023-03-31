@@ -140,7 +140,7 @@ export const Footer = ({ classList }) => {
 							</ul>
 						</nav>
 						<nav className="d-none d-md-block col-md">
-							<h6 className="mb-4 fw-bolder fs-6">Categories</h6>
+							<h6 className="mb-4 fw-bolder fs-6">دسته بندی ها</h6>
 							{product_categories.length !== 0 ? (
 								<ul className="list-unstyled">
 									{product_categories.map((i) => (

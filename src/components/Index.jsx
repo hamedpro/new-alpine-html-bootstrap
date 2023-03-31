@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useRef } from "react";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { SwiperHeroSlideshow } from "../partials/swiper/SwiperHeroSlideshow";
 import { SwiperProductCarouselScrollbar } from "../partials/swiper/SwiperProductCarouselScrollbar";
@@ -19,7 +19,45 @@ export const Index = () => {
 	var { products, key_values, product_categories } =
 		useContext(GlobalContext).global_context_state;
 
-	
+	//they need to access each other
+	//because they are controller of each other
+	var swiper_linked_carousel_small_container = useRef();
+	var swiper_linked_carousel_large_container = useRef();
+	useEffect(() => {
+		var options = {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			roundLengths: true,
+			loop: true,
+			controller: {
+				control:
+					/* swiper_linked_carousel_small_container.current */ ".swiper-linked-carousel-small",
+			},
+		};
+		Object.assign(swiper_linked_carousel_large_container.current, options);
+		swiper_linked_carousel_large_container.current.initialize();
+
+		options = {
+			spaceBetween: 0,
+			slidesPerView: 1,
+			roundLengths: true,
+			loop: true,
+			navigation: {
+				nextEl: ".swiper-next-linked",
+				prevEl: ".swiper-prev-linked",
+			},
+			pagination: {
+				el: ".swiper-pagination-custom",
+			},
+			controller: {
+				control:
+					/* swiper_linked_carousel_large_container.current */ ".swiper-linked-carousel-large",
+			},
+		};
+		Object.assign(swiper_linked_carousel_small_container.current, options);
+		swiper_linked_carousel_small_container.current.initialize();
+	}, []);
+
 	return (
 		<>
 			<div className="position-relative z-index-30">
@@ -223,7 +261,11 @@ export const Index = () => {
 									</p>
 									<h2 className="display-5 fw-bold mb-6">اخرین محصولات ما</h2>
 									<div className="px-8 position-relative">
-										<SwiperLinkedCarouselSmall />
+										<SwiperLinkedCarouselSmall
+											swiper_container_ref={
+												swiper_linked_carousel_small_container
+											}
+										/>
 
 										<div className="swiper-prev-linked position-absolute top-50 start-0 mt-n8 cursor-pointer transition-all opacity-50-hover">
 											<i className="ri-arrow-left-s-line ri-2x"></i>
@@ -236,7 +278,11 @@ export const Index = () => {
 							</div>
 							<div className="col-md-5 d-none d-md-flex" data-aos="fade-left">
 								<div className="w-100 h-100">
-									<SwiperLinkedCarouselLarge />
+									<SwiperLinkedCarouselLarge
+										swiper_container_ref={
+											swiper_linked_carousel_large_container
+										}
+									/>
 								</div>
 							</div>
 						</div>

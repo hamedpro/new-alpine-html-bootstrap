@@ -17,7 +17,8 @@ export const BannerSaleExtended = () => {
 							data-aos-delay="250"
 						>
 							<h3 className="fs-1 fw-bold mb-0 lh-1">
-								<i className="ri-timer-flash-line align-bottom"></i> Sale Extended
+								<i className="ri-timer-flash-line align-bottom"></i> تخفیف ها تمدید
+								شدند !
 							</h3>
 						</div>
 						<div
@@ -29,25 +30,25 @@ export const BannerSaleExtended = () => {
 								href="/category"
 								className="btn btn-orange btn-orange-chunky text-white my-1"
 							>
-								<span>Shop Menswear</span>
+								<span>دسته بندی اول</span>
 							</a>
 							<a
 								href="/category"
 								className="btn btn-orange btn-orange-chunky text-white my-1"
 							>
-								<span>Shop Womenswear</span>
+								<span>دسته بندی دو</span>
 							</a>
 							<a
 								href="/category"
 								className="btn btn-orange btn-orange-chunky text-white my-1"
 							>
-								<span>Shop Kidswear</span>
+								<span>دسته بندی سه</span>
 							</a>
 							<a
 								href="/category"
 								className="btn btn-orange btn-orange-chunky text-white my-1"
 							>
-								<span>Shop Accessories</span>
+								<span>دسته بندی چهار</span>
 							</a>
 						</div>
 						<div
@@ -55,14 +56,12 @@ export const BannerSaleExtended = () => {
 							data-aos="fade-left"
 							data-aos-delay="250"
 						>
-							<p className="lead fw-bolder">
-								Discount applied to products at checkout.
-							</p>
+							<p className="lead fw-bolder">یک جمله فرضی اینجا نمایش داده خواهد شد</p>
 							<a
 								className="text-white fw-bolder text-link-border border-2 border-white align-self-start pb-1 transition-all opacity-50-hover"
 								href="#"
 							>
-								Exclusions apply. Learn more{" "}
+								یه جمله فرضی دیگه . اطلاعات بیشتر{" "}
 								<i className="ri-arrow-right-line align-bottom"></i>
 							</a>
 						</div>
