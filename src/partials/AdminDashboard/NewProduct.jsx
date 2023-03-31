@@ -40,7 +40,8 @@ export const NewProduct = () => {
 			form.append("file", file);
 			var { file_id } = (
 				await axios({
-					url: "http://localhost:4000/files",
+					baseURL: api_endpoint,
+					url: "/files",
 					method: "post",
 					data: form,
 				})
@@ -49,7 +50,8 @@ export const NewProduct = () => {
 		}
 
 		await axios({
-			url: "http://localhost:4000/collections/products",
+			baseURL: api_endpoint,
+			url: "/collections/products",
 			method: "post",
 			data: {
 				document: {

@@ -3,7 +3,8 @@
 	"version": "1.0.0",
 	"description": "Bootstrap 5 HTML Template created by Pixel Rocket",
 	"scripts": {
-		"dev": "vite & nodemon ./src/api/index.js"
+		"dev": "vite & nodemon ./src/api/index.js",
+		"start": "node start_script.js "
 	},
 	"type": "module",
 	"keywords": [],
@@ -49,9 +50,11 @@
 		"express": "^4.18.2",
 		"form-data": "^4.0.0",
 		"formidable": "^2.1.1",
+		"http-server": "^14.1.1",
 		"jsonwebtoken": "^9.0.0",
 		"medium-zoom": "^1.0.6",
 		"mongodb": "^5.1.0",
+		"nodemon": "^2.0.22",
 		"nouislider": "^14.6.3",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
