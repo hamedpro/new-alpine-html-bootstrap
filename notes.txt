@@ -11,3 +11,4 @@ when showing stars if there is not any reviews we must not show empty stars
 during transition most probably i have removed some of for example data-swiper attr
 and they may be required to css to show properly so they must be returned 
 
+destroy swiper and ... at correct time 

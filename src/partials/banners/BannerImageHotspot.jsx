@@ -4,8 +4,6 @@ import svg_divider_bottom_rl from "../svg/svg-divider-bottom-rl.svg";
 import background_image from "../../assets/images/image.avif";
 import { GlobalContext } from "../../GlobalContext";
 export const BannerImageHotspot = () => {
-	var { products } = useContext(GlobalContext).global_context_state;
-
 	return (
 		<>
 			<div className="position-absolute z-index-50 text-white top-0 start-0 end-0">

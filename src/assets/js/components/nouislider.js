@@ -2,7 +2,7 @@ import noUiSlider from 'nouislider';
 
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
-        var priceSliders = document.querySelectorAll('.filter-price') || [];
+        var priceSliders = document.querySelectorAll(".filter-price");
 
         const createPriceSlider = (priceSlider) => {
             const parentElem = priceSlider.closest('.widget-filter-price');

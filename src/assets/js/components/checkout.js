@@ -1,7 +1,7 @@
 (function () {
 	const billingToggle = document.querySelector("#same-address");
 	const billingSection = document.querySelector(".billing-address");
-	const paymentToggles = document.querySelectorAll('[name="checkoutPaymentMethod"]') || [];
+	const paymentToggles = document.querySelectorAll('[name="checkoutPaymentMethod"]');
 	const cardFields = document.querySelector(".card-details");
 	const paypalInfo = document.querySelector(".paypal-details");
 	const STRIPE_ID = "checkoutPaymentStripe";

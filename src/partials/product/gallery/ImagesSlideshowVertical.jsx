@@ -6,7 +6,7 @@ export const ImagesSlideshowVertical = ({ product_document }) => {
 	var gallery_top_vertical_swiper_container = useRef();
 	useEffect(() => {
 		function init_medium_zoom() {
-			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
+			const zoomImgs = document.querySelectorAll("[data-zoomable]");
 
 			zoomImgs.forEach((img) => {
 				const zoom = new mediumZoom(img, {

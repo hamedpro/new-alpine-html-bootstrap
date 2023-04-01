@@ -14,18 +14,11 @@ export const SwiperLinkedCarouselSmall = ({ swiper_container_ref }) => {
 			<div className="swiper-pagination-blocks mb-4">
 				<div className="swiper-pagination-custom"></div>
 			</div>
-
-			<swiper-slide className="swiper-slide overflow-hidden">
-				<ListingCard {...products[0]} />
-			</swiper-slide>
-
-			<swiper-slide className="swiper-slide overflow-hidden">
-				<ListingCard {...products[0]} />
-			</swiper-slide>
-
-			<swiper-slide className="swiper-slide overflow-hidden">
-				<ListingCard {...products[0]} />
-			</swiper-slide>
+			{[1, 2, 3].map((i) => (
+				<swiper-slide key={i} className="swiper-slide overflow-hidden">
+					{products.length !== 0 && <ListingCard {...products[0]} />}
+				</swiper-slide>
+			))}
 		</swiper-container>
 	);
 };

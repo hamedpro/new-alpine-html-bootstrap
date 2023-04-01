@@ -1,19 +1,17 @@
 import axios from "axios";
-import React from "react";
+import React, { useContext } from "react";
 import { Link, useNavigate } from "react-router-dom";
-
+import { GlobalContext } from "../GlobalContext";
 export const Login = () => {
+	var { users } = useContext(GlobalContext).global_context_state;
 	var nav = useNavigate();
 	async function login_handler() {
 		var username = document.getElementById("username_input").value;
 		var password = document.getElementById("password_input").value;
 
 		var response;
-		response = await axios({
-			url: `/collections/users`,
-			baseURL: api_endpoint,
-		});
-		var user = response.data.find((i) => i.username === username);
+
+		var user = users.find((i) => i.username === username);
 		if (user === undefined) {
 			alert("کاربری با این نام کاربری وجود ندارد");
 			return;

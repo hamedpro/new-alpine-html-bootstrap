@@ -12,52 +12,31 @@ export const SwiperLinkedCarouselLarge = ({ swiper_container_ref }) => {
 		>
 			<swiper-slide className="swiper-slide">
 				<div className="row g-3">
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
+					{[1, 2, 3, 4].map((i) => (
+						<div key={i} className="col-12 col-md-6">
+							{products.length !== 0 && <ListingCard {...products[0]} />}
+						</div>
+					))}
 				</div>
 			</swiper-slide>
 
 			<swiper-slide className="swiper-slide">
 				<div className="row g-3">
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
+					{[1, 2, 3, 4].map((i) => (
+						<div key={i} className="col-12 col-md-6">
+							{products.length !== 0 && <ListingCard {...products[0]} />}
+						</div>
+					))}
 				</div>
 			</swiper-slide>
 
 			<swiper-slide className="swiper-slide">
 				<div className="row g-3">
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
-					<div className="col-12 col-md-6">
-						<ListingCard {...products[0]} />
-					</div>
+					{[1, 2, 3, 4].map((i) => (
+						<div key={i} className="col-12 col-md-6">
+							{products.length !== 0 && <ListingCard {...products[0]} />}
+						</div>
+					))}
 				</div>
 			</swiper-slide>
 		</swiper-container>

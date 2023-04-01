@@ -30,8 +30,7 @@ export const Index = () => {
 			roundLengths: true,
 			loop: true,
 			controller: {
-				control:
-					/* swiper_linked_carousel_small_container.current */ ".swiper-linked-carousel-small",
+				control: ".swiper-linked-carousel-small",
 			},
 		};
 		Object.assign(swiper_linked_carousel_large_container.current, options);
@@ -50,8 +49,7 @@ export const Index = () => {
 				el: ".swiper-pagination-custom",
 			},
 			controller: {
-				control:
-					/* swiper_linked_carousel_large_container.current */ ".swiper-linked-carousel-large",
+				control: ".swiper-linked-carousel-large",
 			},
 		};
 		Object.assign(swiper_linked_carousel_small_container.current, options);
@@ -226,7 +224,7 @@ export const Index = () => {
 									}
 								</p>
 							</div>
-							{products && (
+							{
 								<SwiperProductCarouselScrollbar
 									products={products
 										.filter(
@@ -240,7 +238,7 @@ export const Index = () => {
 										)
 										.slice(0, 5)}
 								/>
-							)}
+							}
 						</div>
 					</section>
 				) : (

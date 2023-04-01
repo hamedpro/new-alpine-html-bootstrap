@@ -13,14 +13,13 @@ export const GlobalContextProvider = ({ children }) => {
 		"product_categories",
 		"posts",
 		"product_reviews",
-		"cart_items",
 		"products_likes",
 		"key_values",
 		"overall_reviews",
 		"users",
 		"download_center_items",
-		"filters_one",
 	];
+
 	async function refresh_global_context_state() {
 		collections_to_fetch.forEach(async (collection_name) => {
 			var collection = (

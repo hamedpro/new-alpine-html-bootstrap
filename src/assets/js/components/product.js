@@ -1,6 +1,8 @@
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
-        const productOptions = document.querySelectorAll('.product-option select, .product-option input') || [];
+        const productOptions = document.querySelectorAll(
+			".product-option select, .product-option input"
+		);
         const PARENT_CSS_CLASS = 'product-option';
         const SELECTED_OPTION_CLASS = 'selected-option';
 

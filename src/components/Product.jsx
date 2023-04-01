@@ -9,7 +9,7 @@ import { GlobalContext } from "../GlobalContext";
 import { useParams } from "react-router-dom";
 export const Product = () => {
 	var { product_id } = useParams();
-	var products = useContext(GlobalContext).global_context_state.products;
+	var { products } = useContext(GlobalContext).global_context_state;
 	var product = products.find((i) => i._id === product_id);
 	return (
 		<>

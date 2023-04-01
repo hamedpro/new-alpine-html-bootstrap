@@ -1,25 +1,15 @@
 import axios from "axios";
-import { Fragment, useEffect } from "react";
+import { Fragment, useContext, useEffect } from "react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import ReactSelect from "react-select";
+import { GlobalContext } from "../../GlobalContext";
 var input_value = (element_id) => document.getElementById(element_id).value;
 export const NewProduct = () => {
-	var [product_categories, set_product_categories] = useState();
+	var { product_categories } = useContext(GlobalContext).global_context_state;
 	var [options, set_options] = useState([]);
 	var [selected_product_category, set_selected_product_category] = useState();
-	useEffect(() => {
-		axios({
-			baseURL: api_endpoint,
-			url: "/collections/product_categories",
-			data: {
-				filters: {},
-			},
-		})
-			.then((response) => response.data)
-			.then((data) => set_product_categories(data));
-	}, []);
-	if (product_categories === undefined) return <h1>در حال بارگذاری دسته بندی های کالا ها ...</h1>;
+	
 	async function submit_product() {
 		var files = document.getElementById("image_files_ids").files;
 

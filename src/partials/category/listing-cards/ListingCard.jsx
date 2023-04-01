@@ -9,7 +9,6 @@ var average = (array_of_numbers) => {
 	return total / array_of_numbers.length;
 };
 export const ListingCard = (props) => {
-	var [product_reviews, set_product_reviews] = useState();
 	var { product_reviews } = useContext(GlobalContext).global_context_state;
 
 	return (
@@ -56,11 +55,15 @@ export const ListingCard = (props) => {
 			<div className="card-body px-0 text-center">
 				<div className="d-flex justify-content-center align-items-center mx-auto mb-1">
 					<ReviewStarsSmall
-						width={average(
-							product_reviews
-								.filter((i) => i.product_id === props._id)
-								.map((i) => Number(i.width))
-						)}
+						width={
+							product_reviews.length !== 0
+								? average(
+										product_reviews
+											.filter((i) => i.product_id === props._id)
+											.map((i) => Number(i.width))
+								  )
+								: 0
+						}
 					/>
 					<span className="small fw-bolder ms-2 text-muted">
 						{" "}

@@ -6,7 +6,7 @@ export const DownloadCenter = ({}) => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 	var { download_center_items, users } = useContext(GlobalContext).global_context_state;
 
-	var { is_admin } = users.find((i) => i._id === window.localStorage.getItem("user_id"));
+	var { is_admin } = users.find((i) => i._id === window.localStorage.getItem("user_id")) || {};
 	async function delete_download_center_item(download_center_item_id) {
 		if (!window.confirm("ایا از حذف این فایل اطمینان دارید ؟!")) return;
 		await axios({

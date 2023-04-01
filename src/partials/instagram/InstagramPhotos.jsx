@@ -9,7 +9,7 @@ export const InstagramPhotos = () => {
 	).value;
 	useEffect(() => {
 		function init_medium_zoom() {
-			const zoomImgs = document.querySelectorAll("[data-zoomable]") || [];
+			const zoomImgs = document.querySelectorAll("[data-zoomable]");
 
 			zoomImgs.forEach((img) => {
 				const zoom = new mediumZoom(img, {

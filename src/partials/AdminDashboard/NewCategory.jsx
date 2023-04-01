@@ -1,24 +1,10 @@
 import axios from "axios";
-import React, { Fragment, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
+import { GlobalContext } from "../../GlobalContext";
 
 export const NewCategory = () => {
-	var [product_categories, set_product_categories] = useState();
-	function fetch_data() {
-		axios({
-			baseURL: api_endpoint,
-			url: "/collections/product_categories",
-			data: {
-				filters: {},
-			},
-		})
-			.then((response) => response.data)
-			.then((data) => {
-				set_product_categories(data);
-			});
-	}
-	useEffect(fetch_data, []);
-	if (product_categories === undefined)
-		return <h1>در حال بارگذاری دسته بندی های کالا ها ... </h1>;
+var { product_categories } = useContext(GlobalContext).global_context_state;
+ 
 	async function submit_new_product_category() {
 		await axios({
 			baseURL: api_endpoint,

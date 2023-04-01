@@ -60,8 +60,10 @@ export class Navbar {
 }
 (function () {
     document.addEventListener('DOMContentLoaded', () => {
-        const dropdownMenus = document.querySelectorAll('.navbar-nav .dropdown, .navbar-nav .dropend') || [];
-        const navbarTogglers = document.querySelectorAll('.navbar-toggler') || [];
+        const dropdownMenus = document.querySelectorAll(
+			".navbar-nav .dropdown, .navbar-nav .dropend"
+		);
+		const navbarTogglers = document.querySelectorAll(".navbar-toggler");
         const NAVBAR_ACTIVE_CLASS = 'navbar-active';
         // if toggle button has this CSS class, we do not add body class to hide overflow.
         const NAVBAR_BTN_DISABLE_ADD_BODY_CLASS = 'btn-collapse-expand';

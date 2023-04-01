@@ -1,7 +1,7 @@
 (function () {
 	document.addEventListener("DOMContentLoaded", () => {
 		// handle filter navigation on category page
-		const filterSearchBars = document.querySelectorAll(".filter-search") || [];
+		const filterSearchBars = document.querySelectorAll(".filter-search");
 
 		const handleCategoryFilterSearch = (event, search) => {
 			const filterWidget = event.target.closest(".widget-filter");

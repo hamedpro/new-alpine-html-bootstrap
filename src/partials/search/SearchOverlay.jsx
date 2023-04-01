@@ -9,7 +9,6 @@ export const SearchOverlay = () => {
 
 	function search(search_query) {
 		var tmp = { name: "hamed is here", lname: "hamed is not here" };
-		return { products, product_categories: [tmp, tmp], posts: [tmp, tmp, tmp] };
 		return {
 			products: products.filter((product) => JSON.stringify(product).includes(search_query)),
 			product_categories: product_categories.filter((product_category) =>

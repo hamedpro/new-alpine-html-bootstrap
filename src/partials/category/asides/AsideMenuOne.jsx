@@ -7,8 +7,20 @@ import { FilterColour } from "../filters/FilterColour";
 import { GlobalContext } from "../../../GlobalContext";
 import SimpleBar from "simplebar-react";
 export const AsideMenuOne = () => {
-	var filters_one = useContext(GlobalContext).global_context_state.filters_one;
-	var { categories, brands, type, sizes, colours } = filters_one;
+	var tmp = useContext(GlobalContext).global_context_state.key_values.find(
+		(i) => i.key === "filters_one"
+	);
+	if (tmp) {
+		var filters_one = tmp.value;
+	}
+
+	var { categories, brands, type, sizes, colours } = filters_one || {
+		categories: [],
+		brands: [],
+		type: [],
+		sizes: [],
+		colours: [],
+	};
 
 	return (
 		<aside>

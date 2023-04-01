@@ -3,7 +3,6 @@ import express from "express";
 import { readFileSync } from "fs";
 import { MongoClient, ObjectId } from "mongodb";
 import cors from "cors";
-import jwt from "jsonwebtoken";
 var { api_port, mongodb_url, mongodb_db_name, jwt_secret } = JSON.parse(
 	readFileSync("./env.json", "utf-8")
 );

@@ -116,8 +116,11 @@ export const InfoOne = ({ product_document }) => {
 				<div className="d-flex justify-content-start align-items-center">
 					<ReviewStarsSmall
 						width={
-							average(product_reviews_of_this_product.map((i) => Number(i.width))) ||
-							0
+							product_reviews_of_this_product.length !== 0
+								? average(
+										product_reviews_of_this_product.map((i) => Number(i.width))
+								  )
+								: 0
 						}
 					/>
 					<small className="text-muted d-inline-block ms-2 fs-bolder">
