@@ -91,7 +91,7 @@ export function generator(db) {
 		//body schema : user_id : string , password : any
 		var user = await db
 			.collection("users")
-			.findOne({ _id: new new ObjectId(request.body.user_id)() });
+			.findOne({ _id: new ObjectId(request.body.user_id) });
 		if (user === null) {
 			response.status(404).json("user you are looking for doesnt exist");
 			return;

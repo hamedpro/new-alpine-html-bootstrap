@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ReviewStarsSmall } from "./ReviewStarsSmall";
+import { GlobalContext } from "../../GlobalContext";
 
 export const Review = ({
 	time,
@@ -12,6 +13,7 @@ export const Review = ({
 	border_bottom,
 	width,
 }) => {
+	var { users } = useContext(GlobalContext).global_context_state;
 	return (
 		<article
 			className={`py-5 border-bottom ${border_top && "border-top"} ${
@@ -24,7 +26,7 @@ export const Review = ({
 						{new Date(time).getDate()}/{new Date(time).getMonth() + 1}/
 						{new Date(time).getFullYear()}
 					</small>
-					<p className="fw-bolder">{user_id}</p>
+					<p className="fw-bolder">@{users.find((i) => i._id === user_id).username}</p>
 					<span className="bg-success-faded fs-xs fw-bolder text-uppercase p-2">
 						{user_badge}
 					</span>

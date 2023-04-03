@@ -65,11 +65,13 @@ export const OffcanvasReview = () => {
 							></textarea>
 						</div>
 						<p>
-							من این کالا را به دیگران پیشنهاد میدهم : {has_recommended_this_product}
+							{has_recommended_this_product
+								? "من این کالا را به دیگران پیشنهاد میدهم "
+								: "من این کالا را پیشنهاد نمیدهم "}
 						</p>
-						<button onClick={() => set_has_recommended_this_product((prev) => !prev)}>
+						<div onClick={() => set_has_recommended_this_product((prev) => !prev)}>
 							تغییر وضعیت{" "}
-						</button>
+						</div>
 						<h3>به این محصول از ۰ تا ۱۰۰ امتیاز دهید :</h3>
 						<input id="rating_width" type="number" className="d-block" />
 						<button
