@@ -4,7 +4,7 @@ import { GlobalContext } from "../../GlobalContext";
 
 export const NewCategory = () => {
 var { product_categories } = useContext(GlobalContext).global_context_state;
- 
+var { refresh_global_context_state } = useContext(GlobalContext);
 	async function submit_new_product_category() {
 		await axios({
 			baseURL: api_endpoint,
@@ -13,11 +13,11 @@ var { product_categories } = useContext(GlobalContext).global_context_state;
 			data: {
 				document: {
 					title: document.getElementById("title_input").value,
-					description: document.getElementById("description_input"),
+					description: document.getElementById("description_input").value,
 				},
 			},
 		});
-		await fetch_data();
+		await refresh_global_context_state();
 		alert("با موفقیت انجام شد !");
 	}
 	return (
@@ -34,6 +34,7 @@ var { product_categories } = useContext(GlobalContext).global_context_state;
 			<h1>اضافه کردن دسته بندی جدید : </h1>
 			<p>برای این دسته بندی جدید عنوانی انتخاب کنید :</p>
 			<input id="title_input" />
+			<p>برای این دسته بندی توضیحی بنویسید :‌</p>
 			<input id="description_input" />
 			<button onClick={submit_new_product_category}>ثبت اطلاعات </button>
 		</>
