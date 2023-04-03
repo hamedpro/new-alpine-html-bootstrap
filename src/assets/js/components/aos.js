@@ -5,7 +5,6 @@ const options = {
 	easing: "ease-out-quad",
 	once: true,
 	startEvent: "load",
-	disable: "mobile",
 };
 
 AOS.init(options);
