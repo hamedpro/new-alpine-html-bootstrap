@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useContext, useState } from "react";
 import ReactSelect from "react-select";
 import { GlobalContext } from "../GlobalContext";
+import { BackButtonRow } from "./BackButtonRow";
 export const AdminDashboardIndexPageContent = () => {
 	var { product_categories, key_values } = useContext(GlobalContext).global_context_state;
 	var { refresh_global_context_state } = useContext(GlobalContext);
@@ -48,28 +49,36 @@ export const AdminDashboardIndexPageContent = () => {
 	}
 	return (
 		<>
-			<h1>مدیریت محتوای صفحه اصلی</h1>
-			<h3>اسلایدر محصولات صفحه اصلی{/* swiper product carouesl scrollbar */} </h3>
+			<BackButtonRow row_class_name={"tw-p-4"} location={"/admin-dashboard"} />
+			<div className="tw-p-4" dir="rtl">
+				<h1 className="tw-text-4xl">مدیریت محتوای صفحه اصلی</h1>
+				<hr className="tw-my-3" />
+				<h3 className="tw-text-2xl">
+					اسلایدر محصولات صفحه اصلی{/* swiper product carouesl scrollbar */}{" "}
+				</h3>
 
-			<p>یکی از دسته بندی های کالا را انتخاب کنید که کالاهای آن در این بخش نمایش داده شود</p>
+				<p>
+					یکی از دسته بندی های کالا را انتخاب کنید که کالاهای آن در این بخش نمایش داده شود
+				</p>
 
-			<ReactSelect
-				value={
-					index_page_product_carousel_scrollbar_product_category_id !== undefined
-						? {
-								label: product_categories.find(
-									(i) =>
-										i._id ===
-										index_page_product_carousel_scrollbar_product_category_id
-								).title,
-								value: index_page_product_carousel_scrollbar_product_category_id,
-						  }
-						: undefined
-				}
-				options={product_categories.map((i) => ({ label: i.title, value: i._id }))}
-				onChange={handle_index_page_product_carousel_scrollbar_change}
-				isSearchable
-			/>
+				<ReactSelect
+					value={
+						index_page_product_carousel_scrollbar_product_category_id !== undefined
+							? {
+									label: product_categories.find(
+										(i) =>
+											i._id ===
+											index_page_product_carousel_scrollbar_product_category_id
+									).title,
+									value: index_page_product_carousel_scrollbar_product_category_id,
+							  }
+							: undefined
+					}
+					options={product_categories.map((i) => ({ label: i.title, value: i._id }))}
+					onChange={handle_index_page_product_carousel_scrollbar_change}
+					isSearchable
+				/>
+			</div>
 		</>
 	);
 };

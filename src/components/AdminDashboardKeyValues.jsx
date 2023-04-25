@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { Fragment, useContext } from "react";
 import { GlobalContext } from "../GlobalContext";
+import { BackButtonRow } from "./BackButtonRow";
 
 export const AdminDashboardKeyValues = () => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
@@ -57,32 +58,50 @@ export const AdminDashboardKeyValues = () => {
 	}
 	return (
 		<>
-			{[
-				"instagram_id",
-				"twitter_id",
-				"facebook_id",
-				"company_address",
-				"company_landline_phone_number",
-				"company_mobile_phone_number",
-				"company_name",
-				"company_description",
-			].map((i) => (
-				<Fragment key={i}>
-					<h2>{i}</h2>
-					<p>
-						مقدار فعلی :{" "}
-						{key_values.find((row) => row.key === i)
-							? key_values.find((row) => row.key === i).value
-							: "هیچ مقداری ثبت نشده است"}
-					</p>
-					<p>تنظیم مقدار جدید برای این مورد :</p>
-					<input type="text" id={i} />
-					<button onClick={() => submit_new_value(i)}>ثبت اطلاعات </button>
-				</Fragment>
-			))}
-			<p>set new company_image</p>
-			<input type="file" id="company_image_input" />
-			<button onClick={upload_new_company_image}>upload new company image</button>
+			<BackButtonRow row_class_name={"tw-p-2"} location={"/admin-dashboard"} />
+			<div className="tw-p-4" dir="rtl">
+				<h1 className="tw-text-5xl">مدیریت جفت مقدار ها</h1>
+				<hr className="tw-my-5" />
+				{[
+					{ key: "instagram_id", label: "آیدی اینستاگرام" },
+					{ key: "twitter_id", label: "آیدی توییتر" },
+					{ key: "facebook_id", label: "آیدی فیسبوک" },
+					{ key: "company_address", label: "آدرس شرکت" },
+					{ key: "company_landline_phone_number", label: "شماره تلفن ثابت شرکت" },
+					{ key: "company_mobile_phone_number", label: "شماره تلفن همراه شرکت" },
+					{ key: "company_name", label: "نام شرکت" },
+					{ key: "company_description", label: "توضیح متنی شرکت" },
+				].map((i) => (
+					<div key={i.key} className="tw-border tw-border-black tw-p-4 tw-mb-2">
+						<h2 className="tw-text-xl">{i.label}</h2>
+						<p>
+							مقدار فعلی :{" "}
+							{key_values.find((row) => row.key === i.key)
+								? key_values.find((row) => row.key === i.key).value
+								: "هیچ مقداری ثبت نشده است"}
+						</p>
+						<span>تنظیم مقدار جدید برای این مورد :</span>
+						<input type="text" id={i.key} className="tw-border tw-border-black" />
+						<br />
+						<button
+							className="tw-border tw-border-black tw-px-2 tw-mt-2"
+							onClick={() => submit_new_value(i.key)}
+						>
+							ثبت اطلاعات
+						</button>
+					</div>
+				))}
+
+				<p>بارگذاری عکس جدید شرکت</p>
+				<input type="file" id="company_image_input" />
+				<br />
+				<button
+					className="tw-border tw-border-black tw-px-2 tw-mt-2"
+					onClick={upload_new_company_image}
+				>
+					شروع بارگذاری
+				</button>
+			</div>
 		</>
 	);
 };

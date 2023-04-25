@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useContext } from "react";
 import { GlobalContext } from "../GlobalContext";
+import { BackButtonRow } from "./BackButtonRow";
 export const AdminDashboardInstagramImages = () => {
 	var { refresh_global_context_state } = useContext(GlobalContext);
 	async function submit_handler() {
@@ -48,15 +49,24 @@ export const AdminDashboardInstagramImages = () => {
 	}
 	return (
 		<>
-			<h1>مدیریت بخش عکس های اینستاگرام</h1>
-
-			<p>لطفا دقیقا ۹ عکس انتخاب کنید و بر روی اپلود محتوا کلیک کنید</p>
-			<p>
-				اگر هم اکنون عکس هایی برای این بخش تنظیم شده است این عکس های جدید جایگزین آنها
-				خواهند شد{" "}
-			</p>
-			<input type="file" id="input" multiple />
-			<button onClick={submit_handler}>آپلود محتوا</button>
+			<BackButtonRow row_class_name="tw-p-4" location={"/admin-dashboard"} />
+			<div className="tw-p-4" dir="rtl">
+				<h1 className="tw-text-5xl">مدیریت بخش عکس های اینستاگرام</h1>
+				<hr className="tw-my-5" />
+				<p>لطفا دقیقا ۹ عکس انتخاب کنید و بر روی اپلود محتوا کلیک کنید</p>
+				<p>
+					(اگر هم اکنون عکس هایی برای این بخش تنظیم شده است این عکس های جدید جایگزین آنها
+					خواهند شد)
+				</p>
+				<input type="file" id="input" multiple />
+				<br />
+				<button
+					onClick={submit_handler}
+					className="tw-border tw-border-black tw-px-2 tw-mt-2"
+				>
+					آپلود محتوا
+				</button>
+			</div>
 		</>
 	);
 };
