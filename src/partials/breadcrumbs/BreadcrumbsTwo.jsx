@@ -1,18 +1,16 @@
 import React from "react";
 
-export const BreadcrumbsTwo = () => {
+export const BreadcrumbsTwo = ({ parts }) => {
 	return (
 		<nav aria-label="breadcrumb">
 			<ol className="breadcrumb">
-				<li className="breadcrumb-item breadcrumb-light">
-					<a href="#">Home</a>
-				</li>
-				<li className="breadcrumb-item breadcrumb-light">
-					<a href="#">Activities</a>
-				</li>
-				<li className="breadcrumb-item active breadcrumb-light" aria-current="page">
-					Clothing
-				</li>
+				{parts.slice(0, parts.length - 1).map((part, index) => (
+					<li key={index} className="breadcrumb-item breadcrumb-light">
+						<a href="#">{part}</a>
+					</li>
+				))}
+
+				<li className="breadcrumb-item active breadcrumb-light">{parts.at(-1)}</li>
 			</ol>
 		</nav>
 	);

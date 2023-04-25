@@ -242,7 +242,14 @@ export const Index = () => {
 						</div>
 					</section>
 				) : (
-					<h1>دسته بندی منتخب محصولات انتخاب نشده است</h1>
+					<div
+						style={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+					>
+						<h1 className="text-center  mt-5" dir="rtl">
+							<i className="bi-info-circle-fill mx-2" />
+							دسته بندی منتخب محصولات انتخاب نشده است
+						</h1>
+					</div>
 				)}
 
 				<section className="my-10 position-relative">
@@ -251,7 +258,7 @@ export const Index = () => {
 
 				<section className="py-5" data-aos="fade-in">
 					<div className="container">
-						<div className="row g-5">
+						<div className="row g-5" dir="rtl">
 							<div className="col-12 col-md-7" data-aos="fade-right">
 								<div className="m-0">
 									<p className="small fw-bolder text-uppercase tracking-wider mb-2 text-muted">

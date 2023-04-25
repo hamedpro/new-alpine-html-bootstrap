@@ -1,4 +1,5 @@
 import React from "react";
+import "bootstrap-icons/font/bootstrap-icons.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./assets/scss/libs.scss";
 import "./assets/scss/theme.scss";
@@ -14,11 +15,8 @@ import { Footer } from "./partials/footer/Footer";
 import { Offcanvas } from "./partials/offcanvas/Offcanvas";
 import { SearchOverlay } from "./partials/search/SearchOverlay";
 import { AdminDashboard } from "./components/AdminDashboard";
-import { Posts } from "./partials/posts/Posts";
-import { Post } from "./partials/posts/Post";
 import { Register } from "./components/Register";
 import { Login } from "./components/Login";
-import { TermsOfService } from "./components/TermsOfService";
 import { FAQ } from "./components/FAQ";
 import { NewSupportMessage } from "./components/NewSupportMessage";
 import { ContactUs } from "./components/ContactUs";
@@ -118,13 +116,11 @@ export const App = () => {
 								</CommonBottomWrapper>
 							}
 						/>
-						<Route path="/posts" element={<Posts />} />
-						<Route path="/posts/:post_id" element={<Post />} />
+
 						<Route path="/products/new" element={<NewProduct />} />
 						<Route path="/admin-dashboard/*" element={<AdminDashboard />} />
 						<Route path="/register" element={<Register />} />
 						<Route path="/login" element={<Login />} />
-						<Route path="/terms-of-service" element={<TermsOfService />} />
 						<Route path="/faq" element={<FAQ />} />
 						<Route path="/support-messages/new" element={<NewSupportMessage />} />
 						<Route path="/contact-us" element={<ContactUs />} />

@@ -26,14 +26,6 @@ export const Menu = () => {
 								<DropdownLinks
 									data={[
 										{
-											header: "دسته بندی ها",
-											items: product_categories.map((product_category) => ({
-												link: `/categories/${product_category._id}`,
-												text: product_category.title,
-											})),
-											view_all_link: "/categories",
-										},
-										{
 											header: "محصولات",
 											items: products.map((product) => ({
 												link: `/products/${product._id}`,
@@ -71,7 +63,7 @@ export const Menu = () => {
 					aria-haspopup="true"
 					aria-expanded="false"
 				>
-					پست ها
+					دسته بندی ها
 				</a>
 
 				<div className="dropdown-menu dropdown-megamenu">
@@ -81,14 +73,12 @@ export const Menu = () => {
 								<DropdownLinks
 									data={[
 										{
-											header: "آخرین پست ها",
-
-											items: posts.map((post) => ({
-												link: `/posts/${post._id}`,
-												text: post.title,
+											header: "دسته بندی ها",
+											items: product_categories.map((product_category) => ({
+												link: `/categories/${product_category._id}`,
+												text: product_category.title,
 											})),
-
-											view_all_link: "/posts",
+											view_all_link: "/categories",
 										},
 									]}
 								/>
@@ -141,11 +131,6 @@ export const Menu = () => {
 					<li>
 						<Link className="dropdown-item" to="/support-messages/new">
 							درخواست پشتیبانی آنلاین
-						</Link>
-					</li>
-					<li>
-						<Link className="dropdown-item" to="/terms-of-service">
-							شرایط و قوانین
 						</Link>
 					</li>
 					<li>

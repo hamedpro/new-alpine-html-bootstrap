@@ -1,20 +1,21 @@
 import React, { Fragment, useContext } from "react";
 import { NavBar } from "../partials/header/navbar/NavBar";
 import { GlobalContext } from "../GlobalContext";
+import { ProductsShowcase } from "./ProductsShowcase";
 
 export const Products = () => {
 	var { products } = useContext(GlobalContext).global_context_state;
 
 	return (
 		<>
-			<NavBar />
-			<h1>products</h1>
-			{products.map((i) => (
-				<Fragment key={i._id}>
-					<p>{JSON.stringify(i)}</p>
-					<hr />{" "}
-				</Fragment>
-			))}
+			<ProductsShowcase
+				breadcrumb_parts={["صفحه اصلی", "محصولات"]}
+				main_title={"محصولات ما"}
+				product_ids={products.map((i) => i._id)}
+				description={
+					"در این بخش تمام کالا های ثبت شده در تمام دسته بندی ها را در کنار هم مشاهده کنید"
+				}
+			/>
 		</>
 	);
 };

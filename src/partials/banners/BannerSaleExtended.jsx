@@ -16,7 +16,7 @@ export const BannerSaleExtended = () => {
 							data-aos="fade-right"
 							data-aos-delay="250"
 						>
-							<h3 className="fs-1 fw-bold mb-0 lh-1">
+							<h3 className="fs-1 fw-bold mb-0 lh-1" dir="rtl">
 								<i className="ri-timer-flash-line align-bottom"></i> تخفیف ها تمدید
 								شدند !
 							</h3>
