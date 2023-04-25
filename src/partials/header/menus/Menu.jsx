@@ -106,11 +106,13 @@ export const Menu = () => {
 					درباره ما
 				</Link>
 			</li>
+
 			<li className="nav-item me-lg-4">
-				<Link className="nav-link fw-bolder py-lg-4" to="/contact-us">
-					تماس با ما
+				<Link className="nav-link fw-bolder py-lg-4" to="/download_center">
+					دانلود ها
 				</Link>
 			</li>
+
 			<li className="nav-item dropdown me-lg-4">
 				<a
 					className="nav-link fw-bolder dropdown-toggle py-lg-4"
@@ -131,11 +133,6 @@ export const Menu = () => {
 					<li>
 						<Link className="dropdown-item" to="/support-messages/new">
 							درخواست پشتیبانی آنلاین
-						</Link>
-					</li>
-					<li>
-						<Link className="dropdown-item" to="/download_center">
-							دانلود ها
 						</Link>
 					</li>
 				</ul>

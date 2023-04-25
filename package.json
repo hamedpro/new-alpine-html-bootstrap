@@ -3,7 +3,7 @@
 	"version": "1.0.0",
 	"description": "Bootstrap 5 HTML Template created by Pixel Rocket",
 	"scripts": {
-		"dev": "vite & nodemon ./src/api/index.js",
+		"dev": "tailwindcss -c ./tailwind.config.cjs -i tailwind_input.css -o tailwind_output.css --watch=always & vite & nodemon ./src/api/index.js",
 		"start": "node start_script.js "
 	},
 	"type": "module",
@@ -64,6 +64,7 @@
 		"simplebar": "^6.2.1",
 		"simplebar-react": "^3.2.1",
 		"swiper": "^9.1.1",
+		"tailwindcss": "^3.3.1",
 		"tippy.js": "^6.3.1",
 		"vite": "^4.1.4"
 	}

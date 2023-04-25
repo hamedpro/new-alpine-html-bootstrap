@@ -3,6 +3,7 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import "./assets/scss/libs.scss";
 import "./assets/scss/theme.scss";
+import "../tailwind_output.css";
 import { Cart } from "./components/Cart";
 import { Category } from "./components/Category";
 import { Checkout } from "./components/Checkout";
@@ -19,7 +20,6 @@ import { Register } from "./components/Register";
 import { Login } from "./components/Login";
 import { FAQ } from "./components/FAQ";
 import { NewSupportMessage } from "./components/NewSupportMessage";
-import { ContactUs } from "./components/ContactUs";
 import { AboutUs } from "./components/AboutUs";
 import { MyProfile } from "./components/MyProfile";
 import { LikedProducts } from "./components/LikedProducts";
@@ -123,7 +123,6 @@ export const App = () => {
 						<Route path="/login" element={<Login />} />
 						<Route path="/faq" element={<FAQ />} />
 						<Route path="/support-messages/new" element={<NewSupportMessage />} />
-						<Route path="/contact-us" element={<ContactUs />} />
 						<Route path="/about-us" element={<AboutUs />} />
 						<Route path="/my-profile" element={<MyProfile />} />
 						<Route path="/my-profile/liked_products" element={<LikedProducts />} />

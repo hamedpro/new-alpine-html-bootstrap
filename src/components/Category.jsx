@@ -10,7 +10,14 @@ export const Category = () => {
 	var this_product_category = product_categories.find((i) => i._id === category_id);
 	return (
 		<ProductsShowcase
-			breadcrumb_parts={["Home", "Categories", this_product_category.title]}
+			breadcrumb_parts={[
+				{ location: "/", label: "صفحه اصلی" },
+				{ location: "/categories", label: "دسته بندی ها" },
+				{
+					label: this_product_category.title,
+					location: `/categories/${this_product_category._id}`,
+				},
+			]}
 			main_title={this_product_category.title}
 			product_ids={products.map((i) => i._id)}
 			description={this_product_category.description}

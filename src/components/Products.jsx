@@ -9,7 +9,10 @@ export const Products = () => {
 	return (
 		<>
 			<ProductsShowcase
-				breadcrumb_parts={["صفحه اصلی", "محصولات"]}
+				breadcrumb_parts={[
+					{ label: "صفحه اصلی", location: "/" },
+					{ label: "محصولات", location: "/products" },
+				]}
 				main_title={"محصولات ما"}
 				product_ids={products.map((i) => i._id)}
 				description={
